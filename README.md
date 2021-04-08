@@ -6,6 +6,6 @@ My main focus is on data logic and manipulation with backend technologies (node 
 I'm also interested in Machine Learning with python and Cloud computing with AWS.”
 
 **Proect Links**
-* personal website : ![](https://sciederrick.github.io/index.html)
+* [personal website](https://sciederrick.github.io/index.html)
 
 
