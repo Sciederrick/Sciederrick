@@ -5,7 +5,7 @@
 My main focus is on data logic and manipulation with backend technologies (node JS, mySQL, mongoDB and mongoose, MsSQL).
 I'm also interested in Machine Learning with python and Cloud computing with AWS.”
 
-**Proect Links**
+**Project Links**
 * [personal website](https://sciederrick.github.io/index.html)
 
 
