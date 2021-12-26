@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'NovaSquare';
+    src: local("fonts"),
+     url(~/assets/fonts/NovaSquare-Regular.ttf) format("truetype");
+}
+
+body {
+    font-family: 'NovaSquare', sans-serif;
+    color: #313131;
+}
+
+@layer components {
+    .btn {
+        @apply px-3 py-2 m-2 text-sm;
+    }
+
+    .btn-transparent {
+        @apply  rounded-3xl  text-[#313131] border-2 border-[#313131]; 
+    }
+
+    .btn-green {
+        @apply  rounded-3xl  bg-[#00A991] text-white; 
+    }
+
+    .btn-blue {
+        @apply  rounded-lg  bg-[#7B9EB6] text-white m-0.5 px-4; 
+    }
+
+    .btn-transparent-noborder {
+        @apply  rounded-3xl  text-[#313131];
+    }
+
+    .btn-transparent-border-bottom {
+        @apply border-b-2 border-[#ededed];
+    }
+
+}
+
