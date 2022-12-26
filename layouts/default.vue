@@ -10,6 +10,7 @@
                 class="m-2 underline md:mx-6 lg:mx-8">blog</a>
             <a href="mailto:derrickmbarani@gmail.com" target="_top"
                 class="btn btn-transparent md:mx-6 lg:mx-8">message me</a>
+
         </nav>
 
 
@@ -21,7 +22,7 @@
         <slot />
     </div>
 
-    <footer class="lg:border lg:border-[#ededed] pt-4 lg:pb-8 lg:px-16">
+    <footer class="lg:border lg:border-[#ededed] pt-4 lg:pb-8 lg:px-16" id="footer">
         <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
             <section class="py-4 my-2 px-4">
                 <p class="pb-6 text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 

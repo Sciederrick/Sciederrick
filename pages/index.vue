@@ -1,5 +1,45 @@
 <template>
     <main>
+        <!-- navigation drawer-->
+        <nav class="min-h-screen fixed top-0 left-0 flex flex-col bg-white w-72 z-40 hidden">
+            <ul class="text-2xl pl-16 pt-24 lg:pt-36">
+                <li class="py-4 border-r-4 border-[#028E7A]">
+                    <NuxtLink to="/#hero">hero</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#project1">projects</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#feedback">feedback</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#footer">footer</NuxtLink>
+                </li>
+            </ul>
+            <hr class="mt-6 lg:mt-16">
+            <ul class="py-2 flex pl-16">
+                <li class="text-lg mr-4">
+                    <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
+                        <Icon name="mdi:linkedin" size="24px" color="#313131"/>
+                    </a>
+                </li>
+                <li class="text-lg mr-4">
+                    <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
+                        <Icon name="logos:google-developers" size="24px" color="#313131"/>
+                    </a>
+                </li>
+                <li class="text-lg mr-4">
+                    <a href="https://github.com/Sciederrick" target="_blank">
+                        <Icon name="uil:github" size="24px" color="#313131"/>
+                    </a>
+                </li>
+            </ul>
+            <button class="absolute bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+                <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
+            </button>
+            
+        </nav>
+
         <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-32 lg:px-28" id="hero">
             <article class="mb-16 md:pl-4">
                 <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8"/>
@@ -23,10 +63,11 @@
 
                 </div>
                 <div class="flex flex-row justify-between p-2">
-                    <button class="btn btn-transparent-noborder md:btn-green md:p-3">
+                    <NuxtLink to="/#project1"
+                        class="btn btn-transparent-noborder md:btn-green md:p-3">
                         <span class="md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
                         <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"/>&nbsp;Explore my work</span>
-                    </button>
+                    </NuxtLink>
                     <button class="btn btn-transparent-noborder order-first">
                         resume&nbsp;<Icon name="material-symbols:download-rounded" color="#313131"/>
                     </button>
