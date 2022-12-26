@@ -20,32 +20,37 @@
         <slot />
     </div>
 
-    <footer class="pt-16 lg:flex lg:flex-row lg:relative lg:pb-16 lg:justify-between lg:px-16 lg:border lg:border-[#ededed]">
-        <section class="py-4 my-2 px-4 lg:max-w-md">
-            <p class="pb-2 text-lg md:text-xl">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
-            <button class="btn btn-transparent -ml-1 text-lg md:text-xl">Let's Talk</button>
-
-        </section>
-
-        <div class="lg:flex lg:flex-col">
-            <section class="py-4 my-2 px-4 lg:max-w-md">
-                <h2 class="text-xl pb-2 md:text-2xl">My Location</h2>
-                <p class="pb-2 text-lg md:text-xl">Nairobi, KE <Icon name="material-symbols:location-on-outline" color="#313131"/><br/>Available for remote work or relocation</p>
+    <footer class="lg:border lg:border-[#ededed] pt-4 lg:pb-8 lg:px-16">
+        <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
+            <section class="py-4 my-2 px-4">
+                <p class="pb-2 text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
+                <button class="btn btn-transparent -ml-1 text-lg">Let's Talk</button>
     
             </section>
     
-            <section class="py-4 my-2 px-4 lg:max-w-md">
-                <h2 class="text-xl pb-2 md:text-2xl">Follow Me</h2>
-                <ul class="pb-2">
-                    <li class="text-lg md:text-xl"><Icon name="mdi:linkedin"/>&nbsp;linkedin</li>
-                    <li class="text-lg md:text-xl"><Icon name="logos:google-developers"/>&nbsp;googledev profile</li>
+            <section class="py-4 my-2 px-4">
+                <h2 class="text-xl pb-4 lg:underline">My Location</h2>
+                <p class="pb-2 text-lg">Nairobi, KE <Icon name="material-symbols:location-on-outline" color="#313131"/><br/>Available for remote work or relocation</p>
+    
+            </section>
+    
+            <section class="py-4 my-2 px-4">
+                <h2 class="text-xl pb-4 lg:underline">Contact</h2>
+                <p class="text-lg"><Icon name="carbon:email" color="#313131"/>&nbsp;derrickmbarani@gmail.com</p>
+                <ul class="pb-2 flex">
+                    <li class="text-lg mr-4"><Icon name="mdi:linkedin" size="24px" color="#313131"/></li>
+                    <li class="text-lg mr-4"><Icon name="logos:google-developers" size="24px" color="#313131"/></li>
+                    <li class="text-lg mr-4"><Icon name="uil:github" size="24px" color="#313131"/></li>
                 </ul>
     
             </section>
 
         </div>
 
-        <p class="pt-20 px-4 text-sm lg:absolute lg:bottom-4">Copyright &#169; 2022 Derrick Mbarani</p>
+        <section>
+            <hr class="pt-4"/>
+            <p class="text-sm pl-2">Copyright &#169; 2022 Derrick Mbarani</p>
+        </section>
     </footer>
 
 </template>

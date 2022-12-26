@@ -19,15 +19,15 @@ body {
     }
 
     .btn-transparent {
-        @apply  rounded-3xl  text-[#313131] border-2 border-[#313131]; 
+        @apply  rounded-3xl  text-[#313131] border-2 border-[#313131] hover:bg-[#313131] hover:text-white; 
     }
 
     .btn-green {
-        @apply  rounded-3xl  bg-[#00A991] text-white; 
+        @apply  rounded-3xl  bg-[#00A991] text-white hover:bg-[#028E7A]; 
     }
 
     .btn-blue {
-        @apply  rounded-lg  bg-[#7B9EB6] text-white m-0.5 px-4; 
+        @apply  rounded-lg  bg-[#7B9EB6] text-white m-0.5 px-4 hover:bg-[#61849C]; 
     }
 
     .btn-transparent-noborder {

@@ -41,7 +41,7 @@
             
         </section>
 
-        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start" id="project1">
+        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" id="project1">
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
@@ -54,13 +54,13 @@
                 <button class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">target&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
 
             </div>
-            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:mt-4">
+            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:max-w-lg lg:mt-4">
                 <img src="" alt="">
 
             </div>
         </section>
 
-        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start" id="project2">
+        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start lg:justify-between" id="project2">
             <div class="p-4 mb-16 lg:max-w-md lg:ml-8">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
@@ -73,30 +73,31 @@
                 <button class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">target&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
 
             </div>
-            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:order-first lg:mt-4">
+            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:order-first lg:max-w-lg lg:mt-4">
                 <img src="" alt="">
 
             </div>
         </section>
 
-        <section class="min-h-screen flex items-center justify-between bg-feedback-illustration md:bg-[#ededed] lg:px-16" id="feedback">
+        <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
             <form action="" class="m-4 lg:max-w-lg">
                 <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? please drop a line.</p>
-                <div class="border-2 border-[#e1e1e1] rounded-lg flex flex-row bg-[#ffffff] md:rounded-xl md:max-w-lg lg:w-auto">
-                    <input type="text" name="feedbackMsg" id="feedbackMsg"
-                        class="w-full rounded-lg md:rounded:xl">
+                <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
+                    <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
+                        class="px-4 pr-20 md:pr-28 w-full h-10 text-[#808080] rounded-lg active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none md:h-12 md:rounded:xl">
                     <button type="submit"
-                        class="btn btn-blue md:text-lg lg:text-xl">submit</button>
+                        class="btn btn-blue absolute right-0 md:text-lg lg:text-xl">submit</button>
 
                 </div>
 
             </form>
 
-            <div class="hidden md:block md:m-16">
+            <div class="order-first md:order-last md:m-16">
                 <img src="~/assets/images/undraw_quick_chat_re_bit5.svg" alt="">
             </div>
         </section>
 
     </main>
 </template>
+
   
