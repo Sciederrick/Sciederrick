@@ -1,8 +1,9 @@
 <template>
     <header>        
         <nav class="flex flex-row justify-between items-center my-10 mx-4 md:fixed md:right-0 md:top-0 md:mt-6">
-            <Icon name="ci:menu-alt-05" size="48px" color="#313131"
-                class="fixed bottom-0 left-0 m-4 z-40 md:top-0 md:mt-6"/>
+            <button class="fixed bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+                <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
+            </button>
             <NuxtLink :to="`/#feedback`"
                 class="m-2 underline md:mx-6 lg:mx-8">feedback</NuxtLink>
             <a href="https://derrickmbarani.hashnode.dev/" target="_blank"

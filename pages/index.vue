@@ -15,11 +15,7 @@
                     <div>
                         <Icon name="mdi:hand-wave-outline" color="#313131" size="32px"/>
                     </div>
-                    <p class="p-4 md:text-3xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
-                        <ul class="list-none flex flex-row mt-4 text-base">
-                            <li><NuxtLink :to="``" class="mr-4"><Icon name="mdi:linkedin"/>&nbsp;linkedin</NuxtLink></li>
-                            <li><NuxtLink :to="``" class="mr-4"><Icon name="logos:google-developers"/>&nbsp;google dev profile</NuxtLink></li>
-                        </ul>
+                    <p class="p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
                     <div class="w-10 h-10 rounded-full absolute -top-6 right-4 overflow-hidden md:w-8 md:h-8 md:left-12 md:border md:border-[#808080]">
                         <img src="~/assets/images/profile_picture.png" alt="my passport photo" class="object-fit">
