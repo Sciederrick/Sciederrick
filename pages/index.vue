@@ -41,7 +41,7 @@
             
         </section>
 
-        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" id="project1">
+        <section class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" id="project1">
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <section class="min-h-screen pt-20 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start lg:justify-between" id="project2">
+        <section class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start lg:justify-between" id="project2">
             <div class="p-4 mb-16 lg:max-w-md lg:ml-8">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
@@ -80,7 +80,7 @@
         </section>
 
         <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
-            <form action="" class="m-4 lg:max-w-lg">
+            <form class="m-4 lg:max-w-lg">
                 <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? please drop a line.</p>
                 <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
