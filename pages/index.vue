@@ -1,45 +1,5 @@
 <template>
     <main>
-        <!-- navigation drawer-->
-        <nav class="min-h-screen fixed top-0 left-0 flex flex-col bg-white w-72 z-40 hidden">
-            <ul class="text-2xl pl-16 pt-24 lg:pt-36">
-                <li class="py-4 border-r-4 border-[#028E7A]">
-                    <NuxtLink to="/#hero">hero</NuxtLink>
-                </li>
-                <li class="py-4">
-                    <NuxtLink to="/#project1">projects</NuxtLink>
-                </li>
-                <li class="py-4">
-                    <NuxtLink to="/#feedback">feedback</NuxtLink>
-                </li>
-                <li class="py-4">
-                    <NuxtLink to="/#footer">footer</NuxtLink>
-                </li>
-            </ul>
-            <hr class="mt-6 lg:mt-16">
-            <ul class="py-2 flex pl-16">
-                <li class="text-lg mr-4">
-                    <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
-                        <Icon name="mdi:linkedin" size="24px" color="#313131"/>
-                    </a>
-                </li>
-                <li class="text-lg mr-4">
-                    <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
-                        <Icon name="logos:google-developers" size="24px" color="#313131"/>
-                    </a>
-                </li>
-                <li class="text-lg mr-4">
-                    <a href="https://github.com/Sciederrick" target="_blank">
-                        <Icon name="uil:github" size="24px" color="#313131"/>
-                    </a>
-                </li>
-            </ul>
-            <button class="absolute bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
-                <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
-            </button>
-            
-        </nav>
-
         <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-32 lg:px-28" id="hero">
             <article class="mb-16 md:pl-4">
                 <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8"/>
@@ -78,40 +38,33 @@
             
         </section>
 
-        <section class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" id="project1">
-            <div class="p-4 mb-16 lg:max-w-md lg:mr-8">
+        <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
+            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" >
+            <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
-                    <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
-                    <button class="btn btn-transparent-noborder">TARGET</button>
-                    <button class="btn btn-transparent-noborder">FEATURES</button>
+                    <button  @click="project.activeComponent='background'"
+                        class="btn btn-transparent-noborder -ml-3"
+                        :class="[project.activeComponent == 'background' ? '':'text-[#e1e1e1]']">BACKGROUND</button>
+                    <button @click="project.activeComponent='target'"
+                        class="btn btn-transparent-noborder" 
+                        :class="[project.activeComponent == 'target' ? '':'text-[#e1e1e1]']">TARGET</button>
+                    <button @click="project.activeComponent='features'"
+                        class="btn btn-transparent-noborder"                         
+                        :class="[project.activeComponent == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
                 </nav>
-                <h3 class="text-lg pb-2 pt-8">fintech</h3>
-                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.background</span></h2>
-                <p class="text-lg py-2 pb-4 md:text-xl">I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.</p>
+                <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
+                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent }}</span></h2>
+                <p class="text-lg py-2 pb-4 md:text-xl">{{ project[project.activeComponent] }}</p>
                 <button class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">target&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
 
             </div>
-            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:max-w-lg lg:mt-4">
-                <img src="" alt="">
-
-            </div>
-        </section>
-
-        <section class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:items-start lg:justify-between" id="project2">
-            <div class="p-4 mb-16 lg:max-w-md lg:ml-8">
-                <nav class="hidden border-b border-t lg:flex lg:flex-row">
-                    <button class="btn btn-transparent-noborder -ml-3">BACKGROUND</button>
-                    <button class="btn btn-transparent-noborder">TARGET</button>
-                    <button class="btn btn-transparent-noborder">FEATURES</button>
-                </nav>
-                <h3 class="text-lg pb-2 pt-8">fintech</h3>
-                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.background</span></h2>
-                <p class="text-lg py-2 pb-4 md:text-xl">I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.</p>
-                <button class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">target&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
-
-            </div>
-            <div class="w-full h-96 border border-[#808080] bg-[#ededed] lg:order-first lg:max-w-lg lg:mt-4">
-                <img src="" alt="">
+            <div class="w-full h-96 border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
+                <div v-if="project.image != null">
+                    <img src="" alt="" >
+                </div>
+                <div v-else>
+                    <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>
+                </div>
 
             </div>
         </section>
@@ -136,5 +89,43 @@
 
     </main>
 </template>
+
+<script setup>
+
+const projects = ref([
+    { 
+    id:1, 
+    title:'lorem ipsum', 
+    category:'fintech', 
+    background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
+    target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
+    features:[
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum'
+    ],
+    image: null,
+    activeComponent: 'background'
+    },
+    { 
+    id:2, 
+    title:'lorem ipsum', 
+    category:'portfolio', 
+    background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
+    target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
+    features:[
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum',
+        'lorem ipsum'
+    ],
+    image: null,
+    activeComponent: 'background'
+    },
+])
+</script>
 
   

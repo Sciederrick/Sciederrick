@@ -1,7 +1,8 @@
 <template>
     <header>        
         <nav class="flex flex-row justify-between items-center my-10 mx-4 md:fixed md:right-0 md:top-0 md:mt-6">
-            <button class="fixed bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+            <button @click="toggleNavDrawer"
+                class="fixed bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
                 <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
             </button>
             <NuxtLink :to="`/#feedback`"
@@ -17,8 +18,52 @@
     </header>
 
 
-    <!-- page content down here -->
+    
     <div>
+        <!-- navigation drawer-->
+        <nav class="min-h-screen fixed top-0 left-0 bg-white w-72 z-40" 
+            :class="{flex: isNavDrawerOpen, 'flex-col':isNavDrawerOpen, hidden: !isNavDrawerOpen}">
+            <ul class="text-2xl pl-16 pt-24 lg:pt-36">
+                <li class="py-4 border-r-4 border-[#028E7A]">
+                    <NuxtLink to="/#hero">hero</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#project1">projects</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#feedback">feedback</NuxtLink>
+                </li>
+                <li class="py-4">
+                    <NuxtLink to="/#footer">footer</NuxtLink>
+                </li>
+            </ul>
+            <hr class="mt-6 lg:mt-16">
+            <ul class="py-2 flex pl-16">
+                <li class="text-lg mr-4">
+                    <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
+                        <Icon name="mdi:linkedin" size="24px" color="#313131"/>
+                    </a>
+                </li>
+                <li class="text-lg mr-4">
+                    <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
+                        <Icon name="logos:google-developers" size="24px" color="#313131"/>
+                    </a>
+                </li>
+                <li class="text-lg mr-4">
+                    <a href="https://github.com/Sciederrick" target="_blank">
+                        <Icon name="uil:github" size="24px" color="#313131"/>
+                    </a>
+                </li>
+            </ul>
+            <button @click="toggleNavDrawer"
+                class="absolute bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+                <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
+            </button>
+            
+        </nav>
+
+
+        <!-- page content down here -->
         <slot />
     </div>
 
@@ -69,9 +114,17 @@
                     <span class="hidden lg:block">/Made from scratch with nuxt/</span>
                     <span>Copyright &#169; 2022 Derrick Mbarani</span>
                 </p>
-                <p><span class="hidden md:inline">rate my site</span>&nbsp;<Icon name="material-symbols:star-rate-half-rounded" size="32" color="#313131"/></p>
+                <p><span class="hidden md:inline">rate this site</span>&nbsp;<Icon name="material-symbols:star-rate-half-rounded" size="32" color="#313131"/></p>
             </div>
         </section>
     </footer>
 
 </template>
+
+<script setup>
+const isNavDrawerOpen = ref(false)
+
+function toggleNavDrawer() {
+    isNavDrawerOpen.value = !isNavDrawerOpen.value
+}
+</script>
