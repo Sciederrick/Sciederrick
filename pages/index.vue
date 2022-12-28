@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-32 lg:px-28" id="hero">
+        <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-48 lg:px-28" id="hero">
             <article class="mb-16 md:pl-4">
                 <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8"/>
                 <ul class="list-none ml-8 md:flex md:flex-row">
