@@ -10,7 +10,7 @@
             <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
                 class="m-2 underline md:mx-6 lg:mx-8">blog</a>
             <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                class="btn btn-transparent md:mx-6 lg:mx-8">message me</a>
+                class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">message me</a>
 
         </nav>
 
@@ -70,7 +70,7 @@
             <section class="py-4 my-2 px-4">
                 <p class="pb-6 text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
                 <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                class="btn btn-transparent -ml-1 text-lg">Let's Talk</a>
+                class="btn btn-transparent -ml-1 text-lg rounded md:rounded-3xl">Let's Talk</a>
     
             </section>
     

@@ -11,7 +11,7 @@
             </article>
 
             <article>
-                <div class="flex flex-row relative p-2 items-center py-4 md:pl-12">
+                <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-10">
                     <div>
                         <Icon name="mdi:hand-wave-outline" color="#313131" size="32px"/>
                     </div>
@@ -24,8 +24,8 @@
                 </div>
                 <div class="flex flex-row justify-between p-2">
                     <NuxtLink to="/#project1"
-                        class="btn btn-transparent-noborder md:btn-green md:p-3">
-                        <span class="md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
+                        class="btn btn-transparent-noborder order-first md:order-last md:btn-green md:p-3">
+                        <span class="btn btn-blue rounded md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
                         <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"/>&nbsp;Explore my work</span>
                     </NuxtLink>
                     <button class="btn btn-transparent-noborder order-first invisible">
@@ -74,13 +74,6 @@
         <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
             <form class="m-4 lg:max-w-lg">
                 <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
-                <!-- <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
-                    <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
-                        class="px-4 pr-20 md:pr-28 w-full h-10 text-[#808080] rounded-lg active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none md:h-12 md:rounded:xl">
-                    <button type="submit"
-                        class="btn btn-blue absolute right-0 md:text-lg lg:text-xl">submit</button>
-
-                </div> -->
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
