@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-48 lg:px-28" id="hero">
+        <section class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max" id="hero">
             <article class="mb-16 md:pl-4">
                 <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8"/>
                 <ul class="list-none ml-8 md:flex md:flex-row">
@@ -39,7 +39,7 @@
         </section>
 
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" >
+            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
+        <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 xl:min-h-max" id="feedback">
             <form class="m-4 lg:max-w-lg">
                 <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
