@@ -74,11 +74,18 @@
         <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
             <form class="m-4 lg:max-w-lg">
                 <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
-                <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
+                <!-- <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="px-4 pr-20 md:pr-28 w-full h-10 text-[#808080] rounded-lg active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none md:h-12 md:rounded:xl">
                     <button type="submit"
                         class="btn btn-blue absolute right-0 md:text-lg lg:text-xl">submit</button>
+
+                </div> -->
+                <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
+                    <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
+                        class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
+                    <button type="submit"
+                        class="btn btn-blue w-full mx-auto rounded-sm md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">submit <span class="md:hidden">&nbsp;feedback</span></button>
 
                 </div>
 
