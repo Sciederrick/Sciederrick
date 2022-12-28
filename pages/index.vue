@@ -42,28 +42,30 @@
             class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
-                    <button  @click="project.activeComponent='background'"
+                    <button  @click="project.activeComponentId=0"
                         class="btn btn-transparent-noborder -ml-3"
-                        :class="[project.activeComponent == 'background' ? '':'text-[#e1e1e1]']">BACKGROUND</button>
-                    <button @click="project.activeComponent='target'"
+                        :class="[project.activeComponent() == 'background' ? '':'text-[#e1e1e1]']">BACKGROUND</button>
+                    <button @click="project.activeComponentId=1"
                         class="btn btn-transparent-noborder" 
-                        :class="[project.activeComponent == 'target' ? '':'text-[#e1e1e1]']">TARGET</button>
-                    <button @click="project.activeComponent='features'"
+                        :class="[project.activeComponent() == 'target' ? '':'text-[#e1e1e1]']">TARGET</button>
+                    <button @click="project.activeComponentId=2"
                         class="btn btn-transparent-noborder"                         
-                        :class="[project.activeComponent == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
+                        :class="[project.activeComponent() == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
-                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent }}</span></h2>
-                <p class="text-lg py-2 pb-4 md:text-xl">{{ project[project.activeComponent] }}</p>
-                <button class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">target&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
+                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
+                <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ project[project.activeComponent()] }}</p>
+                <button @click="project.navigateSections()"
+                    class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">
+                    {{ project.nextComponent() }}&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
 
             </div>
             <div class="w-full h-96 border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
                 <div v-if="project.image != null">
                     <img src="" alt="" >
                 </div>
-                <div v-else>
-                    <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>
+                <div class="text-[#e1e1e1]" v-else>
+                    <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
                 </div>
 
             </div>
@@ -71,7 +73,7 @@
 
         <section class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16" id="feedback">
             <form class="m-4 lg:max-w-lg">
-                <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? please drop a line.</p>
+                <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="border-2 border-[#e1e1e1] rounded-lg bg-[#ffffff] relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="px-4 pr-20 md:pr-28 w-full h-10 text-[#808080] rounded-lg active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none md:h-12 md:rounded:xl">
@@ -107,7 +109,29 @@ const projects = ref([
         'lorem ipsum'
     ],
     image: null,
-    activeComponent: 'background'
+    activeComponentId: 0,
+    components: ['background','target','features'],
+    activeComponent: function() {
+        const components = this.components
+        const activeComponentId = this.activeComponentId
+        return components[activeComponentId]
+    },
+    nextComponent: function() {
+        const components = this.components
+        let activeComponentId = this.activeComponentId
+        if(this.activeComponentId < 2) {
+            activeComponentId++
+        } else {
+            activeComponentId = 0
+        }
+        return components[activeComponentId]
+    },
+    navigateSections: function() {
+        if(this.activeComponentId < 2) 
+            this.activeComponentId++
+        else
+            this.activeComponentId = 0
+    }
     },
     { 
     id:2, 
@@ -123,7 +147,29 @@ const projects = ref([
         'lorem ipsum'
     ],
     image: null,
-    activeComponent: 'background'
+    activeComponentId: 0,
+    components: ['background','target','features'],
+    activeComponent: function() {
+        const components = this.components
+        const activeComponentId = this.activeComponentId
+        return components[activeComponentId]
+    },
+    nextComponent: function() {
+        const components = this.components
+        let activeComponentId = this.activeComponentId
+        if(this.activeComponentId < 2) {
+            activeComponentId++
+        } else {
+            activeComponentId = 0
+        }
+        return components[activeComponentId]
+    },
+    navigateSections: function() {
+        if(this.activeComponentId < 2) 
+            this.activeComponentId++
+        else
+            this.activeComponentId = 0
+    }
     },
 ])
 </script>

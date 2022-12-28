@@ -1,7 +1,7 @@
 <template>
     <header>        
         <nav class="flex flex-row justify-between items-center my-10 mx-4 md:fixed md:right-0 md:top-0 md:mt-6">
-            <button @click="toggleNavDrawer"
+            <button @click="isNavDrawerOpen = !isNavDrawerOpen"
                 class="fixed bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
                 <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
             </button>
@@ -17,8 +17,6 @@
 
     </header>
 
-
-    
     <div>
         <!-- navigation drawer-->
         <nav class="min-h-screen fixed top-0 left-0 bg-white w-72 z-40" 
@@ -55,7 +53,7 @@
                     </a>
                 </li>
             </ul>
-            <button @click="toggleNavDrawer"
+            <button @click="isNavDrawerOpen = !isNavDrawerOpen"
                 class="absolute bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
                 <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
             </button>
@@ -67,7 +65,7 @@
         <slot />
     </div>
 
-    <footer class="lg:border lg:border-[#ededed] pt-4 lg:pb-8 lg:px-16" id="footer">
+    <footer class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">
         <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
             <section class="py-4 my-2 px-4">
                 <p class="pb-6 text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
@@ -107,24 +105,62 @@
 
         </div>
 
-        <section>
+        <section class="relative">
             <hr class="pt-4 text-sm"/>
             <div class="flex justify-between items-center pb-4">
                 <p class="pl-2 text-sm md:text-base">
                     <span class="hidden lg:block">/Made from scratch with nuxt/</span>
                     <span>Copyright &#169; 2022 Derrick Mbarani</span>
                 </p>
-                <p><span class="hidden md:inline">rate this site</span>&nbsp;<Icon name="material-symbols:star-rate-half-rounded" size="32" color="#313131"/></p>
+                <button @click="isRateMySite = !isRateMySite" class="flex items-center"
+                    v-if="!isRateMySite"><div class="hidden md:inline">rate this site</div>&nbsp;
+                    <div><Icon name="material-symbols:star-rate-half-rounded" size="32" color="#808080"/></div>
+                    
+                </button>
+                <!-- rate my site -->
+                <div class="fixed bottom-0 inset-x-0 h-32 flex justify-between items-center z-10 shadow-lg rounded-lg bg-[#ededed] py-1.5 px-3 w-full md:rounded lg:max-w-md lg:static lg:h-auto" v-else>
+                    <p class="pl-2">rate <span class="hidden md:inline">this site</span></p>
+                    <div class="-ml-20 pr-8 md:pr-10">
+                        <button @click="siteRating=1">
+                            <Icon name="ic:baseline-star-rate" color="#e5e500" size="32px" v-if="siteRating > 0"/>
+                            <Icon name="ic:outline-star-outline" color="#e5e500" size="32px" v-else/>
+                        </button>
+                        <button @click="siteRating=2">
+                            <Icon name="ic:baseline-star-rate" color="#e5e500" size="32px" v-if="siteRating > 1"/>
+                            <Icon name="ic:outline-star-outline" color="#e5e500" size="32px" v-else/>
+                        </button>
+                        <button @click="siteRating=3">
+                            <Icon name="ic:baseline-star-rate" color="#e5e500" size="32px" v-if="siteRating > 2"/>
+                            <Icon name="ic:outline-star-outline" color="#e5e500" size="32px" v-else/>
+                        </button>
+                        <button @click="siteRating=4">
+                            <Icon name="ic:baseline-star-rate" color="#e5e500" size="32px" v-if="siteRating > 3"/>
+                            <Icon name="ic:outline-star-outline" color="#e5e500" size="32px" v-else/>
+                        </button>
+                        <button @click="siteRating=5">
+                            <Icon name="ic:baseline-star-rate" color="#e5e500" size="32px" v-if="siteRating > 4"/>
+                            <Icon name="ic:outline-star-outline" color="#e5e500" size="32px" v-else/>
+                        </button>                        
+                    </div>
+                    <button @click="isRateMySite = !isRateMySite"
+                        class="absolute right-0 top-0 bottom-0 lg:pr-2">
+                    <Icon name="line-md:arrow-close-right" color="#808080" size="24px"/></button>
+                </div>
             </div>
         </section>
+
     </footer>
 
 </template>
 
 <script setup>
 const isNavDrawerOpen = ref(false)
+const isRateMySite = ref(false)
+const siteRating = ref(0)
 
-function toggleNavDrawer() {
-    isNavDrawerOpen.value = !isNavDrawerOpen.value
-}
+watch(isRateMySite, async(status) => {
+    if (status == false)
+        await navigateTo('/#feedback') 
+})
+
 </script>
