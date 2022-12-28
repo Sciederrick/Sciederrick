@@ -11,7 +11,7 @@
                 </ul>
             </article>
 
-            <article class="bg-[#e1e1e1] rounded-xl pb-6 md:px-0 md:bg-transparent ">
+            <article class="bg-[#e1e1e1] rounded-xl pb-20 md:px-0 md:bg-transparent">
                 <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-10">
                     <div>
                         <Icon name="mdi:hand-wave-outline" color="#313131" size="32px"/>
