@@ -28,7 +28,7 @@
                         <span class="md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
                         <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"/>&nbsp;Explore my work</span>
                     </NuxtLink>
-                    <button class="btn btn-transparent-noborder order-first">
+                    <button class="btn btn-transparent-noborder order-first invisible">
                         resume&nbsp;<Icon name="material-symbols:download-rounded" color="#313131"/>
                     </button>
                 </div>
