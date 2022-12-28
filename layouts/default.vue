@@ -3,7 +3,7 @@
         <header>        
             <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:top-0 md:mt-6">
                 <button @click="isNavDrawerOpen = !isNavDrawerOpen"
-                    class="fixed bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+                    class="fixed bottom-0 left-0 m-4 z-20 btn btn-transparent-noborder md:mt-6">
                     <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
                 </button>
                 <NuxtLink :to="`/#feedback`"
@@ -119,7 +119,7 @@
                         
                     </button>
                     <!-- rate my site -->
-                    <div class="fixed bottom-0 inset-x-0 h-32 flex justify-between items-center z-10 shadow-lg rounded-lg bg-[#ededed] py-1.5 px-3 w-full md:rounded lg:max-w-md lg:static lg:h-auto" v-else>
+                    <div class="fixed bottom-0 inset-x-0 h-32 flex justify-between items-center z-30 shadow-lg rounded-lg bg-[#ededed] py-1.5 px-3 w-full md:rounded lg:max-w-md lg:static lg:h-auto" v-else>
                         <p class="pl-2">rate <span class="hidden md:inline">this site</span></p>
                         <div class="-ml-20 pr-8 md:pr-10">
                             <button @click="siteRating=1">
