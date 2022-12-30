@@ -57,8 +57,8 @@
                 <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
                 <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ project[project.activeComponent()] }}</p>
                 <button @click="project.navigateSections()"
-                    class="btn btn-transparent-border-bottom -ml-3 md:text-2xl lg:hidden">
-                    {{ project.nextComponent() }}&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
+                    class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
+                    next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
 
             </div>
             <div class="w-full h-96 border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
