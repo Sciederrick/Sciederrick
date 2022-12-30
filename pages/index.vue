@@ -57,7 +57,7 @@
                 <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
                 <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ project[project.activeComponent()] }}</p>
                 <button @click="project.navigateSections()"
-                    class="btn btn-transparent-border-bottom text-lg -ml-3 md:text-2xl lg:hidden">
+                    class="btn btn-transparent-border-bottom -ml-3 md:text-2xl lg:hidden">
                     {{ project.nextComponent() }}&nbsp;<Icon name="material-symbols:arrow-circle-right-rounded" color="#313131" /></button>
 
             </div>
@@ -74,8 +74,9 @@
 
         <section id="feedback"
             class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 xl:min-h-max">
-            <form class="m-4 lg:max-w-lg">
-                <p class=" text-lg py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
+            <form class="m-4 lg:max-w-lg" name="feedback">
+                <input type="hidden" name="site_rating" :value="siteRating">{{ siteRating }}
+                <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
@@ -95,7 +96,6 @@
 </template>
 
 <script setup>
-
 const projects = ref([
     { 
     id:1, 
@@ -174,6 +174,9 @@ const projects = ref([
     }
     },
 ])
+
+const siteRating = ref(0)
+
 </script>
 
   

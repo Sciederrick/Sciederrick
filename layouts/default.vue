@@ -55,7 +55,7 @@
                     </li>
                 </ul>
                 <button @click="isNavDrawerOpen = !isNavDrawerOpen"
-                    class="absolute bottom-0 left-0 m-4 z-40 btn btn-transparent-noborder md:mt-6">
+                    class="absolute bottom-4 left-0 m-4 z-40 btn btn-transparent-noborder md:bottom-0 md:mt-6">
                     <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
                 </button>
                 
@@ -69,33 +69,33 @@
         <footer class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">
             <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
                 <section class="py-4 my-2 px-4">
-                    <p class="pb-6 text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
+                    <p class="pb-6 md:text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
                     <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent -ml-1 text-lg rounded md:rounded-3xl">Let's Talk</a>
+                    class="btn btn-transparent -ml-1 rounded md:text-lg md:rounded-3xl">Let's Talk</a>
         
                 </section>
         
                 <section class="py-4 my-2 px-4">
-                    <h2 class="text-xl pb-4 lg:underline">My Location</h2>
-                    <p class="pb-2 text-lg">Nairobi, KE <Icon name="material-symbols:location-on-outline" color="#313131"/><br/>Available for remote work or relocation</p>
+                    <h2 class="text-lg pb-4 md:text-xl lg:underline">My Location</h2>
+                    <p class="pb-2 md:text-lg">Nairobi, KE <Icon name="material-symbols:location-on-outline" color="#313131"/><br/>Available for remote work or relocation</p>
         
                 </section>
         
                 <section class="py-4 my-2 px-4">
-                    <h2 class="text-xl pb-4 lg:underline">Contact</h2>
-                    <p class="text-lg"><Icon name="carbon:email" color="#313131"/>&nbsp;derrickmbarani@gmail.com</p>
+                    <h2 class="text-lg pb-4 md:text-xl lg:underline">Contact</h2>
+                    <p class="md:text-lg"><Icon name="carbon:email" color="#313131"/>&nbsp;derrickmbarani@gmail.com</p>
                     <ul class="pb-2 flex">
-                        <li class="text-lg mr-4">
+                        <li class="mr-4 md:text-lg">
                             <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
                                 <Icon name="mdi:linkedin" size="24px" color="#313131"/>
                             </a>
                         </li>
-                        <li class="text-lg mr-4">
+                        <li class="mr-4 md:text-lg">
                             <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
                                 <Icon name="logos:google-developers" size="24px" color="#313131"/>
                             </a>
                         </li>
-                        <li class="text-lg mr-4">
+                        <li class="mr-4 md:text-lg">
                             <a href="https://github.com/Sciederrick" target="_blank">
                                 <Icon name="uil:github" size="24px" color="#313131"/>
                             </a>
@@ -107,7 +107,7 @@
             </div>
     
             <section class="relative">
-                <hr class="pt-4 text-sm"/>
+                <hr class="pt-4"/>
                 <div class="flex justify-between items-center pb-4">
                     <p class="pl-2 text-sm md:text-base">
                         <span class="hidden lg:block">/Made from scratch with nuxt/</span>
@@ -160,10 +160,13 @@
 const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
 const siteRating = ref(0)
+const emit = defineEmits(['siteRating'])
 
 watch(isRateMySite, async(status) => {
-    if (status == false)
+    if (status == false) {
         await navigateTo('/#feedback') 
+        emit('siteRating', siteRating)
+    }
 })
 
 </script>
