@@ -20,19 +20,28 @@
     
         <div>
             <!-- navigation drawer-->
-            <nav class="min-h-screen fixed top-0 left-0 bg-white w-72 z-40" 
+            <nav id="navDrawer"
+                class="min-h-screen fixed top-0 left-0 bg-white w-72 z-40" 
                 :class="{flex: isNavDrawerOpen, 'flex-col':isNavDrawerOpen, hidden: !isNavDrawerOpen}">
                 <ul class="text-2xl pl-16 pt-24 lg:pt-36">
-                    <li class="py-4 border-r-4 border-[#028E7A]">
+                    <li @click="activeSection='hero'"
+                        class="py-4 border-r-4"
+                        :class="[activeSection == 'hero' ? 'border-[#028E7A]':'']">
                         <NuxtLink to="/#hero">hero</NuxtLink>
                     </li>
-                    <li class="py-4">
+                    <li @click="activeSection='projects'"
+                        class="py-4 border-r-4"
+                        :class="[activeSection == 'projects' ?'border-[#028E7A]':'']">
                         <NuxtLink to="/#project1">projects</NuxtLink>
                     </li>
-                    <li class="py-4">
+                    <li @click="activeSection='feedback'"
+                        class="py-4 border-r-4"
+                        :class="[activeSection == 'feedback' ?'border-[#028E7A]':'']">
                         <NuxtLink to="/#feedback">feedback</NuxtLink>
                     </li>
-                    <li class="py-4">
+                    <li @click="activeSection='footer'"
+                        class="py-4 border-r-4"
+                        :class="[activeSection == 'footer' ?'border-[#028E7A]':'']">
                         <NuxtLink to="/#footer">footer</NuxtLink>
                     </li>
                 </ul>
@@ -157,16 +166,33 @@
 </template>
 
 <script setup>
+import { useFeedbackStore } from '@/store/feedback_store';
+
+const feedbackStore = useFeedbackStore()
 const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
 const siteRating = ref(0)
-const emit = defineEmits(['siteRating'])
+const activeSection = ref('hero')
 
-watch(isRateMySite, async(status) => {
+watch(isRateMySite, async (status) => {
     if (status == false) {
+        feedbackStore.addSiteRating(siteRating)
         await navigateTo('/#feedback') 
-        emit('siteRating', siteRating)
     }
 })
 
+
 </script>
+
+<style scoped>
+@keyframes navDrawerReveal {
+  from {transform: translateX(-200px);}
+  to {transform: translateX(0px);}
+}
+#navDrawer {
+    transform: translateX(-1000px); 
+    animation-name: navDrawerReveal;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+</style>

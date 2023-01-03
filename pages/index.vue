@@ -27,7 +27,8 @@
                     <NuxtLink to="/#project1"
                         class="btn btn-transparent-noborder order-first md:order-last md:btn-green md:p-3">
                         <span class="btn btn-blue rounded md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
-                        <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"/>&nbsp;Explore my work</span>
+                        <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"
+                            class="animate-bounce"/>&nbsp;Explore my work</span>
                     </NuxtLink>
                     <button class="btn btn-transparent-noborder order-first invisible">
                         resume&nbsp;<Icon name="material-symbols:download-rounded" color="#313131"/>
@@ -73,7 +74,7 @@
         </section>
 
         <section id="feedback"
-            class="min-h-screen flex flex-col items-center bg-feedback-illustration justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 xl:min-h-max">
+            class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 xl:min-h-max">
             <form class="m-4 lg:max-w-lg" name="feedback">
                 <input type="hidden" name="site_rating" :value="siteRating">{{ siteRating }}
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
@@ -96,6 +97,9 @@
 </template>
 
 <script setup>
+import { storeToRefs } from 'pinia';
+import { useFeedbackStore } from '@/store/feedback_store';
+
 const projects = ref([
     { 
     id:1, 
@@ -174,8 +178,7 @@ const projects = ref([
     }
     },
 ])
-
-const siteRating = ref(0)
+const { siteRating } = storeToRefs(useFeedbackStore())
 
 </script>
 
