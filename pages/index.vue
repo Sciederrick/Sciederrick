@@ -41,7 +41,7 @@
         </section>
 
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-28 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
@@ -74,7 +74,7 @@
         </section>
 
         <section id="feedback"
-            class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 xl:min-h-max">
+            class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <form class="m-4 lg:max-w-lg" name="feedback">
                 <input type="hidden" name="site_rating" :value="siteRating">{{ siteRating }}
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
@@ -97,13 +97,13 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useFeedbackStore } from '@/store/feedback_store';
+// import { storeToRefs } from 'pinia';
+// import { useFeedbackStore } from '@/store/feedback_store';
 
 const projects = ref([
     { 
     id:1, 
-    title:'lorem ipsum', 
+    title:'sheng dictionary', 
     category:'fintech', 
     background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
     target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
@@ -178,7 +178,8 @@ const projects = ref([
     }
     },
 ])
-const { siteRating } = storeToRefs(useFeedbackStore())
+// const { siteRating = 0 } = storeToRefs(useFeedbackStore())
+const siteRating = ref(0)
 
 </script>
 
