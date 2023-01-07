@@ -7,7 +7,7 @@
                 <Icon name="mdi:android-studio" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else-if="heroActiveHeadline == 1"/>
                 <Icon name="grommet-icons:article" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else/>
                 <ul class="list-none ml-8 md:flex md:flex-row">
-                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">01</span>&nbsp;&nbsp;mobile app(s)</li>
+                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">02</span>&nbsp;&nbsp;mobile app(s)</li>
                     <li class="text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</li>
                     <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">03</span>&nbsp;&nbsp;article(s)</li>
                 </ul>
@@ -184,7 +184,7 @@ const siteRating = feedbackStore.siteRating
 const heroActiveHeadline = ref(0)
 const heroHeadlines = ref([
     "02 design sample(s)",
-    "01 mobile app(s)",
+    "02 mobile app(s)",
     "03 article(s)"
 ])
 
