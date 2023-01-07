@@ -3,11 +3,13 @@
         <section id="hero"
             class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4">
-                <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8"/>
+                <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-if="heroActiveHeadline == 0"/>
+                <Icon name="mdi:android-studio" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else-if="heroActiveHeadline == 1"/>
+                <Icon name="grommet-icons:article" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else/>
                 <ul class="list-none ml-8 md:flex md:flex-row">
-                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">05</span>&nbsp;&nbsp;mobile apps</li>
-                    <li class="text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design samples</li>
-                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">03</span>&nbsp;&nbsp;articles</li>
+                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">01</span>&nbsp;&nbsp;mobile app(s)</li>
+                    <li class="text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</li>
+                    <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">03</span>&nbsp;&nbsp;article(s)</li>
                 </ul>
             </article>
 
@@ -55,7 +57,7 @@
                         :class="[project.activeComponent() == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
-                <h2 class="text-2xl py-4">Cart app&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
+                <h2 class="text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
                 <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ project[project.activeComponent()] }}</p>
                 <button @click="project.navigateSections()"
                     class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
@@ -76,7 +78,7 @@
         <section id="feedback"
             class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <form class="m-4 lg:max-w-lg" name="feedback">
-                <input type="hidden" name="site_rating" :value="siteRating"><span v-if="siteRating > 0">{{ siteRating }}&nbsp;star</span>
+                <input type="hidden" name="site_rating" :value="siteRating"><span v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</span>
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
@@ -99,20 +101,19 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import { useFeedbackStore } from '@/store/feedback_store';
+import { onMounted } from 'vue';
 
 const projects = ref([
     { 
     id:1, 
     title:'sheng dictionary', 
     category:'utility', 
-    background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
-    target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
+    background:'This is a utility application inspired by the need to keep tabs with street lingo which might crucial when interacting with informals on the streets.',
+    target:'The youth, politicians looking to blend in, or anyone seeking to interact with the youth from downtown', 
     features:[
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum'
+        'sheng words',
+        'sheng idioms',
+        'games to make things interesting',
     ],
     image: null,
     activeComponentId: 0,
@@ -141,16 +142,15 @@ const projects = ref([
     },
     { 
     id:2, 
-    title:'lorem ipsum', 
+    title:'shopping list application', 
     category:'portfolio', 
-    background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
-    target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
+    background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
+    target:'Anyone with a smartphone seeking to improve their shopping experience.', 
     features:[
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum',
-        'lorem ipsum'
+        'lists compilation',
+        'commodity prices',
+        'active expenses calculator',
+        'list sharing with family & friends',
     ],
     image: null,
     activeComponentId: 0,
@@ -181,6 +181,24 @@ const projects = ref([
 
 const feedbackStore = storeToRefs(useFeedbackStore())
 const siteRating = feedbackStore.siteRating
+const heroActiveHeadline = ref(0)
+const heroHeadlines = ref([
+    "02 design sample(s)",
+    "01 mobile app(s)",
+    "03 article(s)"
+])
+
+function rotateActiveHeadline() {
+    if (heroActiveHeadline.value < 3)
+        heroActiveHeadline.value++
+    else
+        heroActiveHeadline.value = 0
+}
+
+onMounted(() => {
+    setInterval(() => rotateActiveHeadline(), 10000)
+})
+
 
 </script>
 

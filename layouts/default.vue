@@ -172,7 +172,7 @@ import { useFeedbackStore } from '@/store/feedback_store';
 const feedbackStore = storeToRefs(useFeedbackStore())
 const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
-const siteRating = ref(5)
+const siteRating = ref(0)
 const activeSection = ref('hero')
 watch(isRateMySite, async (status) => {
     if (status == false) {
