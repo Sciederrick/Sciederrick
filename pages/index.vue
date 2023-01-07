@@ -142,7 +142,7 @@ const projects = ref([
     },
     { 
     id:2, 
-    title:'shopping list application', 
+    title:'shopping app', 
     category:'portfolio', 
     background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
     target:'Anyone with a smartphone seeking to improve their shopping experience.', 
@@ -196,7 +196,7 @@ function rotateActiveHeadline() {
 }
 
 onMounted(() => {
-    setInterval(() => rotateActiveHeadline(), 10000)
+    // setInterval(() => rotateActiveHeadline(), 10000)
 })
 
 
