@@ -166,17 +166,17 @@
 </template>
 
 <script setup>
-// import { useFeedbackStore } from '@/store/feedback_store';
+import { storeToRefs } from 'pinia';
+import { useFeedbackStore } from '@/store/feedback_store';
 
-// const feedbackStore = useFeedbackStore()
+const feedbackStore = storeToRefs(useFeedbackStore())
 const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
-const siteRating = ref(0)
+const siteRating = ref(5)
 const activeSection = ref('hero')
-
 watch(isRateMySite, async (status) => {
     if (status == false) {
-        // feedbackStore.addSiteRating(siteRating)
+        feedbackStore.siteRating.value = siteRating        
         await navigateTo('/#feedback') 
     }
 })

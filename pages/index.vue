@@ -76,7 +76,7 @@
         <section id="feedback"
             class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <form class="m-4 lg:max-w-lg" name="feedback">
-                <input type="hidden" name="site_rating" :value="siteRating">{{ siteRating }}
+                <input type="hidden" name="site_rating" :value="siteRating"><span v-if="siteRating > 0">{{ siteRating }}&nbsp;star</span>
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
@@ -97,14 +97,14 @@
 </template>
 
 <script setup>
-// import { storeToRefs } from 'pinia';
-// import { useFeedbackStore } from '@/store/feedback_store';
+import { storeToRefs } from 'pinia';
+import { useFeedbackStore } from '@/store/feedback_store';
 
 const projects = ref([
     { 
     id:1, 
     title:'sheng dictionary', 
-    category:'fintech', 
+    category:'utility', 
     background:'I lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
     target:'I target lorem proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.', 
     features:[
@@ -178,8 +178,9 @@ const projects = ref([
     }
     },
 ])
-// const { siteRating = 0 } = storeToRefs(useFeedbackStore())
-const siteRating = ref(0)
+
+const feedbackStore = storeToRefs(useFeedbackStore())
+const siteRating = feedbackStore.siteRating
 
 </script>
 

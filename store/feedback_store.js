@@ -1,13 +1,17 @@
 import { defineStore } from 'pinia'
 
-export const useFeedbackStore = defineStore('FeedbackStore', () => {
-    let siteRating = ref(0)
 
-    function addSiteRating(rating) {
-        siteRating = rating
-    }
-})
+export const useFeedbackStore = defineStore({
+    id: 'feedback-store',
+    state: () => {
+      return {
+        siteRating: 0,
+      }
+    },
+    actions: {
+        addSiteRating(rating) {
+            this.siteRating = rating
+        }
+    },
 
-if (import.meta.hot) {
-    import.meta.hot.accept(acceptHMRUpdate(useFeedbackStore, import.meta.hot));
-}
+  })
