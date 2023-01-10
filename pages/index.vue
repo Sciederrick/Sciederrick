@@ -58,7 +58,7 @@
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
                 <h2 class="text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
-                <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ project[project.activeComponent()] }}</p>
+                <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
                 <button @click="project.navigateSections()"
                     class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
                     next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
