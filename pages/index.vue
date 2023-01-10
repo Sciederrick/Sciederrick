@@ -77,7 +77,7 @@
 
         <section id="feedback"
             class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
-            <form class="m-4 lg:max-w-lg" name="feedback" data-netlify="true">
+            <form class="m-4 lg:max-w-lg" name="feedback" method="POST" data-netlify="true">
                 <input type="hidden" name="site_rating" :value="siteRating"><span v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</span>
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
