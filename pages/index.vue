@@ -77,25 +77,23 @@
 
         <section id="feedback"
             class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
-            <form class="m-4 lg:max-w-lg" 
-                name="feedback" 
-                method="POST" 
-                data-netlify-honeypot="bot-field"
-                data-netlify="true"
-                netlify>
+            <div class="m-4 lg:max-w-lg">
                 <input value="feedback" name="form-name" type="hidden" />
                 <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
                 <input name="site_rating" :value="siteRating" class="invisible"/>
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
-                    <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
+                    <input v-model="feedbackText"
+                        type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
-                    <button type="submit"
-                        class="btn btn-blue w-full mx-auto rounded-sm md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">submit <span class="md:hidden">&nbsp;feedback</span></button>
+                    <a :href="'mailto:derrickmbarani@gmail.com?subject=Your portfolio site feedback ('+siteRating+')&body='+feedbackText" target="_top"
+                        class="btn btn-blue w-full mx-auto rounded-sm md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
+                        submit <span class="md:hidden">&nbsp;feedback</span>
+                    </a>
 
                 </div>
 
-            </form>
+            </div>
 
             <div class="order-first md:order-last md:m-16">
                 <img src="~/assets/images/undraw_quick_chat_re_bit5.svg" alt="">
@@ -185,6 +183,8 @@ const projects = ref([
     }
     },
 ])
+
+const feedbackText = ref('')
 
 const feedbackStore = storeToRefs(useFeedbackStore())
 const siteRating = feedbackStore.siteRating
