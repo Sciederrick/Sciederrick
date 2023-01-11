@@ -83,7 +83,7 @@
                 data-netlify-honeypot="bot-field"
                 data-netlify="true"
                 netlify>
-                <input name="form-name" value="feedback" type="hidden" />
+                <input value="feedback" name="form-name" type="hidden" />
                 <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
                 <input name="site_rating" :value="siteRating" class="invisible"/>
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
