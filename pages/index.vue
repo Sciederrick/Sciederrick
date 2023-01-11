@@ -87,7 +87,8 @@
                     Don’t fill this out if you’re human: <input name="bot-field" />
                 </label>
                 </p>
-                <input name="site_rating" :value="siteRating" class="invisible"><span v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</span>
+                <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
+                <input name="site_rating" :value="siteRating" class="invisible">
                 <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
