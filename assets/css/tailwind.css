@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'AndikaBoldItalic';
     src: local("fonts"),
-     url(~/assets/fonts/NovaSquare-BoldItalic.ttf) format("truetype");
+     url(~/assets/fonts/Andika-BoldItalic.ttf) format("truetype");
 }
 
 body {
