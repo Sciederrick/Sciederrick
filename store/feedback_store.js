@@ -9,9 +9,9 @@ export const useFeedbackStore = defineStore({
       }
     },
     actions: {
-        addSiteRating(rating) {
-            this.siteRating = rating
-        }
+      addSiteRating(rating) {
+          this.siteRating = rating
+      }
     },
 
   })
