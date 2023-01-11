@@ -87,7 +87,7 @@
                         type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
                         class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
                     <a :href="'mailto:derrickmbarani@gmail.com?subject=Your portfolio site feedback ('+siteRating+')&body='+feedbackText" target="_top"
-                        class="btn btn-blue w-full mx-auto rounded-sm md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
+                        class="btn btn-blue w-full mx-auto rounded-sm text-center md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
                         submit <span class="md:hidden">&nbsp;feedback</span>
                     </a>
 
