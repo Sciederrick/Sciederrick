@@ -1,7 +1,7 @@
 <template>
     <div class="relative lg:container lg:mx-auto">
         <header>        
-            <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:top-0 md:mt-6">
+            <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:left-0 md:top-0 md:mt-6 lg:px-16">
                 <button @click="isNavDrawerOpen = !isNavDrawerOpen"
                     class="fixed bottom-0 left-0 m-4 z-20 btn btn-transparent-noborder md:mt-6">
                     <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
