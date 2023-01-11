@@ -3,14 +3,47 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'NovaSquare';
+    font-family: 'AndikaBold';
     src: local("fonts"),
-     url(~/assets/fonts/NovaSquare-Regular.ttf) format("truetype");
+     url(~/assets/fonts/Andika-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'AndikaRegular';
+    src: local("fonts"),
+     url(~/assets/fonts/Andika-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'AndikaItalic';
+    src: local("fonts"),
+     url(~/assets/fonts/Andika-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'AndikaBoldItalic';
+    src: local("fonts"),
+     url(~/assets/fonts/NovaSquare-BoldItalic.ttf) format("truetype");
 }
 
 body {
-    font-family: 'NovaSquare', sans-serif;
-    color: #313131;
+    font-family: 'AndikaRegular', sans-serif;
+    color: #212427;
+}
+
+.text-bold {
+    font-family: 'AndikaBold', sans-serif;
+    color: #212427;
+}
+
+.text-italic {
+    font-family: 'AndikaItalic', sans-serif;
+    color: #212427;
+}
+
+.text-bold-italic {
+    font-family: 'AndikaBoldItalic', sans-serif;
+    color: #212427;
 }
 
 @layer components {
@@ -26,8 +59,8 @@ body {
         @apply  rounded-3xl  bg-[#00A991] text-white hover:bg-[#028E7A]; 
     }
 
-    .btn-blue {
-        @apply  rounded-lg  bg-[#7B9EB6] text-white m-0.5 px-4 hover:bg-[#61849C]; 
+    .btn-green-sm {
+        @apply  rounded-lg  bg-[#00A991] text-white m-0.5 px-4 hover:bg-[#61849C]; 
     }
 
     .btn-transparent-noborder {

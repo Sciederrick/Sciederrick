@@ -1,14 +1,14 @@
 <template>
     <main>
         <section id="hero"
-            class="min-h-screen md:bg-[#ededed] pt-20 pb-16 md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
+            class="pt-20 pb-16 md:min-h-screen md:bg-[#ededed] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4">
                 <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-if="heroActiveHeadline == 0"/>
                 <Icon name="mdi:android-studio" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else-if="heroActiveHeadline == 1"/>
                 <Icon name="grommet-icons:article" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else/>
                 <ul class="list-none ml-8 md:flex md:flex-row">
                     <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">02</span>&nbsp;&nbsp;mobile app(s)</li>
-                    <li class="text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</li>
+                    <li class="text-bold text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</li>
                     <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">03</span>&nbsp;&nbsp;article(s)</li>
                 </ul>
             </article>
@@ -16,23 +16,24 @@
             <article class="bg-[#e1e1e1] rounded-xl pb-20 md:px-0 md:bg-transparent">
                 <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-10">
                     <div>
-                        <Icon name="mdi:hand-wave-outline" color="#313131" size="32px"/>
+                        <Icon name="gg:quote" color="#313131" size="32px"/>
                     </div>
-                    <p class="p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="text-italic p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
+
                     <div class="w-10 h-10 rounded-full absolute -top-6 right-4 overflow-hidden md:w-8 md:h-8 md:left-12 md:border md:border-[#808080]">
                         <img src="~/assets/images/profile_picture.png" alt="my passport photo" class="object-fit">
                     </div>
 
                 </div>
-                <div class="flex flex-row justify-between p-2">
+                <div class="flex flex-row justify-between p-2 md:px-12">
                     <NuxtLink to="/#project1"
-                        class="btn btn-transparent-noborder order-first md:order-last md:btn-green md:p-3">
+                        class="btn btn-transparent-noborder md:btn-green md:p-3">
                         <span class="btn btn-blue rounded md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
-                        <span class="hidden md:inline"><Icon name="material-symbols:keyboard-double-arrow-down"
-                            class="animate-bounce"/>&nbsp;Explore my work</span>
+                        <span class="hidden md:inline">
+                            &nbsp;&nbsp;Explore my work&nbsp;<Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;</span>
                     </NuxtLink>
-                    <button class="btn btn-transparent-noborder order-first invisible">
+                    <button class="btn btn-transparent-noborder invisible">
                         resume&nbsp;<Icon name="material-symbols:download-rounded" color="#313131"/>
                     </button>
                 </div>
@@ -43,7 +44,7 @@
         </section>
 
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="min-h-screen pt-20 pb-16 md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="pt-20 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
@@ -57,7 +58,7 @@
                         :class="[project.activeComponent() == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
-                <h2 class="text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
+                <h2 class="text-bold text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
                 <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
                 <button @click="project.navigateSections()"
                     class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
@@ -76,7 +77,7 @@
         </section>
 
         <section id="feedback"
-            class="min-h-screen flex flex-col items-center justify-center py-24 bg-[#ededed] md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
+            class="flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <div class="m-4 lg:max-w-lg">
                 <input value="feedback" name="form-name" type="hidden" />
                 <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
@@ -85,9 +86,9 @@
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input v-model="feedbackText"
                         type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
-                        class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#7B9EB6] focus:ring-2 focus:ring-[#7B9EB6] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
+                        class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#00A991] focus:ring-2 focus:ring-[#00A991] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
                     <a :href="'mailto:derrickmbarani@gmail.com?subject=Your portfolio site feedback ('+siteRating+')&body='+feedbackText" target="_top"
-                        class="btn btn-blue w-full mx-auto rounded-sm text-center md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
+                        class="btn btn-green-sm w-full mx-auto rounded-sm text-center md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
                         submit <span class="md:hidden">&nbsp;feedback</span>
                     </a>
 
