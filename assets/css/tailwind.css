@@ -56,11 +56,11 @@ body {
     }
 
     .btn-green {
-        @apply  rounded-3xl  bg-[#00A991] text-white hover:bg-[#028E7A]; 
+        @apply  rounded-3xl  bg-[#00A991] text-white hover:bg-[#007261]; 
     }
 
     .btn-green-sm {
-        @apply  rounded-lg  bg-[#00A991] text-white m-0.5 px-4 hover:bg-[#61849C]; 
+        @apply  rounded-lg  bg-[#00A991] text-white m-0.5 px-4 hover:bg-[#007261]; 
     }
 
     .btn-transparent-noborder {
