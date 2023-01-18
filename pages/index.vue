@@ -3,14 +3,23 @@
         <section id="hero"
             class="pt-20 pb-16 md:min-h-screen md:bg-[#ededed] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4">
-                <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-if="heroActiveHeadline == 0"/>
+                <!-- <Icon name="simple-icons:figma" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-if="heroActiveHeadline == 0"/>
                 <Icon name="mdi:android-studio" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else-if="heroActiveHeadline == 1"/>
-                <Icon name="grommet-icons:article" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else/>
-                <ul class="list-none ml-8 md:flex md:flex-row">
+                <Icon name="grommet-icons:article" color="#313131" size="32px" class="ml-6 md:ml-8 md:-mb-8" v-else/> -->
+                <!-- <ul class="list-none ml-8 flex flex-col md:flex-row">
                     <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">02</span>&nbsp;&nbsp;mobile app(s)</li>
                     <li class="text-bold text-4xl md:text-3xl py-2 md:ml-12 md:order-first md:pt-4 lg:text-4xl"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</li>
                     <li class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"><span class="underline">03</span>&nbsp;&nbsp;article(s)</li>
-                </ul>
+                </ul> -->
+                <!-- <div class="ml-8 flex flex-col md:flex-row">
+                    <div class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"
+                        :class="order[0]"><span class="underline">02</span>&nbsp;&nbsp;mobile app(s)</div>
+                    <div class="text-2xl ml-4 py-2 md:text-3xl md:ml-12 md:order-first md:pt-4 lg:text-4xl"
+                        :class="order[1]"><span class="underline">03</span>&nbsp;&nbsp;design sample(s)</div>
+                    <div class="text-2xl ml-4 py-2 md:pl-4 md:text-xl lg:text-2xl"
+                        :class="order[2]"><span class="underline">03</span>&nbsp;&nbsp;article(s)</div>
+                </div> -->
+                <h1 class="text-bold text-2xl text-center mx-4 pb-8 md:text-left md:mx-8">:-&nbsp;Are you looking for a software developer for your website or an android mobile application?</h1>
             </article>
 
             <article class="bg-[#e1e1e1] rounded-xl pb-20 md:px-0 md:bg-transparent">
@@ -190,21 +199,20 @@ const feedbackText = ref('')
 const feedbackStore = storeToRefs(useFeedbackStore())
 const siteRating = feedbackStore.siteRating
 const heroActiveHeadline = ref(0)
-const heroHeadlines = ref([
-    "02 design sample(s)",
-    "02 mobile app(s)",
-    "03 article(s)"
-])
+const order = ref(['order-1', 'order-2 text-bold text-4xl ml-0', 'order-3'])
 
 function rotateActiveHeadline() {
-    if (heroActiveHeadline.value < 3)
-        heroActiveHeadline.value++
-    else
-        heroActiveHeadline.value = 0
+    var first = order.value[0]
+    var second = order.value[1]
+    var third = order.value[2]
+    order.value[0] = second
+    order.value[1] = third
+    order.value[2] = first
+    console.log(order.value)
 }
 
 onMounted(() => {
-    // setInterval(() => rotateActiveHeadline(), 10000)
+    setInterval(() => rotateActiveHeadline(), 10000)
 })
 
 
