@@ -3,7 +3,7 @@
         <section id="hero"
             class="pt-20 pb-16 md:min-h-screen md:bg-[#ededed] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-bold text-2xl text-center mx-4 pb-8 md:text-left md:mx-8">:-&nbsp;Are you looking for a software developer for your website or an android mobile application?</h1>
+                <h1 class="text-bold text-2xl text-center mx-4 pb-16 md:text-left md:mx-8">:-&nbsp;Are you looking for a software developer for your website or an android mobile application?</h1>
             </article>
 
             <article class="bg-[#e1e1e1] rounded-xl pb-20 md:px-0 md:bg-transparent">
