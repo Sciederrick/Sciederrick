@@ -123,7 +123,7 @@ const projects = ref([
     features:[
         'sheng words',
         'sheng idioms',
-        'games to make things interesting',
+        'word games and learderboards will be released in version 2',
     ],
     image: "sheng_dictionary",
     activeComponentId: 0,
