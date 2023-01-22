@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between my-10 pl-4 lg:px-16">
+    <div class="flex justify-between my-10 px-4 lg:px-16">
         <div class="line w-[75px] animate md:w-[120px]"></div>
         <div class="line w-[75px] animate md:w-[120px]"></div>
         <div class="animate w-[120px] h-[40px] rounded bg-[#777] md:h-[50px] md:w-[150px] md:rounded-2xl"></div>
