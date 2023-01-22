@@ -118,7 +118,7 @@ const projects = ref([
     id:1, 
     title:'sheng dictionary', 
     category:'utility', 
-    background:'This is a utility application inspired by the need to keep tabs with street language (slang) which might crucial when interacting with the youth in the city.',
+    background:'This is a utility application inspired by the need to keep tabs with the Kenyan informal street language (slang).',
     target:'The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
     features:[
         'sheng words',
