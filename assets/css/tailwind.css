@@ -31,6 +31,11 @@ body {
     color: #212427;
 }
 
+.text-regular {
+    font-family: 'AndikaRegular', sans-serif;
+    color: #212427;
+}
+
 .text-bold {
     font-family: 'AndikaBold', sans-serif;
     color: #212427;
