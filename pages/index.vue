@@ -60,7 +60,7 @@
             </div>
             <div class="w-full h-96 border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
                 <div v-if="project.image != null">
-                    <img :src="~/assets/images/`${project.image}`" alt="project image" >
+                    <img :src="templateImages[project.image]" alt="project image" />
                 </div>
                 <div class="text-[#e1e1e1]" v-else>
                     <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
@@ -101,6 +101,17 @@
 import { storeToRefs } from 'pinia';
 import { useFeedbackStore } from '@/store/feedback_store';
 import { onMounted } from 'vue';
+import { filename } from 'pathe/utils';
+
+/**
+ * Work around for dynamic images with Vite because require() doesn't work
+ */
+let templateImages = ref()
+const glob = import.meta.glob('~/assets/images/*.png', { eager: true });
+const images = Object.fromEntries(
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+);
+templateImages.value = images
 
 const projects = ref([
     { 
@@ -114,7 +125,7 @@ const projects = ref([
         'sheng idioms',
         'games to make things interesting',
     ],
-    image: "sheng_dictionary.png",
+    image: "sheng_dictionary",
     activeComponentId: 0,
     components: ['background','target','features'],
     activeComponent: function() {
