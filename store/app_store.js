@@ -6,7 +6,8 @@ export const useAppStore = defineStore({
     state: () => {
       return {
         siteRating: 0,
-        heroLoading: true
+        heroLoading: true,
+        footerLoading: true
       }
     },
     actions: {

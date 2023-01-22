@@ -76,12 +76,13 @@
             <slot />
         </div>
     
-        <footer class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">
+        <footer v-if="!footerLoading"
+            class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">
             <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
-                <section class="py-4 my-2 px-4">
-                    <p class="pb-6 md:text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
+                <section class="py-4 my-2 mb-6 px-4">
+                    <p class="pb-8 md:text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
                     <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent -ml-1 rounded md:text-lg md:rounded-3xl">Let's Talk</a>
+                    class="btn btn-transparent -ml-1 rounded md:text-lg md:rounded-3xl md:px-6">Let's Talk</a>
         
                 </section>
         
@@ -161,6 +162,7 @@
             </section>
     
         </footer>
+        <FooterShimmerEffect v-else/>
 
     </div>
 
@@ -176,6 +178,7 @@ const isRateMySite = ref(false)
 const siteRating = ref(0)
 const activeSection = ref('hero')
 const navLoading = appStore.heroLoading
+const footerLoading = appStore.footerLoading
 
 watch(isRateMySite, async (status) => {
     if (status == false) {

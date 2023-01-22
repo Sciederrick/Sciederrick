@@ -197,7 +197,10 @@ const siteRating = appStore.siteRating
 const heroLoading = appStore.heroLoading
 
 onMounted(() => {
-    setInterval(() => appStore.heroLoading.value = false, 4000)
+    setInterval(() => {
+        appStore.heroLoading.value = false
+        appStore.footerLoading.value = false
+    }, 4000)
 })
 
 
