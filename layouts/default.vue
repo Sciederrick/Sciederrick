@@ -1,6 +1,6 @@
 <template>
     <div class="relative lg:container lg:mx-auto">
-        <header>        
+        <header v-if="!navLoading">        
             <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:left-0 md:top-0 md:mt-6 lg:px-16">
                 <button @click="isNavDrawerOpen = !isNavDrawerOpen"
                     class="fixed bottom-0 left-0 m-4 z-20 btn btn-transparent-noborder md:mt-6">
@@ -17,6 +17,7 @@
     
     
         </header>
+        <NavShimmerEffect v-else/>
     
         <div>
             <!-- navigation drawer-->
@@ -167,16 +168,18 @@
 
 <script setup>
 import { storeToRefs } from 'pinia';
-import { useFeedbackStore } from '@/store/feedback_store';
+import { useAppStore } from '~~/store/app_store';
 
-const feedbackStore = storeToRefs(useFeedbackStore())
+const appStore = storeToRefs(useAppStore())
 const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
 const siteRating = ref(0)
 const activeSection = ref('hero')
+const navLoading = appStore.heroLoading
+
 watch(isRateMySite, async (status) => {
     if (status == false) {
-        feedbackStore.siteRating.value = siteRating        
+        appStore.siteRating.value = siteRating        
         await navigateTo('/#feedback') 
     }
 })

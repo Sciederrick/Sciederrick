@@ -1,6 +1,6 @@
 <template>
-    <main>
-        <section id="hero"
+    <main>       
+        <section id="hero" v-if="!heroLoading"
             class="pt-20 pb-16 md:min-h-screen md:bg-[#ededed] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4 xl:mt-4 2xl:mt-8">
                 <h1 class="text-bold text-2xl text-center mx-4 pb-16 md:text-left md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
@@ -35,7 +35,7 @@
             </article>
             
         </section>
-
+        <HeroShimmerEffect v-else/>        
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
             class="pt-20 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
@@ -99,7 +99,7 @@
 
 <script setup>
 import { storeToRefs } from 'pinia';
-import { useFeedbackStore } from '@/store/feedback_store';
+import { useAppStore } from '~~/store/app_store';
 import { onMounted } from 'vue';
 import { filename } from 'pathe/utils';
 
@@ -112,6 +112,7 @@ const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 );
 templateImages.value = images
+
 
 const projects = ref([
     { 
@@ -191,23 +192,12 @@ const projects = ref([
 
 const feedbackText = ref('')
 
-const feedbackStore = storeToRefs(useFeedbackStore())
-const siteRating = feedbackStore.siteRating
-const heroActiveHeadline = ref(0)
-const order = ref(['order-1', 'order-2 text-bold text-4xl ml-0', 'order-3'])
-
-function rotateActiveHeadline() {
-    var first = order.value[0]
-    var second = order.value[1]
-    var third = order.value[2]
-    order.value[0] = second
-    order.value[1] = third
-    order.value[2] = first
-    console.log(order.value)
-}
+const appStore = storeToRefs(useAppStore())
+const siteRating = appStore.siteRating
+const heroLoading = appStore.heroLoading
 
 onMounted(() => {
-    setInterval(() => rotateActiveHeadline(), 10000)
+    setInterval(() => appStore.heroLoading.value = false, 4000)
 })
 
 
