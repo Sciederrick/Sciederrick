@@ -2,79 +2,23 @@
     <div class="relative lg:container lg:mx-auto">
         <header v-if="!navLoading">        
             <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:left-0 md:top-0 md:mt-6 lg:px-16">
-                <button @click="isNavDrawerOpen = !isNavDrawerOpen"
-                    class="fixed bottom-0 left-0 m-4 z-20 btn btn-transparent-noborder md:mt-6">
-                    <Icon name="ci:menu-alt-05" size="48px" color="#313131" />
-                </button>
-                <NuxtLink :to="`/#feedback`"
-                    class="m-2 underline md:mx-6 lg:mx-8">feedback</NuxtLink>
-                <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
-                    class="m-2 underline md:mx-6 lg:mx-8">blog</a>
+                <div>
+                    <NuxtLink :to="`/#feedback`"
+                        class="m-2 underline md:mx-6 lg:mx-8">Feedback</NuxtLink>|
+                    <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
+                        class="m-2 underline md:mx-6 lg:mx-8">Blog</a>
+
+                </div>
                 <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">message me</a>
+                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Contact me for work</a>
     
             </nav>
-    
-    
+        
         </header>
         <NavShimmerEffect v-else/>
     
-        <div>
-            <!-- navigation drawer-->
-            <nav id="navDrawer"
-                class="min-h-screen fixed top-0 left-0 bg-white w-72 z-40" 
-                :class="{flex: isNavDrawerOpen, 'flex-col':isNavDrawerOpen, hidden: !isNavDrawerOpen}">
-                <ul class="text-2xl pl-16 pt-24 lg:pt-36">
-                    <li @click="activeSection='hero'"
-                        class="py-4 border-r-4"
-                        :class="[activeSection == 'hero' ? 'border-[#028E7A]':'']">
-                        <NuxtLink to="/#hero">hero</NuxtLink>
-                    </li>
-                    <li @click="activeSection='projects'"
-                        class="py-4 border-r-4"
-                        :class="[activeSection == 'projects' ?'border-[#028E7A]':'']">
-                        <NuxtLink to="/#project1">projects</NuxtLink>
-                    </li>
-                    <li @click="activeSection='feedback'"
-                        class="py-4 border-r-4"
-                        :class="[activeSection == 'feedback' ?'border-[#028E7A]':'']">
-                        <NuxtLink to="/#feedback">feedback</NuxtLink>
-                    </li>
-                    <li @click="activeSection='footer'"
-                        class="py-4 border-r-4"
-                        :class="[activeSection == 'footer' ?'border-[#028E7A]':'']">
-                        <NuxtLink to="/#footer">footer</NuxtLink>
-                    </li>
-                </ul>
-                <hr class="mt-6 lg:mt-16">
-                <ul class="py-2 flex pl-16">
-                    <li class="text-lg mr-4">
-                        <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
-                            <Icon name="mdi:linkedin" size="24px" color="#313131"/>
-                        </a>
-                    </li>
-                    <li class="text-lg mr-4">
-                        <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
-                            <Icon name="logos:google-developers" size="24px" color="#313131"/>
-                        </a>
-                    </li>
-                    <li class="text-lg mr-4">
-                        <a href="https://github.com/Sciederrick" target="_blank">
-                            <Icon name="uil:github" size="24px" color="#313131"/>
-                        </a>
-                    </li>
-                </ul>
-                <button @click="isNavDrawerOpen = !isNavDrawerOpen"
-                    class="absolute bottom-4 left-0 m-4 z-40 btn btn-transparent-noborder md:bottom-0 md:mt-6">
-                    <Icon name="line-md:arrow-close-left" size="48px" color="#313131" />
-                </button>
-                
-            </nav>
-    
-    
-            <!-- page content down here -->
-            <slot />
-        </div>
+        <!-- page content down here -->
+        <slot />
     
         <footer v-if="!footerLoading"
             class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">

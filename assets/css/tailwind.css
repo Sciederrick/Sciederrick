@@ -29,6 +29,7 @@
 body {
     font-family: 'AndikaRegular', sans-serif;
     color: #212427;
+    scroll-behavior: smooth;
 }
 
 h1 {
