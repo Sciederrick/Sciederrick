@@ -58,11 +58,11 @@
                     next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
 
             </div>
-            <div class="w-full h-96 border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
-                <div v-if="project.image != null">
-                    <img :src="templateImages[project.image]" alt="project image" />
-                </div>
-                <div class="text-[#e1e1e1]" v-else>
+            <div class="w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
+                
+                <img v-if="project.image != null" class="object-fill" 
+                    :src="templateImages[project.image]" alt="project image" />
+                <div class="h-96 text-[#e1e1e1]" v-else>
                     <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
                 </div>
 
