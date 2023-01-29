@@ -19,8 +19,13 @@
                     </p>
 
                 </div>
+                <a href="/pdf/Derrick-Mbarani.pdf"
+                    class="btn btn-transparent rounded ml-4 md:hidden" download="">
+                        &nbsp;&nbsp;download my resume&nbsp;
+                        <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
+                </a>
                 <NuxtLink to="/resume"
-                    class="btn btn-transparent rounded ml-4 md:border-none md:mx-12 md:rounded-3xl md:btn-green md:p-3 lg:shadow-lg">
+                    class="hidden md:inline-block md:btn md:ml-4 md:border-none md:mx-12 md:rounded-3xl md:btn-green md:p-3 lg:shadow-lg">
                         &nbsp;&nbsp;download my resume&nbsp;
                         <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
                 </NuxtLink>
