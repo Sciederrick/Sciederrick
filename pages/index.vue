@@ -2,34 +2,29 @@
     <main>       
         <section id="hero" v-if="!heroLoading"
             class="gradient-background pt-20 pb-16 md:min-h-screen md:bg-[#00A991] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
-            <article class="mb-16 md:pl-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-2xl text-center mx-4 pb-16 font-semibold md:text-left md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
+            <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
+                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
             </article>
 
             <article class="bg-[#fffff0] rounded-xl pb-20 md:px-0 md:bg-transparent">
+                <header>
+                    <hr class="hidden border border-[#313131] md:block"/>
+                    <h2 class="p-4 md:pl-12 font-semibold uppercase">About Derrick</h2>
+                </header>
                 <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-4">
                     <div>
-                        <Icon name="gg:quote" color="#313131" size="32px"/>
+                        <Icon name="gg:quote" color="#000" size="32px"/>
                     </div>
-                    <p class="p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="p-4 md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
 
-                    <div class="w-10 h-10 rounded-full absolute -top-6 right-4 overflow-hidden md:w-8 md:h-8 md:left-12 md:border md:border-[#808080]">
-                        <img src="~/assets/images/profile_picture.png" alt="my passport photo" class="object-fit">
-                    </div>
+                </div>
+                <NuxtLink to="/#project1"
+                    class="btn btn-transparent rounded ml-4 md:border-none md:mx-12 md:rounded-3xl md:btn-green md:p-3 lg:shadow-lg">
+                        &nbsp;&nbsp;download my resume&nbsp;
+                        <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
+                </NuxtLink>
 
-                </div>
-                <div class="flex flex-row justify-between p-2 md:px-12">
-                    <NuxtLink to="/#project1"
-                        class="btn btn-transparent-noborder md:btn-green md:p-3">
-                        <span class="btn btn-blue rounded md:hidden">see more&nbsp;<Icon name="mdi:chevron-double-right"/></span>
-                        <span class="hidden md:inline">
-                            &nbsp;&nbsp;Explore my work&nbsp;<Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;</span>
-                    </NuxtLink>
-                    <button class="btn btn-transparent-noborder invisible">
-                        resume&nbsp;<Icon name="material-symbols:download-rounded" color="#313131"/>
-                    </button>
-                </div>
 
 
             </article>
@@ -44,16 +39,16 @@
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
                         class="btn btn-transparent-noborder -ml-3"
-                        :class="[project.activeComponent() == 'background' ? '':'text-[#e1e1e1]']">BACKGROUND</button>
+                        :class="[project.activeComponent() == 'background' ? '':'text-[#999]']">BACKGROUND</button>
                     <button @click="project.activeComponentId=1"
                         class="btn btn-transparent-noborder" 
-                        :class="[project.activeComponent() == 'target' ? '':'text-[#e1e1e1]']">TARGET</button>
+                        :class="[project.activeComponent() == 'target' ? '':'text-[#999]']">TARGET</button>
                     <button @click="project.activeComponentId=2"
                         class="btn btn-transparent-noborder"                         
-                        :class="[project.activeComponent() == 'features' ? '':'text-[#e1e1e1]']">FEATURES</button>
+                        :class="[project.activeComponent() == 'features' ? '':'text-[#999]']">FEATURES</button>
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
-                <h2 class="text-bold text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
+                <h2 class="text-semibold text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
                 <button @click="project.navigateSections()"
                     class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">

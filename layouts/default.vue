@@ -1,7 +1,7 @@
 <template>
     <div class="lg:container lg:mx-auto">
         <header v-if="!navLoading" class="sticky top-0 inset-x-0 z-40 frosted-glass">        
-            <nav class="flex flex-row justify-between items-center my-10 mx-4 md:mt-6 lg:px-16">
+            <nav class="flex flex-row justify-between items-center my-10 mx-4 lg:my-2 lg:px-16">
                 <div>
                     <NuxtLink :to="`/#feedback`"
                         class="m-2 underline btn md:mx-6 lg:mx-8">Feedback</NuxtLink>|
@@ -26,7 +26,7 @@
                 <section class="py-4 my-2 mb-6 px-4">
                     <p class="pb-8 md:text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
                     <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent -ml-1">Let's Talk</a>
+                    class="btn btn-transparent -ml-1 rounded md:rounded-3xl">Let's Talk</a>
         
                 </section>
         

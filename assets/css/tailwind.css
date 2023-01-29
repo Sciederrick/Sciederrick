@@ -28,8 +28,9 @@
 
 body {
     font-family: 'AndikaRegular', sans-serif;
-    color: #000;
+    color: #212427;
     scroll-behavior: smooth;
+    background-color: #fffff0;
 }
 
 .gradient-background {
@@ -42,7 +43,7 @@ body {
 }
 
 h1 {
-    color: #fffff0!important;
+    color: #313131!important;
 }
 
 .text-regular {
@@ -67,7 +68,7 @@ h1 {
 
 @layer components {
     .btn {
-        @apply px-3 py-2 m-2 hover:font-bold;
+        @apply px-3 py-2 m-2 hover:font-bold hover:shadow-md;
     }
 
     .btn-transparent {
@@ -79,7 +80,7 @@ h1 {
     }
 
     .btn-green-sm {
-        @apply  rounded-lg  gradient-background text-white m-0.5 hover:bg-[#007261]; 
+        @apply  rounded-lg  gradient-background text-white m-0.5; 
     }
 
     .btn-transparent-noborder {
