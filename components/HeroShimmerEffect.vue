@@ -1,13 +1,15 @@
 <template>
     <div class="-mt-32 flex flex-col pt-40 items-center pb-16 md:min-h-screen lg:bg-[#c0c0c0] lg:pt-48">
-        <div class="w-5/6 pt-16 pb-8 md:py-0">
-            <div class="w-5/6 mx-auto line animate md:w-full"></div>
-            <div class="line animate md:w-[100px]"></div>
+        <div class="w-5/6 mb-16 pt-16 pb-8 md:pt-28">
+            <div class="w-5/6 mx-auto line animate"></div>
+            <div class="line animate mx-auto md:w-[400px]"></div>
+            <div class="line animate mx-auto md:hidden"></div>
+            <div class="line animate mx-auto md:hidden"></div>
             <div class="line animate w-5/6 mx-auto md:hidden"></div>
         </div>
 
-        <div class="w-5/6 mt-24 relative">
-            <div class="profilePic animate absolute top-2 right-0 md:static"></div>
+        <div class="w-5/6 pb-20 relative">
+          <div class="line animate w-[75px] md:w-[200px]"></div>
             <div class="my-16 md:m-16">
                 <div class="w-full line animate"></div>
                 <div class="w-full line animate"></div>
@@ -26,13 +28,6 @@
   margin-top: 20px;
   border-radius: 5px;
 }
-.profilePic {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background: #777;
-}
-
 
 .animate {
    animation : shimmer 2s infinite linear;
