@@ -21,7 +21,7 @@
         <slot />
     
         <footer v-if="!footerLoading"
-            class="lg:border lg:border-[#ededed] pt-16 lg:pb-8 lg:px-16" id="footer">
+            class="pt-16 gradient-background lg:border lg:border-[#ededed] lg:pb-8 lg:px-16" id="footer">
             <div class="md:pt-16 lg:flex lg:flex-row lg:justify-between lg:relative lg:pb-4">
                 <section class="py-4 my-2 mb-6 px-4">
                     <p class="pb-8 md:text-lg">I'm open to collaboration and hires.<br/> Lets build something great together.</p> 
@@ -40,17 +40,17 @@
                     <h2 class="text-lg pb-4 md:text-xl lg:underline">Contact</h2>
                     <p class="md:text-lg"><Icon name="carbon:email" color="#313131"/>&nbsp;derrickmbarani@gmail.com</p>
                     <ul class="pb-2 flex">
-                        <li class="mr-4 md:text-lg">
+                        <li class="ml-0 mr-8 my-4 md:text-lg">
                             <a href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
                                 <Icon name="mdi:linkedin" size="24px" color="#313131"/>
                             </a>
                         </li>
-                        <li class="mr-4 md:text-lg">
+                        <li class="ml-0 mr-8 my-4 md:text-lg">
                             <a href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
                                 <Icon name="logos:google-developers" size="24px" color="#313131"/>
                             </a>
                         </li>
-                        <li class="mr-4 md:text-lg">
+                        <li class="ml-0 mr-8 my-4 md:text-lg">
                             <a href="https://github.com/Sciederrick" target="_blank">
                                 <Icon name="uil:github" size="24px" color="#313131"/>
                             </a>
@@ -62,7 +62,7 @@
             </div>
     
             <section class="relative">
-                <hr class="pt-4"/>
+                <hr class="m-4 border-0.5 border-[#313131]"/>
                 <div class="flex justify-between items-center pb-4">
                     <p class="pl-2 text-sm md:text-base">
                         <span class="hidden lg:block">/Made from scratch with nuxt/</span>
@@ -117,10 +117,8 @@ import { storeToRefs } from 'pinia';
 import { useAppStore } from '~~/store/app_store';
 
 const appStore = storeToRefs(useAppStore())
-const isNavDrawerOpen = ref(false)
 const isRateMySite = ref(false)
 const siteRating = ref(0)
-const activeSection = ref('hero')
 const navLoading = appStore.heroLoading
 const footerLoading = appStore.footerLoading
 
