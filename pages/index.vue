@@ -19,19 +19,16 @@
                     </p>
 
                 </div>
-                <NuxtLink to="/#project1"
+                <NuxtLink to="/resume"
                     class="btn btn-transparent rounded ml-4 md:border-none md:mx-12 md:rounded-3xl md:btn-green md:p-3 lg:shadow-lg">
                         &nbsp;&nbsp;download my resume&nbsp;
                         <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
                 </NuxtLink>
-
-
-
             </article>
             
         </section>
-        <HeroShimmerEffect v-else/>        
-
+        <HeroShimmerEffect v-else/>    
+        
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
             class="pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div v-if="!projectLoading"
@@ -117,7 +114,6 @@ const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 );
 templateImages.value = images
-
 
 const projects = ref([
     { 

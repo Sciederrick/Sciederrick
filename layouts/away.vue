@@ -3,6 +3,8 @@
         <header v-if="!navLoading" class="sticky top-0 inset-x-0 z-40 frosted-glass">        
             <nav class="flex flex-row justify-between items-center my-10 mx-4 lg:my-2 lg:px-16">
                 <div>
+                    <NuxtLink :to="`/`"
+                        class="m-2 underline btn md:mx-6 lg:mx-8">Home</NuxtLink>|
                     <NuxtLink :to="`/#feedback`"
                         class="m-2 underline btn md:mx-6 lg:mx-8">Feedback</NuxtLink>|
                     <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
@@ -15,7 +17,7 @@
             </nav>
         
         </header>
-        <NavShimmerEffect v-else/>
+        <Nav2ShimmerEffect v-else/>
     
         <!-- page content down here -->
         <slot />
@@ -131,4 +133,5 @@ watch(isRateMySite, async (status) => {
 
 
 </script>
+
 
