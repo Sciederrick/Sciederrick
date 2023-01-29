@@ -31,7 +31,8 @@ body {
     color: #000;
     scroll-behavior: smooth;
 }
-.hero-background {
+
+.gradient-background {
     /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
     background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
 }
@@ -62,7 +63,7 @@ h1 {
 
 @layer components {
     .btn {
-        @apply px-3 py-2 m-2 text-sm hover:font-bold;
+        @apply px-3 py-2 m-2 hover:font-bold;
     }
 
     .btn-transparent {
@@ -70,11 +71,11 @@ h1 {
     }
 
     .btn-green {
-        @apply  rounded-3xl  bg-[#00A991] text-white hover:bg-[#007261]; 
+        @apply  rounded-3xl  gradient-background text-white hover:bg-[#007261]; 
     }
 
     .btn-green-sm {
-        @apply  rounded-lg  bg-[#00A991] text-white m-0.5 px-4 hover:bg-[#007261]; 
+        @apply  rounded-lg  gradient-background text-white m-0.5 hover:bg-[#007261]; 
     }
 
     .btn-transparent-noborder {
