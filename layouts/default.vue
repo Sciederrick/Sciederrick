@@ -1,7 +1,7 @@
 <template>
-    <div class="relative lg:container lg:mx-auto">
-        <header v-if="!navLoading">        
-            <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:left-0 md:top-0 md:mt-6 lg:px-16">
+    <div class="lg:container lg:mx-auto">
+        <header v-if="!navLoading" class="sticky top-0 inset-x-0 z-40 frosted-glass">        
+            <nav class="flex flex-row justify-between items-center my-10 mx-4 md:mt-6 lg:px-16">
                 <div>
                     <NuxtLink :to="`/#feedback`"
                         class="m-2 underline btn md:mx-6 lg:mx-8">Feedback</NuxtLink>|

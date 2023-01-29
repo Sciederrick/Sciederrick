@@ -37,6 +37,10 @@ body {
     background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
 }
 
+.frosted-glass {
+    backdrop-filter: blur(15px);
+}
+
 h1 {
     color: #fffff0!important;
 }
