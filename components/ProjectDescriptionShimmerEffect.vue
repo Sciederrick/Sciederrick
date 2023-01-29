@@ -1,19 +1,20 @@
 <template>
   <div class="w-full p-4 md:w-1/2 lg:max-w-lg">
+    <div class="hidden lg:flex">
+      <div v-for="i in 3" class="block h-12 w-[100px] mr-8 mb-[30px] animate"></div>
+    </div>
     <div class="line w-[75px] animate md:w-[100px]"></div>
-    <div class="line w-[150px] animate md:w-[200px]" style="margin-top: 40px!important;margin-bottom: 40px!important;"></div>
-    <div class="line w-full animate"></div>
+    <div class="line w-[150px] animate md:w-[200px]" style="margin-top: 35px!important;margin-bottom: 35px!important;"></div>
     <div class="line w-full animate"></div>
     <div class="line w-full animate"></div>
     <div class="line w-[200px] animate md:w-[360px] lg:w-[240px]"></div>
-    <div class="block w-[200px] h-12 animate"></div>
+    <div class="block w-[200px] mt-[30px] h-12 animate"></div>
   </div>
 </template>
 
 <style scoped>
 .block {
   background: #777;
-  margin-top: 30px;
   border-radius: 5px;
 }
 .line {

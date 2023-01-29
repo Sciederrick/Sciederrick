@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center justify-center py-24 bg-[#c0c0c0] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
+    <div class="flex flex-col items-center justify-center py-24 md:min-h-screen md:py-0 md:justify-between md:flex-row lg:bg-[#c0c0c0] lg:px-16 2xl:min-h-max">
         <div class="w-5/6 m-4 md:w-1/2 lg:max-w-lg">
             <div class="line w-full animate"></div>
             <div class="line w-full animate"></div>
