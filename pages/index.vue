@@ -3,7 +3,7 @@
         <section id="hero" v-if="!heroLoading"
             class="pt-20 pb-16 md:min-h-screen md:bg-[#ededed] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:pl-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-bold text-2xl text-center mx-4 pb-16 md:text-left md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
+                <h1 class="text-2xl text-center mx-4 pb-16 md:text-left md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
             </article>
 
             <article class="bg-[#e1e1e1] rounded-xl pb-20 md:px-0 md:bg-transparent">
@@ -11,7 +11,7 @@
                     <div>
                         <Icon name="gg:quote" color="#313131" size="32px"/>
                     </div>
-                    <p class="text-italic p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="p-4 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
 
                     <div class="w-10 h-10 rounded-full absolute -top-6 right-4 overflow-hidden md:w-8 md:h-8 md:left-12 md:border md:border-[#808080]">
@@ -37,7 +37,7 @@
         </section>
         <HeroShimmerEffect v-else/>        
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="pt-20 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
@@ -52,7 +52,7 @@
                 </nav>
                 <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
                 <h2 class="text-bold text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
-                <p class="text-lg py-2 pb-4 h-56 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
+                <p class="text-lg py-2 pb-4 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
                 <button @click="project.navigateSections()"
                     class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
                     next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <section id="feedback"
+        <section id="feedback" v-if="!feedbackLoading"
             class="flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <div class="m-4 lg:max-w-lg">
                 <input value="feedback" name="form-name" type="hidden" />
@@ -93,6 +93,7 @@
                 <img src="~/assets/images/undraw_quick_chat_re_bit5.svg" alt="">
             </div>
         </section>
+        <FeedbackShimmerEffect v-else/>
 
     </main>
 </template>
@@ -195,11 +196,13 @@ const feedbackText = ref('')
 const appStore = storeToRefs(useAppStore())
 const siteRating = appStore.siteRating
 const heroLoading = appStore.heroLoading
+const feedbackLoading = appStore.feedbackLoading
 
 onMounted(() => {
     setInterval(() => {
         appStore.heroLoading.value = false
         appStore.footerLoading.value = false
+        appStore.feedbackLoading.value = false
     }, 4000)
 })
 
