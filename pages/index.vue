@@ -15,7 +15,7 @@
                     <div>
                         <Icon name="gg:quote" color="#000" size="32px"/>
                     </div>
-                    <p class="p-4 md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="p-4 text-lg md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
 
                 </div>
