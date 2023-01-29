@@ -12,7 +12,7 @@
 
                 </div>
                 <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Hire me</a>
+                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Hire&nbsp;me</a>
     
             </nav>
         
