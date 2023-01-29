@@ -8,7 +8,8 @@ export const useAppStore = defineStore({
         siteRating: 0,
         heroLoading: true,
         footerLoading: true,
-        feedbackLoading: true
+        feedbackLoading: true,
+        projectLoading: true
       }
     },
     actions: {

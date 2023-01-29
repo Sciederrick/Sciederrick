@@ -1,5 +1,5 @@
 <template>
-    <div class="-mt-32 flex flex-col pt-40 items-center md:min-h-screen lg:pt-48">
+    <div class="-mt-32 flex flex-col pt-40 items-center md:min-h-screen bg-[#c0c0c0] lg:pt-48">
         <div class="w-5/6 pt-16 pb-8 md:py-0">
             <div class="w-5/6 mx-auto line animate md:w-full"></div>
             <div class="line animate md:w-[100px]"></div>

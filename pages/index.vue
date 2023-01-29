@@ -36,9 +36,11 @@
             
         </section>
         <HeroShimmerEffect v-else/>        
+
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
             class="pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
-            <div class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
+            <div v-if="!projectLoading"
+                class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <nav class="hidden border-b border-t lg:flex lg:flex-row">
                     <button  @click="project.activeComponentId=0"
                         class="btn btn-transparent-noborder -ml-3"
@@ -58,8 +60,12 @@
                     next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
 
             </div>
-            <div class="w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">
-                
+            <ProjectDescriptionShimmerEffect 
+                :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']"
+                v-else/>
+
+            <div v-if="!projectLoading"
+                class="w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
                 <img v-if="project.image != null" class="object-fill" 
                     :src="templateImages[project.image]" alt="project image" />
                 <div class="h-96 text-[#e1e1e1]" v-else>
@@ -67,6 +73,9 @@
                 </div>
 
             </div>
+            <ProjectImageShimmerEffect 
+                :class="[project.id % 2 == 0 ? 'order-first' : '']"
+                v-else/>
         </section>
 
         <section id="feedback" v-if="!feedbackLoading"
@@ -197,12 +206,14 @@ const appStore = storeToRefs(useAppStore())
 const siteRating = appStore.siteRating
 const heroLoading = appStore.heroLoading
 const feedbackLoading = appStore.feedbackLoading
+const projectLoading = appStore.projectLoading
 
 onMounted(() => {
     setInterval(() => {
         appStore.heroLoading.value = false
         appStore.footerLoading.value = false
         appStore.feedbackLoading.value = false
+        appStore.projectLoading.value = false
     }, 4000)
 })
 
