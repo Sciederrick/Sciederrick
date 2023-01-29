@@ -28,12 +28,16 @@
 
 body {
     font-family: 'AndikaRegular', sans-serif;
-    color: #212427;
+    color: #000;
     scroll-behavior: smooth;
+}
+.hero-background {
+    /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
 }
 
 h1 {
-    color: #808080!important;
+    color: #fffff0!important;
 }
 
 .text-regular {
@@ -58,7 +62,7 @@ h1 {
 
 @layer components {
     .btn {
-        @apply px-3 py-2 m-2 text-sm;
+        @apply px-3 py-2 m-2 text-sm hover:font-bold;
     }
 
     .btn-transparent {

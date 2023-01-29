@@ -4,13 +4,13 @@
             <nav class="flex flex-row justify-between items-center my-10 mx-4 md:absolute md:right-0 md:left-0 md:top-0 md:mt-6 lg:px-16">
                 <div>
                     <NuxtLink :to="`/#feedback`"
-                        class="m-2 underline md:mx-6 lg:mx-8">Feedback</NuxtLink>|
+                        class="m-2 underline btn md:mx-6 lg:mx-8">Feedback</NuxtLink>|
                     <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
-                        class="m-2 underline md:mx-6 lg:mx-8">Blog</a>
+                        class="m-2 underline btn md:mx-6 lg:mx-8">Blog</a>
 
                 </div>
                 <a href="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Contact me for work</a>
+                    class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Hire me</a>
     
             </nav>
         
