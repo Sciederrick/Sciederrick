@@ -35,34 +35,24 @@
         <HeroShimmerEffect v-else/>    
         
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="relative pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div v-if="!projectLoading"
                 class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
-                <nav class="hidden border-b border-t lg:flex lg:flex-row">
-                    <button  @click="project.activeComponentId=0"
-                        class="btn btn-transparent-noborder -ml-3"
-                        :class="[project.activeComponent() == 'background' ? '':'text-[#999]']">BACKGROUND</button>
-                    <button @click="project.activeComponentId=1"
-                        class="btn btn-transparent-noborder" 
-                        :class="[project.activeComponent() == 'target' ? '':'text-[#999]']">TARGET</button>
-                    <button @click="project.activeComponentId=2"
-                        class="btn btn-transparent-noborder"                         
-                        :class="[project.activeComponent() == 'features' ? '':'text-[#999]']">FEATURES</button>
-                </nav>
-                <h3 class="text-lg pb-2 pt-8">{{ project.category }}</h3>
-                <h2 class="text-semibold text-2xl py-4">{{ project.title }}&nbsp;<span class="text-base text-[#686868] lg:hidden">.{{ project.activeComponent() }}</span></h2>
-                <p class="text-lg py-2 pb-4 md:text-xl">{{ typeof project[project.activeComponent()] == 'string' ?  project[project.activeComponent()] : project[project.activeComponent()].toString().split(",").join("; ") }}</p>
-                <button @click="project.navigateSections()"
-                    class="btn btn-transparent rounded-sm -ml-1 md:text-2xl lg:hidden">
-                    next section&nbsp;<Icon name="ic:outline-chevron-right"/></button>
-
+                <h2 class="text-semibold text-2xl py-4">{{ capitalize(project.title) }}</h2>
+                <h3 class="text-lg pb-4 pt-8">{{ capitalize(project.category) }}</h3>
+                <p class="text-lg py-2 pb-4 md:text-xl">{{ project.background }}</p>
+                <p class="text-lg py-2 pb-4 md:text-xl">{{ project.target }}</p>
+                <ul class="list-disc list-inside text-lg py-2 pb-4 md:text-xl">
+                    <li v-for="feature, index in project.features" :key="index"
+                    class="text-italic">{{ feature }}</li>
+                </ul>
             </div>
             <ProjectDescriptionShimmerEffect 
                 :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']"
                 v-else/>
 
             <div v-if="!projectLoading"
-                class="w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
+                class="sticky top-28 w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
                 <img v-if="project.image != null" class="object-fill" 
                     :src="templateImages[project.image]" alt="project image" />
                 <div class="h-96 text-[#e1e1e1]" v-else>
@@ -122,79 +112,38 @@ templateImages.value = images
 
 const projects = ref([
     { 
-    id:1, 
-    title:'sheng dictionary', 
-    category:'utility', 
-    background:'This is a utility application inspired by the need to keep tabs with the Kenyan informal street language (slang).',
-    target:'The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
-    features:[
-        'sheng words',
-        'sheng idioms',
-        'word games and learderboards will be released in version 2',
-    ],
-    image: "sheng_dictionary",
-    activeComponentId: 0,
-    components: ['background','target','features'],
-    activeComponent: function() {
-        const components = this.components
-        const activeComponentId = this.activeComponentId
-        return components[activeComponentId]
-    },
-    nextComponent: function() {
-        const components = this.components
-        let activeComponentId = this.activeComponentId
-        if(this.activeComponentId < 2) {
-            activeComponentId++
-        } else {
-            activeComponentId = 0
-        }
-        return components[activeComponentId]
-    },
-    navigateSections: function() {
-        if(this.activeComponentId < 2) 
-            this.activeComponentId++
-        else
-            this.activeComponentId = 0
-    }
+        id:1, 
+        title:'sheng dictionary', 
+        category:'application', 
+        background:'This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).',
+        target:'The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
+        features:[
+            'words',
+            'idioms',
+            'word games and learderboards will be released in version 2',
+            'separate public facing api for developers to hook up for their interface'
+        ],
+        image: "sheng_dictionary"
     },
     { 
-    id:2, 
-    title:'shopping app', 
-    category:'portfolio', 
-    background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
-    target:'Anyone with a smartphone seeking to improve their shopping experience.', 
-    features:[
-        'lists compilation',
-        'commodity prices',
-        'active expenses calculator',
-        'list sharing with family & friends',
-    ],
-    image: null,
-    activeComponentId: 0,
-    components: ['background','target','features'],
-    activeComponent: function() {
-        const components = this.components
-        const activeComponentId = this.activeComponentId
-        return components[activeComponentId]
-    },
-    nextComponent: function() {
-        const components = this.components
-        let activeComponentId = this.activeComponentId
-        if(this.activeComponentId < 2) {
-            activeComponentId++
-        } else {
-            activeComponentId = 0
-        }
-        return components[activeComponentId]
-    },
-    navigateSections: function() {
-        if(this.activeComponentId < 2) 
-            this.activeComponentId++
-        else
-            this.activeComponentId = 0
-    }
+        id:2, 
+        title:'shopping app', 
+        category:'portfolio', 
+        background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
+        target:'Anyone with a smartphone seeking to improve their shopping experience.', 
+        features:[
+            'lists compilation',
+            'commodity prices',
+            'active expenses calculator',
+            'list sharing with family & friends',
+        ],
+        image: null
     },
 ])
+
+function capitalize(input) {
+    return input.charAt(0).toUpperCase().concat(input.substring(1))
+}
 
 const feedbackText = ref('')
 
