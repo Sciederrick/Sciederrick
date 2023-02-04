@@ -100,5 +100,8 @@ h1 {
         @apply border-b-2 border-[#ededed];
     }
 
+    .card {
+        @apply max-w-lg shadow-lg border border-[#d5d5d5] px-4 py-6 rounded-lg;
+    }
 }
 
