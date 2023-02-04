@@ -68,7 +68,7 @@ h1 {
     }
 
     .btn-transparent {
-        @apply  rounded-3xl  text-[#313131] border-2 border-[#313131] hover:bg-[#313131] hover:text-white; 
+        @apply  rounded-3xl  text-[#000] border-2 border-[#313131] hover:bg-[#313131] hover:text-white; 
     }
 
     .btn-green {
@@ -80,7 +80,7 @@ h1 {
     }
 
     .btn-transparent-noborder {
-        @apply  rounded-3xl  text-[#313131];
+        @apply  rounded-3xl  text-[#000];
     }
 
     .btn-transparent-border-bottom {
