@@ -44,7 +44,7 @@
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ project.target }}</p>
                 <ul class="list-disc list-inside text-lg py-2 pb-4 md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
-                    class="text-italic">{{ feature }}</li>
+                    class="text-light-italic">{{ feature }}</li>
                 </ul>
             </div>
             <ProjectDescriptionShimmerEffect 

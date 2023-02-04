@@ -9,25 +9,19 @@
 }
 
 @font-face {
-    font-family: 'AndikaRegular';
+    font-family: 'PoppinsLight';
     src: local("fonts"),
-     url(~/assets/fonts/Andika-Regular.ttf) format("truetype");
+     url(~/assets/fonts/Poppins-Light.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: 'AndikaItalic';
+    font-family: 'PoppinsLightItalic';
     src: local("fonts"),
-     url(~/assets/fonts/Andika-Italic.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'AndikaBoldItalic';
-    src: local("fonts"),
-     url(~/assets/fonts/Andika-BoldItalic.ttf) format("truetype");
+     url(~/assets/fonts/Poppins-LightItalic.ttf) format("truetype");
 }
 
 body {
-    font-family: 'AndikaRegular', sans-serif;
+    font-family: 'PoppinsLight', sans-serif;
     color: #212427;
     scroll-behavior: smooth;
     background-color: #fffff0;
@@ -52,27 +46,18 @@ body {
 }
 
 h1 {
+    font-family: 'AndikaBold', sans-serif;
     color: #313131!important;
 }
 
 .text-regular {
-    font-family: 'AndikaRegular', sans-serif;
+    font-family: 'PoppinsRegular', sans-serif;
     color: #212427;
 }
 
-.text-bold {
-    font-family: 'AndikaBold', sans-serif;
-    color: #212427;
-}
-
-.text-italic {
-    font-family: 'AndikaItalic', sans-serif;
-    color: #212427;
-}
-
-.text-bold-italic {
-    font-family: 'AndikaBoldItalic', sans-serif;
-    color: #212427;
+.text-light-italic {
+    font-family: 'PoppinsLightItalic', sans-serif;
+    color: #212427;  
 }
 
 @layer components {
