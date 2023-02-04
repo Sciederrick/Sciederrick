@@ -22,7 +22,7 @@
 
 body {
     font-family: 'PoppinsLight', sans-serif;
-    color: #212427;
+    color: #000;
     scroll-behavior: smooth;
     background-color: #fffff0;
 }
@@ -52,12 +52,14 @@ h1 {
 
 .text-regular {
     font-family: 'PoppinsRegular', sans-serif;
-    color: #212427;
+    /* color: #212427; */
+    color: #000;
 }
 
 .text-light-italic {
     font-family: 'PoppinsLightItalic', sans-serif;
-    color: #212427;  
+    /* color: #212427;   */
+    color: #000;
 }
 
 @layer components {
@@ -70,11 +72,11 @@ h1 {
     }
 
     .btn-green {
-        @apply  rounded-3xl  gradient-background-reverse text-[#313131]; 
+        @apply  rounded-3xl  gradient-background-reverse text-[#000]; 
     }
 
     .btn-green-sm {
-        @apply  rounded-lg  gradient-background-reverse text-[#313131] m-0.5; 
+        @apply  rounded-lg  gradient-background-reverse text-[#000] m-0.5; 
     }
 
     .btn-transparent-noborder {
