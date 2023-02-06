@@ -1,12 +1,12 @@
 <template>
     <main>       
         <section id="hero" v-if="!heroLoading"
-            class="gradient-background pt-20 pb-16 md:min-h-screen md:bg-[#00A991] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
+            class="gradient-background pt-20 md:pb-16 md:min-h-screen md:bg-[#00A991] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
                 <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Do you need a website or an android mobile application?</h1>
             </article>
 
-            <article class="bg-[#fffff0] rounded-xl pb-20 md:px-0 md:bg-transparent">
+            <article class="bg-[#fffff0] rounded-t-xl shadow-sm pb-20 md:shadow-none md:px-0 md:bg-transparent">
                 <header>
                     <hr class="hidden border border-[#313131] md:block"/>
                     <h2 class="p-4 md:pl-12 font-semibold uppercase">About Derrick</h2>
@@ -35,7 +35,7 @@
         <HeroShimmerEffect v-else/>    
         
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="relative pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="relative pt-16 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div v-if="!projectLoading"
                 class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
                 <h2 class="text-semibold text-2xl py-4">{{ capitalize(project.title) }}</h2>
