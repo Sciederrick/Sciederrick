@@ -63,7 +63,7 @@
     
             <section class="relative">
                 <hr class="m-4 border-0.5 border-[#313131]"/>
-                <div class="flex justify-between items-center pb-4">
+                <div class="flex justify-between items-center pb-4 px-2">
                     <p class="pl-2 text-sm md:text-base">
                         <span class="hidden lg:block">/Made from scratch with nuxt/</span>
                         <span>Copyright &#169; 2022 Derrick Mbarani</span>
