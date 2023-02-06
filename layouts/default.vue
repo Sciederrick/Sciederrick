@@ -5,8 +5,8 @@
                 <div>
                     <NuxtLink :to="`/#feedback`"
                         class="m-2 underline btn md:mx-6 lg:mx-8">Feedback</NuxtLink>|
-                    <a href="https://derrickmbarani.hashnode.dev/" target="_blank"
-                        class="m-2 underline btn md:mx-6 lg:mx-8">Blog</a>
+                    <NuxtLink to="https://derrickmbarani.hashnode.dev/"
+                        class="m-2 underline btn md:mx-6 lg:mx-8">Blog</NuxtLink>
 
                 </div>
                 <a href="mailto:derrickmbarani@gmail.com" target="_top"
