@@ -3,7 +3,7 @@
         <section id="hero" v-if="!heroLoading"
             class="gradient-background pt-20 pb-16 md:min-h-screen md:bg-[#00A991] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Are you looking for a software developer for your website or an android mobile application?</h1>
+                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Do you need a website or an android mobile application?</h1>
             </article>
 
             <article class="bg-[#fffff0] rounded-xl pb-20 md:px-0 md:bg-transparent">
