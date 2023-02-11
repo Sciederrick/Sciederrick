@@ -38,15 +38,18 @@
             class="relative pt-16 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div v-if="!projectLoading"
                 class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
-                <h2 class="text-semibold text-2xl py-4">{{ capitalize(project.title) }}</h2>
-                <h3 class="text-lg pb-4 pt-8">{{ capitalize(project.category) }}</h3>
+                <h2 class="font-semibold text-2xl py-4">{{ capitalize(project.title) }}</h2>
+                <h3 class="font-semibold text-lg pb-4 pt-8">{{ capitalize(project.category) }}</h3>
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ project.background }}</p>
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ project.target }}</p>
                 <p v-if="project.technicalDetails" class="text-lg py-2 pb-4 md:text-xl">{{ project.technicalDetails }}</p>
-                <ul class="list-disc list-inside text-lg py-2 pb-4 md:text-xl">
+                <div class="py-2 pb-4">
+                    <h4 class="py-2 font-semibold">Features</h4>
+                    <ul class="list-disc list-inside text-lg md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
                         class="text-light-italic">{{ feature }}</li>
                 </ul>
+                </div>
             </div>
             <ProjectDescriptionShimmerEffect 
                 :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']"
