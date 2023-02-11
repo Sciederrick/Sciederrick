@@ -1,5 +1,5 @@
 <template>
-    <div class="lg:container lg:mx-auto">
+    <div class="2xl:container lg:mx-auto">
         <header v-if="!navLoading" class="sticky top-0 inset-x-0 z-40 frosted-glass">        
             <nav class="flex flex-row justify-between items-center my-10 mx-4 lg:my-2 lg:px-16">
                 <div>
