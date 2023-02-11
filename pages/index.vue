@@ -42,9 +42,10 @@
                 <h3 class="text-lg pb-4 pt-8">{{ capitalize(project.category) }}</h3>
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ project.background }}</p>
                 <p class="text-lg py-2 pb-4 md:text-xl">{{ project.target }}</p>
+                <p v-if="project.technicalDetails" class="text-lg py-2 pb-4 md:text-xl">{{ project.technicalDetails }}</p>
                 <ul class="list-disc list-inside text-lg py-2 pb-4 md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
-                    class="text-light-italic">{{ feature }}</li>
+                        class="text-light-italic">{{ feature }}</li>
                 </ul>
             </div>
             <ProjectDescriptionShimmerEffect 
@@ -116,13 +117,14 @@ const projects = ref([
         title:'sheng dictionary', 
         category:'application', 
         background:'This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).',
-        target:'The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
+        target:'Target: The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
         features:[
             'words',
             'idioms',
             'word games and learderboards will be released in version 2',
             'separate public facing api for developers to hook up for their interface'
         ],
+        technicalDetails: 'This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.',
         image: "sheng_dictionary"
     },
     { 
@@ -130,13 +132,14 @@ const projects = ref([
         title:'shopping app', 
         category:'portfolio', 
         background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
-        target:'Anyone with a smartphone seeking to improve their shopping experience.', 
+        target:'Target: Anyone with a smartphone seeking to improve their shopping experience.', 
         features:[
             'lists compilation',
             'commodity prices',
             'active expenses calculator',
             'list sharing with family & friends',
         ],
+        technicalDetails: null,
         image: null
     },
 ])
