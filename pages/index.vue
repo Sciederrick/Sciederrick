@@ -1,7 +1,7 @@
 <template>
     <main>       
         <section id="hero" v-if="!heroLoading"
-            class="gradient-background pt-20 md:pb-16 md:min-h-screen md:bg-[#00A991] md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
+            class="gradient-background pt-20 md:pb-16 md:min-h-screen md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
                 <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Do you need a website or an android mobile application?</h1>
             </article>
@@ -9,7 +9,7 @@
             <article class="bg-[#fffff0] rounded-t-xl shadow-sm pb-20 md:shadow-none md:px-0 md:bg-transparent">
                 <header>
                     <hr class="hidden border border-[#313131] md:block"/>
-                    <h2 class="p-4 md:pl-12 font-semibold uppercase">About Derrick</h2>
+                    <h2 class="p-4 md:pl-12 font-semibold uppercase text-[#000]">About Derrick</h2>
                 </header>
                 <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-4">
                     <div>
@@ -52,10 +52,10 @@
                 v-else/>
 
             <div v-if="!projectLoading"
-                class="sticky top-28 w-full border border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
+                class="sticky top-28 w-full md:border md:border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
                 <img v-if="project.image != null" class="object-fill" 
                     :src="templateImages[project.image]" alt="project image" />
-                <div class="h-96 text-[#e1e1e1]" v-else>
+                <div class="h-96 text-[#e1e1e1] hidden md:block" v-else>
                     <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
                 </div>
 

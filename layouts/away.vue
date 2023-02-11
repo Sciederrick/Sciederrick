@@ -68,7 +68,7 @@
                 <div class="flex justify-between items-center pb-4">
                     <p class="pl-2 text-sm md:text-base">
                         <span class="hidden lg:block">/Made from scratch with nuxt/</span>
-                        <span>Copyright &#169; 2022 Derrick Mbarani</span>
+                        <span>Copyright &#169; {{ new Date().getFullYear() }} Derrick Mbarani</span>
                     </p>
                     <button @click="isRateMySite = !isRateMySite" class="flex items-center"
                         v-if="!isRateMySite"><div class="hidden md:inline">rate this site</div>&nbsp;
