@@ -3,7 +3,18 @@
         <section id="hero" v-if="!heroLoading"
             class="gradient-background pt-20 md:pb-16 md:min-h-screen md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
             <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">Do you need a website or an android mobile application?</h1>
+                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">
+                    <span>Do&nbsp;</span>
+                    <span>you&nbsp;</span> 
+                    <span>need&nbsp;</span>
+                    <span>a&nbsp;</span>
+                    <span>website&nbsp;</span>
+                    <span>or&nbsp;</span> 
+                    <span>an&nbsp;</span>
+                    <span>android&nbsp;</span>
+                    <span>mobile&nbsp;</span>
+                    <span>application?</span>
+                </h1>
             </article>
 
             <article class="bg-[#fffff0] rounded-t-xl shadow-sm pb-20 md:shadow-none md:px-0 md:bg-transparent">
@@ -35,19 +46,19 @@
         <HeroShimmerEffect v-else/>    
         
         <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="relative pt-16 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
+            class="box relative pt-16 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
             <div v-if="!projectLoading"
                 class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
-                <h2 class="font-semibold text-2xl py-4">{{ capitalize(project.title) }}</h2>
-                <h3 class="font-semibold text-lg pb-4 pt-8">{{ capitalize(project.category) }}</h3>
-                <p class="text-lg py-2 pb-4 md:text-xl">{{ project.background }}</p>
-                <p class="text-lg py-2 pb-4 md:text-xl">{{ project.target }}</p>
-                <p v-if="project.technicalDetails" class="text-lg py-2 pb-4 md:text-xl">{{ project.technicalDetails }}</p>
+                <h2 class="text-animate  font-semibold text-2xl py-4 ">{{ capitalize(project.title) }}</h2>
+                <h3 class="text-animate  font-semibold text-lg pb-4 pt-8 ">{{ capitalize(project.category) }}</h3>
+                <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.background }}</p>
+                <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.target }}</p>
+                <p v-if="project.technicalDetails" class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.technicalDetails }}</p>
                 <div class="py-2 pb-4">
-                    <h4 class="py-2 font-semibold">Features</h4>
+                    <h4 class="py-2 font-semibold text-animate">Features</h4>
                     <ul class="list-disc list-inside text-lg md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
-                        class="text-light-italic">{{ feature }}</li>
+                        class="text-animate  text-light-italic ">{{ feature }}</li>
                 </ul>
                 </div>
             </div>
@@ -70,12 +81,12 @@
         </section>
 
         <section id="feedback" v-if="!feedbackLoading"
-            class="flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
+            class="box flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <div class="m-4 lg:max-w-lg">
                 <input value="feedback" name="form-name" type="hidden" />
-                <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
+                <p class="text-animate " v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
                 <input name="site_rating" :value="siteRating" class="invisible"/>
-                <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
+                <p class="py-10 text-animate  md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input v-model="feedbackText"
                         type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
@@ -159,6 +170,50 @@ const heroLoading = appStore.heroLoading
 const feedbackLoading = appStore.feedbackLoading
 const projectLoading = appStore.projectLoading
 
+function createObserver() {
+    const boxElements = document.querySelectorAll(".box");
+    let observer;
+
+    let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+    };
+
+    observer = new IntersectionObserver(handleIntersect, options);
+    boxElements.forEach(boxElement => {
+        observer.observe(boxElement);
+    });
+    
+}
+
+function handleIntersect(entries, observer) {
+    entries.forEach(entry => {
+        toggleAnimation(entry);
+    })
+}
+
+function toggleAnimation(entry) {
+    if (entry.isIntersecting) {
+            if (entry.target.hasAttribute("id")) {
+                const sectionId = entry.target.getAttribute("id");
+                const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
+                console.log("sectionId: " + sectionId)
+                elements.forEach(el => {
+                    el.classList.add('reveal-up');
+                });
+            }
+        } else {
+            if (entry.target.hasAttribute("id")) {
+                const sectionId = entry.target.getAttribute("id");
+                const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
+                elements.forEach(el => {
+                    el.classList.remove('reveal-up');
+                });
+            }
+        }
+}
+
 onMounted(() => {
     setInterval(() => {
         appStore.heroLoading.value = false
@@ -166,8 +221,8 @@ onMounted(() => {
         appStore.feedbackLoading.value = false
         appStore.projectLoading.value = false
     }, 4000)
+    createObserver()
 })
-
 
 </script>
 
