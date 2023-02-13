@@ -119,39 +119,26 @@ span {
 }
 
 .text-animate {
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
 }
 
 .reveal-up {
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
-  animation: scrollRevealUp 1.25s ease-out forwards;
-}
-
-.revealDown {
-  animation: scrollRevealDown 3s ease-in forwards;
+  animation: scrollRevealUp 5s ease-out forwards; */
 }
 
 @keyframes scrollRevealUp {
   from { 
-    transform: translateY(100px); 
+    opacity: 0;
+    transform: scale(100);
+    transform: translateY(10px); 
   }
   to { 
     opacity: 100;
     visibility: visible;
     transform: translateY(0px); 
-  }
-}
-
-@keyframes scrollRevealDown {
-  from {     
-    transform: translateY(-40px);
-  }
-  to { 
-    opacity: 100;
-    visibility: visible;
-    transform: translateY(0);
   }
 }
 

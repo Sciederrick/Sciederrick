@@ -53,9 +53,9 @@
                 <h3 class="text-animate  font-semibold text-lg pb-4 pt-8 ">{{ capitalize(project.category) }}</h3>
                 <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.background }}</p>
                 <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.target }}</p>
-                <p v-if="project.technicalDetails" class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.technicalDetails }}</p>
+                <p v-if="project.technicalDetails" class="text-animate   text-lg py-2 pb-4  md:text-xl">{{ project.technicalDetails }}</p>
                 <div class="py-2 pb-4">
-                    <h4 class="py-2 font-semibold text-animate">Features</h4>
+                    <h4 class="py-2 font-semibold text-animate ">Features</h4>
                     <ul class="list-disc list-inside text-lg md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
                         class="text-animate  text-light-italic ">{{ feature }}</li>
@@ -84,9 +84,9 @@
             class="box flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
             <div class="m-4 lg:max-w-lg">
                 <input value="feedback" name="form-name" type="hidden" />
-                <p class="text-animate " v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
+                <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
                 <input name="site_rating" :value="siteRating" class="invisible"/>
-                <p class="py-10 text-animate  md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
+                <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
                 <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
                     <input v-model="feedbackText"
                         type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
@@ -172,6 +172,7 @@ const projectLoading = appStore.projectLoading
 
 function createObserver() {
     const boxElements = document.querySelectorAll(".box");
+    console.log(boxElements)
     let observer;
 
     let options = {
@@ -198,7 +199,7 @@ function toggleAnimation(entry) {
             if (entry.target.hasAttribute("id")) {
                 const sectionId = entry.target.getAttribute("id");
                 const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
-                console.log("sectionId: " + sectionId)
+                
                 elements.forEach(el => {
                     el.classList.add('reveal-up');
                 });
@@ -207,12 +208,14 @@ function toggleAnimation(entry) {
             if (entry.target.hasAttribute("id")) {
                 const sectionId = entry.target.getAttribute("id");
                 const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
+
                 elements.forEach(el => {
                     el.classList.remove('reveal-up');
                 });
             }
         }
 }
+
 
 onMounted(() => {
     setInterval(() => {
