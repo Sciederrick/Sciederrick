@@ -9,7 +9,8 @@ export default defineNuxtConfig({
         ['@pinia/nuxt',
         {
             autoImports: ['defineStore', 'acceptHMRUpdate'],
-        }]
+        }],
+        '@nuxt/content'
     ],
     app: {
         head: {
