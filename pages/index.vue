@@ -26,7 +26,7 @@
                     <div>
                         <Icon name="gg:quote" color="#000" size="32px"/>
                     </div>
-                    <p class="p-4 text-lg md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="p-4 text-lg text-[#000] md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
 
                 </div>
@@ -58,7 +58,7 @@
                     <h4 class="py-2 font-semibold text-animate ">Features</h4>
                     <ul class="list-disc list-inside text-lg md:text-xl">
                     <li v-for="feature, index in project.features" :key="index"
-                        class="text-animate  text-light-italic ">{{ feature }}</li>
+                        class="text-animate text-light-italic marker:text-[#777]">{{ feature }}</li>
                 </ul>
                 </div>
             </div>
@@ -68,7 +68,7 @@
 
             <div v-if="!projectLoading"
                 class="sticky top-28 w-full md:border md:border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
-                <img v-if="project.image != null" class="object-fill" 
+                <img v-if="project.image != null" class="object-contain" 
                     :src="templateImages[project.image]" alt="project image" />
                 <div class="h-96 text-[#e1e1e1] hidden md:block" v-else>
                     <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
@@ -119,7 +119,7 @@ import { filename } from 'pathe/utils';
  * Work around for dynamic images with Vite because require() doesn't work
  */
 let templateImages = ref()
-const glob = import.meta.glob('~/assets/images/*.png', { eager: true });
+const glob = import.meta.glob('~/assets/images/*.webp', { eager: true });
 const images = Object.fromEntries(
   Object.entries(glob).map(([key, value]) => [filename(key), value.default])
 );

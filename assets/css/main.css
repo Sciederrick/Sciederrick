@@ -48,6 +48,22 @@ h1 {
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
+h2 {
+  color: #777;
+}
+
+h3, h4, h5, h6, p, li {
+  color: #313131;
+}
+
+footer {
+  color: #000;
+}
+
+footer h2, footer h3, footer h4, footer h5, footer h6, footer p, footer li {
+  color: #000;
+}
+
 @keyframes scale {
     100% {
         transform: scale(1);
