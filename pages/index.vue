@@ -26,7 +26,8 @@
                     <div>
                         <Icon name="gg:quote" color="#000" size="32px"/>
                     </div>
-                    <p class="p-4 text-lg text-[#000] md:pb-8 md:text-2xl">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
+                    <p class="p-4 text-lg md:pb-8 md:text-2xl"
+                        style="color:black!important">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
                     </p>
 
                 </div>
@@ -143,17 +144,15 @@ const projects = ref([
     },
     { 
         id:2, 
-        title:'shopping app', 
-        category:'portfolio', 
-        background:'I proactively innovate to solve my own problems. Such was the case when I realized I needed a shopping companion to keep track of things to purchase and how much cash I was leaking in the process.',
-        target:'Target: Anyone with a smartphone seeking to improve their shopping experience.', 
+        title:'definitions api', 
+        category:'api', 
+        background:'A REST API to serve Sheng definitions to mobile client given an API key is sent with the GET request.', 
         features:[
-            'lists compilation',
-            'commodity prices',
-            'active expenses calculator',
-            'list sharing with family & friends',
+            'authentication and authorization',
+            'pagination',
+            'GET endpoint',
         ],
-        technicalDetails: null,
+        technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
         image: null
     },
 ])
