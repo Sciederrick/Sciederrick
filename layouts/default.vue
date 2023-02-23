@@ -13,14 +13,13 @@
                 <NuxtLink to="mailto:derrickmbarani@gmail.com" target="_top"
                     class="btn btn-transparent rounded md:rounded-3xl md:mx-6 lg:mx-8">Hire me</NuxtLink>
     
-            </nav>
-        
+            </nav>        
         </header>
     
         <!-- page content down here -->
         <slot />
 
-        <footer class="px-5 py-16 lg:px-16">
+        <footer class="px-5 py-6 md:py-16 lg:px-16">
             <div class="flex flex-col md:flex-row">
                 <div class="md:max-w-md md:pr-16 lg:pr-0 lg:max-w-xl">
                     <p class="pb-12 text-2xl">Feeling inspired? Let me know. I'm open to collaboration and hires.

@@ -27,7 +27,7 @@
         </section> 
         
         <!-- projects -->
-        <section class="py-16 grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-x-8">
+        <section class="py-8 grid grid-cols-1 md:py-16 md:grid-cols-2 gap-y-10 md:gap-x-8">
             <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
                 <div class="flex flex-col">
                     <img v-if="project.image != null" class="object-contain rounded-3xl" 
@@ -38,9 +38,9 @@
         </section>
 
         <!-- about -->
-        <section class="py-16">
+        <section class="py-8 md:py-16">
             <p class="text-2xl md:text-4xl">I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.</p>
-            <div class="max-h-96 w-full rounded-3xl overflow-hidden my-12">
+            <div class="max-h-96 w-full rounded-3xl overflow-hidden mt-20">
                 <img src="~/assets/images/cover.webp"
                     class="object-cover"/>
             </div>
@@ -102,7 +102,6 @@ function capitalize(input) {
     inputArray.forEach((word, index) => {
         if (index == 0) output = ''
         output += word.charAt(0).toUpperCase().concat(word.substring(1))
-        console.log(output)
         if (inputArray.length != index + 1) output += " "
     })
     return output
