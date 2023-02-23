@@ -1,111 +1,50 @@
 <template>
-    <main>       
-        <section id="hero" v-if="!heroLoading"
-            class="gradient-background pt-20 md:pb-16 md:min-h-screen md:pt-40 lg:pt-48 lg:px-28 xl:min-h-max">
-            <article class="mb-16 md:p-4 xl:mt-4 2xl:mt-8">
-                <h1 class="text-4xl text-center mx-4 pb-16 font-semibold md:mx-8">
-                    <span>Do&nbsp;</span>
-                    <span>you&nbsp;</span> 
-                    <span>need&nbsp;</span>
-                    <span>a&nbsp;</span>
-                    <span>website&nbsp;</span>
-                    <span>or&nbsp;</span> 
-                    <span>an&nbsp;</span>
-                    <span>android&nbsp;</span>
-                    <span>mobile&nbsp;</span>
-                    <span>application?</span>
-                </h1>
-            </article>
-
-            <article class="bg-[#fffff0] rounded-t-xl shadow-sm pb-20 md:shadow-none md:px-0 md:bg-transparent">
-                <header>
-                    <hr class="hidden border border-[#313131] md:block"/>
-                    <h2 class="p-4 md:pl-12 font-semibold uppercase text-[#000]">About Derrick</h2>
-                </header>
-                <div class="flex flex-row relative p-2 items-center py-4 md:pl-12 lg:pt-4">
-                    <div>
-                        <Icon name="gg:quote" color="#000" size="32px"/>
-                    </div>
-                    <p class="p-4 text-lg md:pb-8 md:text-2xl"
-                        style="color:black!important">Hi there, welcome to my site. I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.
-                    </p>
-
+    <main class="px-5 lg:px-16">  
+        <!-- hero -->     
+        <section id="hero" class="md:pb-16 xl:min-h-max">
+            <article class="py-10 md:py-20 md:flex md:justify-between md:items-end lg:py-28">
+                <div class="md:pr-10">
+                    <p class="text-xl pt-10 pb-5 md:text-2xl md:max-w-lg">I specialize in crafting exceptional digital experiences to help achieve business goals.</p>
+                    <h1 class="text-4xl text-left pt-5 pb-10 md:text-6xl md:pb-0 lg:text-7xl">
+                        Websites, APIs & Android Applications
+                    </h1>
                 </div>
-                <NuxtLink to="/pdf/Derrick-Mbarani.pdf" target="_blank"
-                    class="btn btn-transparent rounded ml-4 md:hidden" download="">
-                        &nbsp;&nbsp;download my resume&nbsp;
-                        <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
-                </NuxtLink>
-                <NuxtLink to="/resume"
-                    class="hidden md:inline-block md:btn md:ml-4 md:border-none md:mx-12 md:rounded-3xl md:btn-green md:p-3 lg:shadow-lg">
-                        &nbsp;&nbsp;download my resume&nbsp;
-                        <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>&nbsp;&nbsp;
-                </NuxtLink>
+                <div class="mt-10">
+                    <NuxtLink to="/pdf/Derrick-Mbarani.pdf" target="_blank"
+                        class="md:hidden" download="">
+                            updated&nbsp;resume&nbsp;
+                            <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>
+                    </NuxtLink>
+                    <NuxtLink to="/resume"
+                        class="hidden md:flex">
+                            updated&nbsp;resume&nbsp;
+                            <Icon name="material-symbols:keyboard-double-arrow-down" class="animate-bounce"/>
+                    </NuxtLink>
+                    <p class="text-muted">Click&nbsp;to&nbsp;download</p>
+                </div>
             </article>
             
-        </section>
-        <HeroShimmerEffect v-else/>    
+        </section> 
         
-        <section :id="`project${project.id}`" v-for="project in projects" :key="project.id"
-            class="box relative pt-16 pb-16 md:min-h-screen md:pt-28 lg:pt-32 lg:px-16 lg:flex lg:flex-row lg:justify-between lg:items-start xl:min-h-max" >
-            <div v-if="!projectLoading"
-                class="p-4 mb-16 lg:max-w-md lg:mr-8" :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']">
-                <h2 class="text-animate  font-semibold text-2xl py-4 ">{{ capitalize(project.title) }}</h2>
-                <h3 class="text-animate  font-semibold text-lg pb-4 pt-8 ">{{ capitalize(project.category) }}</h3>
-                <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.background }}</p>
-                <p class="text-animate  text-lg py-2 pb-4  md:text-xl">{{ project.target }}</p>
-                <p v-if="project.technicalDetails" class="text-animate   text-lg py-2 pb-4  md:text-xl">{{ project.technicalDetails }}</p>
-                <div class="py-2 pb-4">
-                    <h4 class="py-2 font-semibold text-animate ">Features</h4>
-                    <ul class="list-disc list-inside text-lg md:text-xl">
-                    <li v-for="feature, index in project.features" :key="index"
-                        class="text-animate text-light-italic marker:text-[#777]">{{ feature }}</li>
-                </ul>
-                </div>
-            </div>
-            <ProjectDescriptionShimmerEffect 
-                :class="[project.id % 2 == 0 ? 'lg:ml-8' : 'lg:mr-8']"
-                v-else/>
-
-            <div v-if="!projectLoading"
-                class="sticky top-28 w-full md:border md:border-[#e1e1e1] lg:max-w-lg lg:mt-4" :class="[project.id % 2 == 0 ? 'order-first' : '']">                
-                <img v-if="project.image != null" class="object-contain" 
+        <!-- projects -->
+        <section class="py-16 grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-x-8">
+            <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
+                <div class="flex flex-col">
+                    <img v-if="project.image != null" class="object-contain rounded-3xl" 
                     :src="templateImages[project.image]" alt="project image" />
-                <div class="h-96 text-[#e1e1e1] hidden md:block" v-else>
-                    <Icon name="mdi:file-image-remove-outline" color="#e1e1e1" size="32px"/>no image
+                    <p class="py-6">{{ capitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
                 </div>
-
             </div>
-            <ProjectImageShimmerEffect 
-                :class="[project.id % 2 == 0 ? 'order-first' : '']"
-                v-else/>
         </section>
 
-        <section id="feedback" v-if="!feedbackLoading"
-            class="box flex flex-col items-center justify-center py-24 bg-[#ededed] md:min-h-screen md:py-0 md:justify-between md:flex-row lg:px-16 2xl:min-h-max">
-            <div class="m-4 lg:max-w-lg">
-                <input value="feedback" name="form-name" type="hidden" />
-                <p v-if="siteRating > 0">{{ siteRating }}&nbsp;star(s)</p>
-                <input name="site_rating" :value="siteRating" class="invisible"/>
-                <p class="py-10 md:text-xl">I use feedback to improve my work: how is your user experience? what do you like about this site? what should be improved? any other business? it's anonymous, please drop a line.</p>
-                <div class="rounded-lg flex flex-col md:border-2 md:bg-[#ffffff] md:border-[#e1e1e1] md:relative md:rounded-xl md:max-w-lg lg:w-auto">
-                    <input v-model="feedbackText"
-                        type="text" name="feedbackMsg" id="feedbackMsg" placeholder="your feedback goes here ..."
-                        class="pl-4 w-full h-10 text-[#808080] rounded-sm active:ring-2 active:ring-[#00A991] focus:ring-2 focus:ring-[#00A991] focus:outline-none mb-0.5 md:mb-0 md:rounded-lg md:h-12 md:px-4 md:pr-28 md:rounded:xl">
-                    <NuxtLink :to="'mailto:derrickmbarani@gmail.com?subject=Your portfolio site feedback ('+siteRating+')&body='+feedbackText" target="_top"
-                        class="btn btn-green-sm w-full mx-auto rounded-sm text-center md:mr-0.5 md:rounded-lg md:w-auto md:absolute md:right-0 md:text-lg lg:text-xl">
-                        submit <span class="md:hidden">&nbsp;feedback</span>
-                    </NuxtLink>
-
-                </div>
-
-            </div>
-
-            <div class="order-first md:order-last md:m-16">
-                <img src="~/assets/images/undraw_quick_chat_re_bit5.svg" alt="">
+        <!-- about -->
+        <section class="py-16">
+            <p class="text-2xl md:text-4xl">I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.</p>
+            <div class="max-h-96 w-full rounded-3xl overflow-hidden my-12">
+                <img src="~/assets/images/cover.webp"
+                    class="object-cover"/>
             </div>
         </section>
-        <FeedbackShimmerEffect v-else/>
 
     </main>
 </template>
@@ -153,12 +92,20 @@ const projects = ref([
             'GET endpoint',
         ],
         technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: null
+        image: "sheng_dictionary"
     },
 ])
 
 function capitalize(input) {
-    return input.charAt(0).toUpperCase().concat(input.substring(1))
+    let output = null;
+    const inputArray = input.split(' ')
+    inputArray.forEach((word, index) => {
+        if (index == 0) output = ''
+        output += word.charAt(0).toUpperCase().concat(word.substring(1))
+        console.log(output)
+        if (inputArray.length != index + 1) output += " "
+    })
+    return output
 }
 
 const feedbackText = ref('')
