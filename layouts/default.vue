@@ -5,13 +5,13 @@
             <nav class="flex flex-row justify-between items-center py-5 md:py-3">
                 <div>
                     <NuxtLink to="/"
-                        class="m-2 ml-0 underline btn md:mr-6 lg:mr-8">Me</NuxtLink>|
+                        class="m-2 ml-0 pl-0 underline btn md:mr-8 lg:mr-10">Me</NuxtLink>|
                     <NuxtLink to="https://derrickmbarani.hashnode.dev/"
-                        class="m-2 underline btn md:mx-6 lg:mx-8">Blog</NuxtLink>
+                        class="m-2 underline btn md:mx-8 lg:mx-10">Blog</NuxtLink>
 
                 </div>
                 <NuxtLink to="mailto:derrickmbarani@gmail.com" target="_top"
-                    class="btn btn-transparent rounded md:rounded-3xl md:ml-6 lg:ml-8">Hire me</NuxtLink>
+                    class="btn btn-transparent rounded md:rounded-3xl mr-0 md:ml-6 lg:ml-8">Hire me</NuxtLink>
     
             </nav>        
         </header>
