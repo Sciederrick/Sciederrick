@@ -74,11 +74,11 @@ function capitalize(input) {
     return output
 }
 
-const { id } = useRoute().params
+const { title } = useRoute().params
 let project = ref({})
 
-function getProject(id) {
-    return projects.value.filter(project => project.id === parseInt(id))[0]
+function getProject(title) {
+    return projects.value.filter(project => project.title === title)[0]
 }
 
 const projects = ref([
@@ -117,7 +117,7 @@ const projects = ref([
     },
 ])
 
-project.value = getProject(id)
+project.value = getProject(title)
 
 </script>
 
