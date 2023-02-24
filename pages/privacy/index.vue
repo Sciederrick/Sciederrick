@@ -20,16 +20,6 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useAppStore } from '~~/store/app_store';
-import { onMounted } from 'vue';
-
-const appStore = storeToRefs(useAppStore())
-
-definePageMeta({
-    layout: 'termsandprivacy'
-})
-
 let privacyDocuments = ref([])
 privacyDocuments = await queryContent('/privacy').find()
 
@@ -46,12 +36,6 @@ function trimParagraph(paragraph, limit = 360) {
     return trimmedParagraph;
 }
 
-onMounted(() => {
-    setInterval(() => {
-        appStore.heroLoading.value = false
-        appStore.footerLoading.value = false
-    }, 1000)
-})
 </script>
 
 
