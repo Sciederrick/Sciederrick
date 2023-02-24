@@ -29,11 +29,12 @@
         <!-- projects -->
         <section class="py-8 grid grid-cols-1 md:py-16 md:grid-cols-2 gap-y-10 md:gap-x-8">
             <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
-                <div class="flex flex-col">
+                <NuxtLink class="flex flex-col"
+                    :to="`projects/${project.id}`">
                     <img v-if="project.image != null" class="object-contain rounded-3xl" 
                     :src="templateImages[project.image]" alt="project image" />
                     <p class="py-6">{{ capitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
-                </div>
+                </NuxtLink>
             </div>
         </section>
 
@@ -50,9 +51,6 @@
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useAppStore } from '~~/store/app_store';
-import { onMounted } from 'vue';
 import { filename } from 'pathe/utils';
 
 /**
@@ -79,7 +77,8 @@ const projects = ref([
             'separate public facing api for developers to hook up for their interface'
         ],
         technicalDetails: 'This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.',
-        image: "sheng_dictionary"
+        image: "sheng_dictionary",
+        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"]
     },
     { 
         id:2, 
@@ -87,12 +86,13 @@ const projects = ref([
         category:'api', 
         background:'A REST API to serve Sheng definitions to mobile client given an API key is sent with the GET request.', 
         features:[
-            'authentication and authorization',
+            'authentication & authorization',
             'pagination',
             'GET endpoint',
         ],
         technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: "sheng_dictionary"
+        image: "sheng_dictionary",
+        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"]
     },
 ])
 
@@ -107,70 +107,6 @@ function capitalize(input) {
     return output
 }
 
-const feedbackText = ref('')
-
-const appStore = storeToRefs(useAppStore())
-const siteRating = appStore.siteRating
-const heroLoading = appStore.heroLoading
-const feedbackLoading = appStore.feedbackLoading
-const projectLoading = appStore.projectLoading
-
-function createObserver() {
-    const boxElements = document.querySelectorAll(".box");
-    console.log(boxElements)
-    let observer;
-
-    let options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1
-    };
-
-    observer = new IntersectionObserver(handleIntersect, options);
-    boxElements.forEach(boxElement => {
-        observer.observe(boxElement);
-    });
-    
-}
-
-function handleIntersect(entries, observer) {
-    entries.forEach(entry => {
-        toggleAnimation(entry);
-    })
-}
-
-function toggleAnimation(entry) {
-    if (entry.isIntersecting) {
-            if (entry.target.hasAttribute("id")) {
-                const sectionId = entry.target.getAttribute("id");
-                const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
-                
-                elements.forEach(el => {
-                    el.classList.add('reveal-up');
-                });
-            }
-        } else {
-            if (entry.target.hasAttribute("id")) {
-                const sectionId = entry.target.getAttribute("id");
-                const elements = document.querySelectorAll("#" + sectionId + " .text-animate");
-
-                elements.forEach(el => {
-                    el.classList.remove('reveal-up');
-                });
-            }
-        }
-}
-
-
-onMounted(() => {
-    setInterval(() => {
-        appStore.heroLoading.value = false
-        appStore.footerLoading.value = false
-        appStore.feedbackLoading.value = false
-        appStore.projectLoading.value = false
-    }, 4000)
-    createObserver()
-})
 
 </script>
 

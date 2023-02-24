@@ -28,7 +28,7 @@
                         class="btn btn-transparent rounded -ml-1 md:rounded-3xl">Let's Talk</NuxtLink>
                 </div>
                 <div class="py-20 pb-12 md:my-0 md:pt-0">
-                    <h2 class="font-bold pb-8">Profiles</h2>
+                    <h2 class="pb-8">Profiles</h2>
                     <dl class="grid grid-cols-2 gap-y-4 md:gap-x-16">
                         <dt>work</dt>
                         <dd class="md:text-end">
