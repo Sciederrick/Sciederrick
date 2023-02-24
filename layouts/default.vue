@@ -1,6 +1,6 @@
 <template>
     <div class="lg:mx-auto 2xl:container">
-        <div class="home w-full h-28"></div>
+        <div class="w-full h-28"></div>
         <header class="fixed top-0 inset-x-0 z-40 nav-dark text-white">        
             <nav class="flex flex-row justify-between items-center py-5 mx-4 md:py-3 lg:px-16">
                 <div>

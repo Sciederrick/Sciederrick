@@ -1,6 +1,6 @@
 <template>
-    <div class="h-screen flex items-center bg-[#eff1f3]">
-        <div class="card mx-auto bg-[#fffff0]">
+    <div class="h-screen flex items-center">
+        <div class="card mx-auto">
             <h1 class="text-xl text-bold md:text-2xl">Uppsss... {{ error.statusCode }}</h1>
             <div class="py-6">
                 <p>{{ error.message }}</p>
@@ -9,7 +9,7 @@
                     <a :href="'mailto:derrickmbarani@gmail.com?subject=Error ('+error.statusCode+')&body='+error.message" target="_top">reach out</a>.
                 </p>
             </div>
-            <button class="btn btn-green-sm" @click="handleClearError">Go Home...</button>
+            <button class="btn btn-transparent" @click="handleClearError">Go Home...</button>
         </div>
     </div>
 </template>
