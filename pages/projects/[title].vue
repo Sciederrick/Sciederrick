@@ -22,8 +22,11 @@
                     </p>
                 </li>
                 <li class="flex justify-between py-1 md:block">
-                    <h3>Industry</h3>
-                    <p>{{ capitalize(project.category) }}</p>
+                    <h3>Link</h3>
+                    <NuxtLink :to="`${project.link}`" target="_blank">
+                        {{ capitalize(project.title) }}
+                        <Icon name="mingcute:external-link-line" size="24px" color="#DCDCDC"/>
+                    </NuxtLink>
                 </li>
                 <li class="flex justify-between py-1 md:block">
                     <h3>Date</h3>
@@ -85,7 +88,7 @@ const projects = ref([
     { 
         id:1, 
         title:'sheng dictionary', 
-        category:'application', 
+        link:'https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary', 
         shortDescription: 'keep up with sheng',
         description: 'This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).Target: The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi',
         features:[
@@ -101,7 +104,7 @@ const projects = ref([
     { 
         id:2, 
         title:'definitions api', 
-        category:'api', 
+        link:'https://dull-gold-cape-buffalo-hem.cyclic.app', 
         shortDescription: 'Sheng definitions for your app',
         description:'A REST API to serve Sheng definitions to mobile client given you have an API key that is sent with the GET request.', 
         features:[
