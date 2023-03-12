@@ -5,30 +5,18 @@
 [![Gmail Badge](https://img.shields.io/badge/-derrickmbarani-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:derrickmbarani@gmail.com)](mailto:derrickmbarani@gmail.com)
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
 
-I am a website and mobile developer. My expertise lies in front-end development, back-end development & Android app development.
+I'm a website and mobile developer. My expertise lies in front-end development, back-end development & Android app development.
 
 ## Preffered Tools
 
-<div style="display:flex;justify-content:space-between; align-items: center;">
-<p style="max-width:4000px; padding-right: 50px;">JavaScript is my go to when it comes to web developent &
-Kotlin for mobile app development. I am also familiar with Python.<p>
-
-
+JavaScript is my preference when it comes to web developent &
+Kotlin for mobile app development. I'm also familiar with Python.    
+    
 [![Vue Badge](https://img.shields.io/badge/-VueJS-3c4e64?style=for-the-badge&logo=vue.js&logoColor=white&logoWidth=30)](https://vuejs.org/)
 [![Node Badge](https://img.shields.io/badge/-NodeJS-3a5311?style=for-the-badge&logo=node.js&logoColor=white&logoWidth=30)](https://nodejs.org/)
 [![Android Badge](https://img.shields.io/badge/-Android-32cd32?style=for-the-badge&logo=android&logoColor=white&logoWidth=30)](https://developer.android.com/)
 [![Javascript Badge](https://img.shields.io/badge/-Javascript-efd81d?style=for-the-badge&logo=javascript&logoColor=black&logoWidth=30)](https://www.javascript.com/)
 [![Kotlin Badge](https://img.shields.io/badge/-Kotlin-E24462?style=for-the-badge&logo=kotlin&logoColor=b125ea&logoWidth=30)](https://kotlinlang.org/)
-
-</div>
-
-## Interests
-
-<div style="display:flex;justify-content:space-between; align-items: center;">
-<img src="./githubreadmeassets/fitness.svg" width="175"/>
-<p style="width:300px">I'm still exploring but this far, I'm gaining interest in health and fitness. I am currently trying to build a step counter app for my brisk walks.<p>
-</div>
-<br/>
 
 ## Sample projects
 
@@ -61,12 +49,9 @@ Kotlin for mobile app development. I am also familiar with Python.<p>
 </table>
 
 <hr/>
-<div style="display:flex; justify-content:space-between; align-items: center;">
-Follow me or reach out for projects and collaborations
-<div style="display:flex;">
 
+Follow me or reach out for projects and collaborations
+    
 [![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
 &nbsp;
 ![Profile views](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
-</div>
-</div>
