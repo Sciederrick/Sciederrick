@@ -1,9 +1,12 @@
-# Hi, I'm Derrick,
+<div align="right">
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/derrick-mbarani/)
 [![Website Badge](https://img.shields.io/badge/-website-black?logo=googlechrome&style=flat&logoColor=white)](https://derrickmbarani.vercel.app/)
 [![Gmail Badge](https://img.shields.io/badge/-derrickmbarani-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:derrickmbarani@gmail.com)](mailto:derrickmbarani@gmail.com)
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
+</div>
+
+# Hi, I'm Derrick,
 
 I'm a website and mobile developer. My expertise lies in front-end development, back-end development & Android app development.
 
@@ -50,8 +53,11 @@ Kotlin for mobile app development. I'm also familiar with Python.
 
 <hr/>
 
-Follow me or reach out for projects and collaborations
+Follow me or reach out for projects and collaborations.
+<div align="right">
     
 [![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
 &nbsp;
 ![Profile views](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
+    
+</div>
