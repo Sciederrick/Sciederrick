@@ -61,12 +61,12 @@ Kotlin for mobile app development. I am also familiar with Python.<p>
 </table>
 
 <hr/>
-<div style="display:flex;justify-content:space-between; align-items: center;">
+<div style="display:flex; justify-content:space-between; align-items: center;">
 Follow me or reach out for projects and collaborations
-<div style="display:flex; padding-top:15px;">
+<div style="display:flex;">
 
-[![GitHub Thaiane](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
+[![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
 &nbsp;
-![](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
+![Profile views](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
 </div>
 </div>
