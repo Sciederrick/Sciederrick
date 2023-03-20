@@ -114,7 +114,7 @@ const projects = ref([
         ],
         technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
         image: "sheng_dictionary",
-        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
+        screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"],
         client: "personal project",
         date: "January 2023"
     },

@@ -31,7 +31,7 @@
             <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
                 <NuxtLink class="flex flex-col"
                     :to="`projects/${project.title}`">
-                    <img v-if="project.image != null" class="object-contain rounded-3xl" 
+                    <img v-if="project.image != null" class="object-fit rounded-3xl h-[300px]" 
                     :src="templateImages[project.image]" alt="project image" />
                     <p class="py-6">{{ capitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
                 </NuxtLink>
@@ -91,8 +91,8 @@ const projects = ref([
             'GET endpoint',
         ],
         technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: "sheng_dictionary",
-        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"]
+        image: "sheng_api",
+        screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"]
     },
 ])
 
