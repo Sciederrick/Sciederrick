@@ -36,14 +36,14 @@ Kotlin for mobile app development. I'm also familiar with Python.
 </thead>
 <tbody>
     <tr>
-    <td><a href="https://github.com/iampavangandhi/Gitwar"><b>🚀 Sheng Api</b></a></td>
+    <td><a href="https://github.com/Sciederrick/NodeDefinitionsApi"><b>🚀 Sheng Api</b></a></td>
     <td>Node REST API for serving language definitions</td>
     <td>Node|HTML|Tailwind</td>
     <td>█████ 80%</td>
     <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app/">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/iampavangandhi/TradeByte"><b>🚀 Steps</b></a></td>
+        <td><a href="https://github.com/Sciederrick/Steps"><b>🚀 Steps</b></a></td>
     <td>Fitness mobile app for tracking step count</td>
     <td>Android|Kotlin</td>
     <td>████ 60%</td>
