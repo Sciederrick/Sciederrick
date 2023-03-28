@@ -20,6 +20,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
 [![Android Badge](https://img.shields.io/badge/-Android-32cd32?style=for-the-badge&logo=android&logoColor=white&logoWidth=30)](https://developer.android.com/)
 [![Javascript Badge](https://img.shields.io/badge/-Javascript-efd81d?style=for-the-badge&logo=javascript&logoColor=black&logoWidth=30)](https://www.javascript.com/)
 [![Kotlin Badge](https://img.shields.io/badge/-Kotlin-E24462?style=for-the-badge&logo=kotlin&logoColor=b125ea&logoWidth=30)](https://kotlinlang.org/)
+[![Python Badge](https://img.shields.io/badge/-Python-efd81d?style=for-the-badge&logo=python&logoWidth=30)](https://www.python.org/)
 
 ## Sample projects
 
