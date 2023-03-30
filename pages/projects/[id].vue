@@ -66,11 +66,11 @@ const images = Object.fromEntries(
 );
 templateImages.value = images
 
-const { title } = useRoute().params
+const { id } = useRoute().params
 let project = ref({})
 
-function getProject(title) {
-    return projects.value.filter(project => project.title === title)[0]
+function getProject(id) {
+    return projects.value.filter(project => project.id === parseInt(id))[0]
 }
 
 const projects = ref([
@@ -109,7 +109,7 @@ const projects = ref([
     },
 ])
 
-project.value = getProject(title)
+project.value = getProject(id)
 
 </script>
 

@@ -30,7 +30,7 @@
         <section class="py-8 grid grid-cols-1 md:py-16 md:grid-cols-2 gap-y-10 md:gap-x-8">
             <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
                 <NuxtLink class="flex flex-col"
-                    :to="`projects/${project.title}`">
+                    :to="`projects/${project.id}`">
                     <img v-if="project.image != null" class="object-cover rounded-3xl h-[300px]"
                     :src="templateImages[project.image]" alt="project image" />
                     <p class="py-6">{{ useCapitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
