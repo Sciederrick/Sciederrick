@@ -5,26 +5,26 @@
             <h1 class="text-4xl text-left py-5 md:text-6xl md:pb-0 lg:text-7xl">
                 {{ project.title }}
             </h1>
-            <h2 class="text-xl py-5 md:text-2xl md:max-w-lg">{{ capitalize(project.shortDescription) }}</h2>
+            <h2 class="text-xl py-5 md:text-2xl md:max-w-lg">{{ useCapitalize(project.shortDescription) }}</h2>
             <p class="text-xl py-10 md:text-2xl md:max-w-lg lg:max-w-2xl">{{ project.description }}</p>
             <ul class="py-12 md:grid md:grid-cols-4">
                 <li class="flex justify-between py-1 md:block">
                     <h3>Client</h3>
-                    <p>{{ capitalize(project.client) }}</p>
+                    <p>{{ useCapitalize(project.client) }}</p>
                 </li>
                 <li class="flex justify-between py-1 md:block">
                     <h3>Features</h3>
                     <p>
                         <ul>
                             <li v-for="(feature, index) in project.features" :key="index"
-                                class="text-right md:text-left">{{ capitalize(feature) }}</li>
+                                class="text-right md:text-left">{{ useCapitalize(feature) }}</li>
                         </ul>
                     </p>
                 </li>
                 <li class="flex justify-between py-1 md:block">
                     <h3>Link</h3>
                     <NuxtLink :to="`${project.link}`" target="_blank">
-                        {{ capitalize(project.title) }}
+                        {{ useCapitalize(project.title) }}
                         <Icon name="mingcute:external-link-line" size="24px" color="#DCDCDC"/>
                     </NuxtLink>
                 </li>

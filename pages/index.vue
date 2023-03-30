@@ -33,7 +33,7 @@
                     :to="`projects/${project.title}`">
                     <img v-if="project.image != null" class="object-cover rounded-3xl h-[300px]"
                     :src="templateImages[project.image]" alt="project image" />
-                    <p class="py-6">{{ capitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
+                    <p class="py-6">{{ useCapitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
                 </NuxtLink>
             </div>
         </section>

@@ -1,4 +1,4 @@
-export function capitalize(input) {
+export function useCapitalize(input) {
     let output = null;
     const inputArray = input.split(' ')
     inputArray.forEach((word, index) => {
