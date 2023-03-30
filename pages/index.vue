@@ -1,3 +1,10 @@
+<script setup>
+    const { useCapitalize, useDynamicImages } = useMyUtils()
+    const templateImages = useDynamicImages()
+
+    const projects = useMyState()
+</script>
+
 <template>
     <main class="px-5 lg:px-16">  
         <!-- hero -->     
@@ -50,53 +57,5 @@
     </main>
 </template>
 
-<script setup>
-import { filename } from 'pathe/utils';
-
-/**
- * Work around for dynamic images with Vite because require() doesn't work
- */
-let templateImages = ref()
-const glob = import.meta.glob('~/assets/images/*.webp', { eager: true });
-const images = Object.fromEntries(
-  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-);
-templateImages.value = images
-
-const projects = ref([
-    { 
-        id:1, 
-        title:'sheng dictionary', 
-        category:'application', 
-        background:'This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).',
-        target:'Target: The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi', 
-        features:[
-            'words',
-            'idioms',
-            'word games and learderboards will be released in version 2',
-            'separate public facing api for developers to hook up for their interface'
-        ],
-        technicalDetails: 'This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.',
-        image: "sheng_dictionary",
-        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"]
-    },
-    { 
-        id:2, 
-        title:'definitions api', 
-        category:'api', 
-        background:'A REST API to serve Sheng definitions to mobile client given an API key is sent with the GET request.', 
-        features:[
-            'authentication & authorization',
-            'pagination',
-            'GET endpoint',
-        ],
-        technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: "sheng_api",
-        screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"]
-    },
-])
-
-
-</script>
 
   

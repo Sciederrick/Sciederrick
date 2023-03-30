@@ -1,3 +1,21 @@
+<script setup>
+    const { useCapitalize, useDynamicImages } = useMyUtils()
+    const templateImages = useDynamicImages()
+
+    const { id } = useRoute().params
+    let project = ref({})
+
+    function getProject(id) {
+        return projects.value.filter(project => project.id === parseInt(id))[0]
+    }
+
+    let projects = ref({})
+
+    projects.value = useMyState().value
+    project.value = getProject(id)
+
+</script>
+
 <template>
     <main class="px-5 lg:px-16">  
         <!-- hero -->     
@@ -53,64 +71,6 @@
     </main>
 </template>
 
-<script setup>
-import { filename } from 'pathe/utils';
 
-/**
- * Work around for dynamic images with Vite because require() doesn't work
- */
-let templateImages = ref()
-const glob = import.meta.glob('~/assets/images/*.webp', { eager: true });
-const images = Object.fromEntries(
-  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-);
-templateImages.value = images
-
-const { id } = useRoute().params
-let project = ref({})
-
-function getProject(id) {
-    return projects.value.filter(project => project.id === parseInt(id))[0]
-}
-
-const projects = ref([
-    { 
-        id:1, 
-        title:'sheng dictionary', 
-        link:'https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary', 
-        shortDescription: 'keep up with sheng',
-        description: 'This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).Target: The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi',
-        features:[
-            'words',
-            'idioms'
-        ],
-        technicalDetails: 'This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.',
-        image: "sheng_dictionary",
-        screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
-        client: "personal project",
-        date: "January 2023"
-    },
-    { 
-        id:2, 
-        title:'definitions api', 
-        link:'https://dull-gold-cape-buffalo-hem.cyclic.app', 
-        shortDescription: 'Sheng definitions for your app',
-        description:'A REST API to serve Sheng definitions to mobile client given you have an API key that is sent with the GET request.', 
-        features:[
-            'authentication & authorization',
-            'pagination',
-            'GET endpoint',
-        ],
-        technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: "sheng_dictionary",
-        screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"],
-        client: "personal project",
-        date: "January 2023"
-    },
-])
-
-project.value = getProject(id)
-
-</script>
 
   
