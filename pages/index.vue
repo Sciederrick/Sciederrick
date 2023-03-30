@@ -31,7 +31,7 @@
             <div :id="`project${project.id}`" v-for="project in projects" :key="project.id">
                 <NuxtLink class="flex flex-col"
                     :to="`projects/${project.title}`">
-                    <img v-if="project.image != null" class="object-fit rounded-3xl h-[300px]" 
+                    <img v-if="project.image != null" class="object-cover rounded-3xl h-[300px]"
                     :src="templateImages[project.image]" alt="project image" />
                     <p class="py-6">{{ capitalize(project.title) }}&nbsp;&nbsp;<Icon name="mdi:arrow-top-right" color="#e1e1e1" size="24px"/></p>
                 </NuxtLink>
@@ -42,7 +42,7 @@
         <section class="py-8 md:py-16">
             <p class="text-2xl md:text-4xl">I'm a software developer. I build web & android applications; translate designs into products; write articles to document my learnings & do UI/UX design as a hobby.</p>
             <div class="max-h-96 w-full rounded-3xl overflow-hidden mt-20">
-                <img src="~/assets/images/cover.webp"
+                <img src="~/assets/images/cover.webp" alt="decorative image"
                     class="object-cover"/>
             </div>
         </section>
