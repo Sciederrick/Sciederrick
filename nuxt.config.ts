@@ -10,11 +10,12 @@ export default defineNuxtConfig({
     ],
     app: {
         head: {
-            title: "Derrick, software developer",
+            title: 'Derrick, software developer',
             meta: [
-                { name: "description", content: "some information about me and my work"}
+                { name: 'description', content: 'some information about me and my work' }
             ]
-        }
+        },
+        pageTransition: { name: 'layout', mode: 'out-in' }
     },
     css: [
         '@/assets/css/main.css',
