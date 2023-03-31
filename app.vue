@@ -11,7 +11,7 @@
 .layout-enter-from {
     opacity: 0;
     filter: blur(5px);
-    transform: translateY(1rem);
+    transform: translateY(2rem);
 }
 .layout-leave-to {
     opacity: 0;
