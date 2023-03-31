@@ -8,9 +8,14 @@
 .layout-leave-active {
     transition: all 0.8s;
 }
-.layout-enter-from,
+.layout-enter-from {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(1rem);
+}
 .layout-leave-to {
     opacity: 0;
     filter: blur(5px);
+    transform: translateY(0);
 }
 </style>
