@@ -1,7 +1,7 @@
 <template>
-    <div class="lg:mx-auto 2xl:container">
+    <div class="relative lg:mx-auto 2xl:container">
         <div class="w-full h-28"></div>
-        <header class="fixed top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16">        
+        <header class="absolute top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16">        
             <nav class="flex flex-row justify-between items-center py-5 md:py-3">
                 <div>
                     <NuxtLink to="/"
