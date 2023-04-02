@@ -1,7 +1,16 @@
+<script setup>
+    function applyVisualClasses(target) {
+        if (target.id == "navbar")
+            target.element.classList.add('text-effects-reverse')
+        if (target.id == "footer")
+            target.element.classList.add('text-effects')
+    }
+</script>
+
 <template>
     <div class="relative lg:mx-auto 2xl:container">
         <div class="w-full h-28"></div>
-        <header class="absolute top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16">        
+        <header class="out absolute top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16" data-observed="true" id="navbar">        
             <nav class="flex flex-row justify-between items-center py-5 md:py-3">
                 <div>
                     <NuxtLink to="/"
@@ -19,7 +28,7 @@
         <!-- page content down here -->
         <slot />
 
-        <footer class="px-5 py-6 md:py-16 lg:px-16">
+        <footer class="out px-5 py-6 md:py-16 lg:px-16" data-observed="true" id="footer">
             <div class="flex flex-col md:flex-row">
                 <div class="md:max-w-md md:pr-16 lg:pr-0 lg:max-w-xl">
                     <p class="pb-12 text-2xl">Feeling inspired? Let me know. I'm open to collaboration and hires.
@@ -57,6 +66,7 @@
                 <span class="md:pl-8">Copyright &#169; {{ new Date().getFullYear() }} Derrick Mbarani</span>
             </div>
         </footer>
+        <Observer @intersect="applyVisualClasses($event)" />
     </div>
 
 </template>

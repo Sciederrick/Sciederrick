@@ -14,18 +14,29 @@
     projects.value = useMyState().value
     project.value = getProject(id)
 
+    function applyVisualClasses(target) {
+        const textElements = document.querySelectorAll(`#${target.id} p, #${target.id} h1, #${target.id} h2, #${target.id} h3, #${target.id} a, #${target.id} ul`)
+        const imgElements = document.querySelectorAll(`#${target.id}.img-container`)
+        textElements.forEach(el => {
+            el.classList.add('text-effects')
+        })
+        imgElements.forEach(el => {
+            el.classList.add('img-effects')
+        })
+    }
+
 </script>
 
 <template>
     <main class="px-5 lg:px-16">  
         <!-- hero -->     
-        <section id="hero" class="pt-10 md:pt-20 md:pb-16 xl:min-h-max">
-            <h1 class="text-4xl text-left py-5 md:text-6xl md:pb-0 lg:text-7xl">
+        <section class="pt-10 md:pt-20 md:pb-16 xl:min-h-max" data-observed="true" id="hero">
+            <h1 class="out text-4xl text-left py-5 md:text-6xl md:pb-0 lg:text-7xl">
                 {{ project.title }}
             </h1>
-            <h2 class="text-xl py-5 md:text-2xl md:max-w-lg">{{ useCapitalize(project.shortDescription) }}</h2>
-            <p class="text-xl py-10 md:text-2xl md:max-w-lg lg:max-w-2xl">{{ project.description }}</p>
-            <ul class="py-12 md:grid md:grid-cols-4">
+            <h2 class="out text-xl py-5 md:text-2xl md:max-w-lg">{{ useCapitalize(project.shortDescription) }}</h2>
+            <p class="out text-xl py-10 md:text-2xl md:max-w-lg lg:max-w-2xl">{{ project.description }}</p>
+            <ul class="out py-12 md:grid md:grid-cols-4">
                 <li class="flex justify-between py-1 md:block">
                     <h3>Client</h3>
                     <p>{{ useCapitalize(project.client) }}</p>
@@ -56,8 +67,8 @@
         <!-- screenshots -->
         <section class="py-8">
             <div v-if="project.screenshots.length > 0" class="flex flex-col w-full">
-                <div v-for="screenshot in project.screenshots"
-                    class="w-full bg-[#B4B6D2] rounded-3xl my-6">
+                <div v-for="(screenshot, index) in project.screenshots" :key="index"
+                    class="out img-container w-full bg-[#B4B6D2] rounded-3xl my-6" data-observed="true" :id="`screenshot-${index}`">
                     <div
                         class="w-3/4 mx-auto max-h-screen rounded-3xl overflow-hidden my-10">
                         <img class="object-cover" 
@@ -67,8 +78,9 @@
                 </div>
             </div>
         </section>
-
+        <Observer @intersect="applyVisualClasses($event)" />
     </main>
+    
 </template>
 
 

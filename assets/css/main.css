@@ -68,6 +68,38 @@ h2, h3 {
   color: #808080;
 }
 
+/* scroll effects */
+.text-effects {
+    animation: animateUp 1s ease .4s 1 forwards;
+}
+
+.text-effects-reverse {
+    animation: animateDown 1s ease .4s 1 forwards;
+}
+
+.img-effects {
+    animation: animateOut 1s ease .4s 1 forwards;
+}
+
+.out {
+    opacity: 0;
+}
+
+@keyframes animateUp {
+    from { opacity: 0; transform: translateY(3rem); }
+    to { opacity: 1; transform: translateY(0);  }
+}
+
+@keyframes animateDown {
+    from { opacity: 0; transform: translateY(-3rem); }
+    to { opacity: 1; transform: translateY(0);  }
+}
+
+@keyframes animateOut {
+    from { opacity: 0; transform: scale(.75); }
+    to { opacity: 1; transform: scale(1);  }  
+}
+
 
 @layer components {
     .btn {

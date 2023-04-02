@@ -15,7 +15,6 @@ export default defineNuxtConfig({
                 { name: 'description', content: 'some information about me and my work' }
             ]
         },
-        pageTransition: { name: 'layout', mode: 'out-in' }
     },
     css: [
         '@/assets/css/main.css',
