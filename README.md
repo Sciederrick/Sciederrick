@@ -50,7 +50,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
         <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app/">____</a></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/Sciederrick/Steps"><b>🚀 Careprompt</b></a></td>
+        <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt</b></a></td>
         <td>Maternal health concept landing page</td>
         <td>Vue|Nuxt</td>
         <td>████ 60%</td>
