@@ -34,7 +34,7 @@ export const useMyState = () => useState(() => ([
     },
     { 
         id:3, 
-        title:'careprompt landing page', 
+        title:'careprompt', 
         link:'https://care-prompt.vercel.app', 
         shortDescription: 'Concept landing page',
         description:'Concept landing page for a maternal health care solution', 
