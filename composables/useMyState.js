@@ -32,4 +32,21 @@ export const useMyState = () => useState(() => ([
         client: "personal project",
         date: "January 2023"
     },
+    { 
+        id:3, 
+        title:'careprompt landing page', 
+        link:'https://care-prompt.vercel.app', 
+        shortDescription: 'Concept landing page',
+        description:'Concept landing page for a maternal health care solution', 
+        features:[
+            'carousel sliders',
+            'social links',
+            'FAQ',
+        ],
+        technicalDetails: 'Powered by Nuxt, hosted on vercel',
+        image: "careprompt",
+        screenshots: ["careprompt_sample1", "careprompt_sample2", "careprompt_sample3", "careprompt_sample4"],
+        client: "pro bono client",
+        date: "April 2023"
+    }
 ]))
