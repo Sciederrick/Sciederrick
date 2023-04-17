@@ -15,23 +15,23 @@ export const useMyState = () => useState(() => ([
         client: "personal project",
         date: "January 2023"
     },
-    { 
-        id:2, 
-        title:'definitions api', 
-        link:'https://dull-gold-cape-buffalo-hem.cyclic.app', 
-        shortDescription: 'Sheng definitions for your app',
-        description:'A REST API to serve Sheng definitions to mobile client given you have an API key that is sent with the GET request.', 
-        features:[
-            'authentication & authorization',
-            'pagination',
-            'GET endpoint',
-        ],
-        technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
-        image: "sheng_api",
-        screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"],
-        client: "personal project",
-        date: "January 2023"
-    },
+    // { 
+    //     id:2, 
+    //     title:'definitions api', 
+    //     link:'https://dull-gold-cape-buffalo-hem.cyclic.app', 
+    //     shortDescription: 'Sheng definitions for your app',
+    //     description:'A REST API to serve Sheng definitions to mobile client given you have an API key that is sent with the GET request.', 
+    //     features:[
+    //         'authentication & authorization',
+    //         'pagination',
+    //         'GET endpoint',
+    //     ],
+    //     technicalDetails: 'Powered by Node, Express, MongoDB with Mongoose and hosted on Cyclic',
+    //     image: "sheng_api",
+    //     screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"],
+    //     client: "personal project",
+    //     date: "January 2023"
+    // },
     { 
         id:3, 
         title:'careprompt', 
