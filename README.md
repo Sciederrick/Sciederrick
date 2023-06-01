@@ -69,7 +69,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
     <tr border: none;>
     <td><b>Project</b></td>
     <td><b>Description</b></td>
-    <td><b>Language</b></td>
+    <td><b>Tools</b></td>
     <td><b>Status</b></td>
     <td><b>Link</b></td>
     </tr>
