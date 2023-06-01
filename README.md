@@ -82,6 +82,13 @@ Kotlin for mobile app development. I'm also familiar with Python.
         <td>█████ 95%</td>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;repo</a></td>
     </tr>
+    <tr>
+        <td><a href="https://github.com/Sciederrick/"><b>🚀 Starter Vue3|Typescript|TailwindCSS template</b></a></td>
+        <td>Starter Node API template with MVC pattern, docs, pagination, JWT auth</td>
+        <td>Vue3|TailwindCSS</td>
+        <td>█5%</td>
+        <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;____</a></td>
+    </tr>
 </tbody>
 </table>
 
