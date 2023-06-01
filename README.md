@@ -94,7 +94,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
 
 <hr/>
 
-If you are seeing this :) I need help with:
+## If you are seeing this :) I need help with:
 
 > Domain Driven Design in Vue3 app, I'm looking for the best way to apply it in terms of folder structure.
 
