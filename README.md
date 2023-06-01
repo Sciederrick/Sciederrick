@@ -87,7 +87,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
         <td>Starter Vue3 Template that follows Domain Driven Design to handle scalability issues faced by MVC pattern in huge projects</td>
         <td>Vue3|TailwindCSS</td>
         <td>█5%</td>
-        <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;____</a></td>
+        <td><a href="https://github.com/Sciederrick/Vue3.DDD.Template">🔗&nbsp;&nbsp;repo</a></td>
     </tr>
 </tbody>
 </table>
