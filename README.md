@@ -84,7 +84,7 @@ Kotlin for mobile app development. I'm also familiar with Python.
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/"><b>🚀 Starter Vue3|Typescript|TailwindCSS template</b></a></td>
-        <td>Starter Node API template with MVC pattern, docs, pagination, JWT auth</td>
+        <td>Starter Vue3 Template that follows Domain Driven Design to handle scalability issues faced by MVC pattern in huge projects</td>
         <td>Vue3|TailwindCSS</td>
         <td>█5%</td>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;____</a></td>
@@ -93,6 +93,10 @@ Kotlin for mobile app development. I'm also familiar with Python.
 </table>
 
 <hr/>
+
+I need help with:
+
+> Domain Driven Design, I'm looking for the best way to apply it in terms of folder structure.
 
 Follow me or reach out for projects and collaborations.
 <div align="right">
