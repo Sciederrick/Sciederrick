@@ -94,43 +94,6 @@ Kotlin for mobile app development. I'm also familiar with Python.
 
 <hr/>
 
-## If you are seeing this :) I need help with:
-
-> Domain Driven Design in Vue3 app, I'm looking for the best way to apply it in terms of folder structure.
-
-> Error affecting one of my Android apps in production that only happens after deployment, see the log below:
-
-```
-Exception u5.j: Serializer for class 'a' is not found.
-<US_MALE_NAME> the class as @Serializable or provide the serializer explicitly.
-  at kotlinx.serialization.SerializersKt.serializer (Serializers.kt)
-  at kotlinx.serialization.SerializersKt.serializersForParameters (Serializers.kt)
-  at kotlinx.serialization.SerializersKt__SerializersKt.serializerByKTypeImpl$SerializersKt__SerializersKt (SerializersKt__Serializers.kt)
-  at kotlinx.serialization.SerializersKt.serializer (Serializers.kt)
-  at ke.derrick.shengdictionary.data.local.database.ShengDatabase$Companion$buildDatabase$1.onCreate (ShengDatabase.java)
-  at ke.derrick.shengdictionary.data.local.database.ShengDatabase_Impl$1.onCreate (ShengDatabase_Impl.java)
-  at androidx.room.RoomOpenHelper.onCreate (RoomOpenHelper.java)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.onCreate (FrameworkSQLiteOpenHelper.java)
-  at android.database.sqlite.SQLiteOpenHelper.getDatabaseLocked (SQLiteOpenHelper.java:413)
-  at android.database.sqlite.SQLiteOpenHelper.getWritableDatabase (SQLiteOpenHelper.java:316)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getWritableOrReadableDatabase (FrameworkSQLiteOpenHelper.java)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.innerGetDatabase (FrameworkSQLiteOpenHelper.java)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper$OpenHelper.getSupportDatabase (FrameworkSQLiteOpenHelper.java)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getDelegate (FrameworkSQLiteOpenHelper.java)
-  at androidx.sqlite.db.framework.FrameworkSQLiteOpenHelper.getWritableDatabase (FrameworkSQLiteOpenHelper.java)
-  at androidx.room.RoomDatabase.beginTransaction (RoomDatabase.java)
-  at androidx.room.RoomDatabaseKt$withTransaction$2.invokeSuspend (RoomDatabase.kt)
-  at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith (BaseContinuationImpl.java)
-  at kotlinx.coroutines.DispatchedTask.run (DispatchedTask.java)
-  at kotlinx.coroutines.EventLoopImplBase.processNextEvent (EventLoopImplBase.java)
-  at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking (BuildersKt__Builders.kt)
-  at kotlinx.coroutines.BuildersKt.runBlocking (Builders.kt)
-  at androidx.room.RoomDatabaseKt$acquireTransactionThread$2$2.run (RoomDatabase.kt)
-  at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1167)
-  at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:641)
-  at java.lang.Thread.run (Thread.java:923)
-  ```
-
 Follow me or reach out for projects and collaborations.
 <div align="right">
     
