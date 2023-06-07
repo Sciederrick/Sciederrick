@@ -13,7 +13,7 @@ I'm a website and mobile developer. My expertise lies in front-end development, 
 ## Preffered Tools
 
 JavaScript is my preference when it comes to web developent &
-Kotlin for mobile app development. I'm also familiar with Python.    
+Kotlin for mobile app development.    
     
 [![Vue Badge](https://img.shields.io/badge/-VueJS-3c4e64?style=for-the-badge&logo=vue.js&logoColor=white&logoWidth=30)](https://vuejs.org/)
 [![Node Badge](https://img.shields.io/badge/-NodeJS-3a5311?style=for-the-badge&logo=node.js&logoColor=white&logoWidth=30)](https://nodejs.org/)
