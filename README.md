@@ -40,12 +40,12 @@ Kotlin for mobile app development. I'm also familiar with Python.
         <td><a href="https://github.com/Sciederrick/ShengDictionary"><b>🚀 Sheng Dictionary</b></a></td>
         <td>Android Application</td>
         <td>Android|Kotlin</td>
-        <td>█████ 80%</td>
+        <td>██████ 90%</td>
         <td><a href="https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary">🔗&nbsp;&nbsp;android application</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/NodeDefinitionsApi"><b>🚀 Sheng Api</b></a></td>
-        <td>Node REST API for serving language definitions, powers the [Sheng Dictionary](https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary)</td>
+        <td>Node REST API for serving language definitions, powers the Sheng Dictionary</td>
         <td>Node|HTML|Tailwind</td>
         <td>█████ 80%</td>
         <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app">🔗&nbsp;&nbsp;website</a></td>
