@@ -37,8 +37,15 @@ Kotlin for mobile app development. I'm also familiar with Python.
 </thead>
 <tbody>
     <tr>
+        <td><a href="https://github.com/Sciederrick/ShengDictionary"><b>🚀 Sheng Dictionary</b></a></td>
+        <td>Android Application</td>
+        <td>Android|Kotlin</td>
+        <td>█████ 80%</td>
+        <td><a href="https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary">🔗&nbsp;&nbsp;android application</a></td>
+    </tr>
+    <tr>
         <td><a href="https://github.com/Sciederrick/NodeDefinitionsApi"><b>🚀 Sheng Api</b></a></td>
-        <td>Node REST API for serving language definitions</td>
+        <td>Node REST API for serving language definitions, powers the [Sheng Dictionary](https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary)</td>
         <td>Node|HTML|Tailwind</td>
         <td>█████ 80%</td>
         <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app">🔗&nbsp;&nbsp;website</a></td>
@@ -56,6 +63,13 @@ Kotlin for mobile app development. I'm also familiar with Python.
         <td>Vue|Nuxt</td>
         <td>████ 60%</td>
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
+    </tr>
+        <tr>
+        <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt Search</b></a></td>
+        <td>Maternal health concept search tool</td>
+        <td>Vue|Nuxt|Typesense|Appwrite</td>
+        <td>████ 60%</td>
+        <td><a href="https://care-prompt-search.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
 </tbody>
 </table>
