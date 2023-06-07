@@ -65,7 +65,7 @@ Kotlin for mobile app development.
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
         <tr>
-        <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt Search</b></a></td>
+        <td><a href="https://github.com/Sciederrick/CarePromptSearch"><b>🚀 Careprompt Search</b></a></td>
         <td>Maternal health concept search tool</td>
         <td>Vue|Nuxt|Typesense|Appwrite</td>
         <td>████ 60%</td>
