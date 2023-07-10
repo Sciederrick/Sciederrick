@@ -113,6 +113,6 @@ Follow me or reach out for projects and collaborations.
     
 [![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
 &nbsp;
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
+![Profile views](https://views.igorkowalczyk.vercel.app/api/badge/Sciederrick)
     
 </div>
