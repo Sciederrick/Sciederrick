@@ -1,7 +1,7 @@
 <div align="right">
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/derrick-mbarani/)
-[![Website Badge](https://img.shields.io/badge/-website-black?logo=googlechrome&style=flat&logoColor=white)](https://derrickmbarani.vercel.app/)
+[![Website Badge](https://img.shields.io/badge/-website-black?logo=googlechrome&style=flat&logoColor=white)](https://derrick.ink/)
 [![Gmail Badge](https://img.shields.io/badge/-derrickmbarani-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:derrickmbarani@gmail.com)](mailto:derrickmbarani@gmail.com)
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
 </div>
