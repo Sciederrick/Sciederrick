@@ -1,7 +1,7 @@
 <div align="right">
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/derrick-mbarani/)
-[![Website Badge](https://img.shields.io/badge/-website-black?logo=googlechrome&style=flat&logoColor=white)](https://derrickmbarani.vercel.app/)
+[![Website Badge](https://img.shields.io/badge/-website-black?logo=googlechrome&style=flat&logoColor=white)](https://derrick.ink/)
 [![Gmail Badge](https://img.shields.io/badge/-derrickmbarani-c14438?style=flat&logo=Gmail&logoColor=white&link=mailto:derrickmbarani@gmail.com)](mailto:derrickmbarani@gmail.com)
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
 </div>
@@ -40,36 +40,29 @@ Kotlin for mobile app development.
         <td><a href="https://github.com/Sciederrick/ShengDictionary"><b>🚀 Sheng Dictionary</b></a></td>
         <td>Android Application</td>
         <td>Android|Kotlin</td>
-        <td>██████ 90%</td>
+        <td>█████ 90%</td>
         <td><a href="https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary">🔗&nbsp;&nbsp;android application</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/NodeDefinitionsApi"><b>🚀 Sheng Api</b></a></td>
         <td>Node REST API for serving language definitions, powers the Sheng Dictionary</td>
         <td>Node|HTML|Tailwind</td>
-        <td>█████ 80%</td>
+        <td>████ 80%</td>
         <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/Steps"><b>🚀 Steps</b></a></td>
         <td>Fitness mobile app for tracking step count</td>
         <td>Android|Kotlin</td>
-        <td>████ 60%</td>
+        <td>███ 60%</td>
         <td><a href="https://dull-gold-cape-buffalo-hem.cyclic.app/">____</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt</b></a></td>
         <td>Maternal health concept landing page</td>
         <td>Vue|Nuxt</td>
-        <td>████ 60%</td>
+        <td>█████ 99%</td>
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
-    </tr>
-        <tr>
-        <td><a href="https://github.com/Sciederrick/CarePromptSearch"><b>🚀 Careprompt Search</b></a></td>
-        <td>Maternal health concept search tool</td>
-        <td>Vue|Nuxt|Typesense|Appwrite</td>
-        <td>████ 60%</td>
-        <td><a href="https://care-prompt-search.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
 </tbody>
 </table>
@@ -113,6 +106,6 @@ Follow me or reach out for projects and collaborations.
     
 [![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
 &nbsp;
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=sciederrick.sciederrick)
+![Profile views](https://views.igorkowalczyk.vercel.app/api/badge/Sciederrick)
     
 </div>
