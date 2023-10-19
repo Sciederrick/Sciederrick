@@ -45,7 +45,7 @@ Kotlin for mobile app development.
     </tr>
         <tr>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template"><b>🚀 Starter Node API template</b></a></td>
-        <td>Starter Node API template with MVC pattern, docs, pagination, JWT auth</td>
+        <td>Starter Node API template with MVC pattern, docs, pagination, Token based authentication with JWT and tests with Jest & Supertest</td>
         <td>Node|<a href="https://apidocjs.com/">APIDOC</a></td>
         <td>█████ 95%</td>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;repo</a></td>
