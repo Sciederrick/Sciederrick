@@ -48,6 +48,7 @@ I'm an apps developer with passion for creating data-driven applications. My exp
 </table>
 
 <hr/>
+
 ## Preffered Tools
 
 JavaScript is my preference when it comes to web developent &
