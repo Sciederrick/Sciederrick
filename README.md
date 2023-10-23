@@ -27,14 +27,14 @@ I'm an apps developer with passion for creating data-driven applications. My exp
         <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt</b></a></td>
         <td>Maternal health concept landing page</td>
         <td>Vue|Nuxt</td>
-        <td>█████ 99%</td>
+        <td>█████ 100%</td>
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
         <tr>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template"><b>🚀 Starter Node API template</b></a></td>
         <td>Starter Node API template with MVC pattern, docs, pagination, Token based authentication with JWT and tests with Jest & Supertest</td>
-        <td>Node|<a href="https://apidocjs.com/">APIDOC</a></td>
-        <td>█████ 95%</td>
+        <td>Node|<a href="https://apidocjs.com/">APIDOC</a>|<a href="https://jestjs.io/">Jest</a></td>
+        <td>█████ 98%</td>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template">🔗&nbsp;&nbsp;repo</a></td>
     </tr>
     <tr>
