@@ -70,4 +70,24 @@ export const useMyState = () =>
       client: "personal project",
       date: "June 2023",
     },
+    {
+      id: 5,
+      title: "Pizza Palace",
+      link: "https://pizza-shop-ik23c78qq-sciederrick.vercel.app/",
+      shortDescription: "e-commerce site clone",
+      description:
+        "An e-commerce clone to explore e-commerce and the power of Vue.js",
+      features: ["Cart", "Table Booking"],
+      technicalDetails:
+        "Powered by Vue2, TailwindCss",
+      image: "pizzapalace",
+      screenshots: [
+        "pizzapalace_sample1",
+        "pizzapalace_sample2",
+        "pizzapalace_sample3",
+        "pizzapalace_sample4",
+      ],
+      client: "personal project",
+      date: "June 2021",
+    }
   ]);
