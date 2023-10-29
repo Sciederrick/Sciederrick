@@ -6,7 +6,7 @@ export const useMyState = () =>
       link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
       shortDescription: "keep up with sheng",
       description:
-        "This is an android application inspired by the need to keep tabs with the Kenyan informal street language (slang).Target: The youth, friendly pedestrians or anyone looking to blend in while on the streets of Nairobi",
+        "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
       features: ["words", "idioms"],
       technicalDetails:
         "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.",
@@ -37,7 +37,7 @@ export const useMyState = () =>
       title: "careprompt",
       link: "https://care-prompt.vercel.app",
       shortDescription: "Concept landing page",
-      description: "Concept landing page for a maternal health care solution",
+      description: "Concept landing page for a maternal health care solution. I built to this for UI/UX exploration through a simple design with subtle animations.",
       features: ["carousel sliders", "social links", "FAQ"],
       technicalDetails: "Powered by Nuxt, hosted on vercel",
       image: "careprompt",
@@ -56,7 +56,7 @@ export const useMyState = () =>
       link: "https://care-prompt-search.vercel.app",
       shortDescription: "Concept Obstetric Emergency Search Tool",
       description:
-        "Search tool that is niche-focused on offering education material for health workers",
+        "Search tool that is niche-focused on offering education material for health workers. I built this in collaboration with Medical Officers as part of the concluded Appwrite hackathon.",
       features: ["Search", "Social Share"],
       technicalDetails:
         "Powered by Nuxt, Typesense, Appwrite, hosted on vercel",
