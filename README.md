@@ -30,7 +30,7 @@ I'm an apps developer with passion for creating data-driven applications. My exp
         <td>█████ 100%</td>
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
-        <tr>
+    <tr>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template"><b>🚀 Starter Node API template</b></a></td>
         <td>Starter Node API template with MVC pattern, docs, pagination, Token based authentication with JWT and tests with Jest & Supertest</td>
         <td>Node|<a href="https://apidocjs.com/">APIDOC</a>|<a href="https://jestjs.io/">Jest</a></td>
@@ -43,6 +43,13 @@ I'm an apps developer with passion for creating data-driven applications. My exp
         <td>Vue3|TailwindCSS</td>
         <td>████80%</td>
         <td><a href="https://github.com/Sciederrick/Vue3.DDD.Template">🔗&nbsp;&nbsp;repo</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://pizza-shop-ik23c78qq-sciederrick.vercel.app/"><b>🚀 Pizza e-commerce Clone</b></a></td>
+        <td>An example e-commerce site to experiment with Vue2</td>
+        <td>Vue2|TailwindCSS</td>
+        <td>████90%</td>
+        <td><a href="https://github.com/Sciederrick/pizza-shop">🔗&nbsp;&nbsp;repo</a></td>
     </tr>
 </tbody>
 </table>
