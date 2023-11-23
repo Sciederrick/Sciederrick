@@ -6,7 +6,7 @@
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
 </div>
 
-# Hi, I'm Derrick,
+# :wave: Hi, I'm Derrick,
 
 Front-end development | Back-end development | Data pipelines & analytics
 
