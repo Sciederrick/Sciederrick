@@ -8,7 +8,7 @@
 
 # Hi, I'm Derrick,
 
-Front-end development | Back-end development | Data pipelines & Analytics
+Front-end development | Back-end development | Data pipelines & analytics
 
 ## Sample projects
 
