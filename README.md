@@ -45,11 +45,11 @@ Front-end development | Back-end development | Data pipelines & analytics
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
-        <td><a href="https://pizza-shop-ik23c78qq-sciederrick.vercel.app/"><b>🚀 Pizza e-commerce Clone</b></a></td>
+        <td><a href="https://github.com/Sciederrick/pizza-shop"><b>🚀 Pizza e-commerce Clone</b></a></td>
         <td>An example e-commerce site to experiment with Vue2</td>
         <td>Vue2|TailwindCSS</td>
         <td>████90%</td>
-        <td><a href="https://github.com/Sciederrick/pizza-shop">🔗&nbsp;&nbsp;repo</a></td>
+        <td><a href="https://pizza-shop-little-italy.vercel.app/">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template"><b>🚀 Starter Node API template</b></a></td>
