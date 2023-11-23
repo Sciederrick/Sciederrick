@@ -8,7 +8,7 @@
 
 # Hi, I'm Derrick,
 
-I'm an apps developer with passion for creating data-driven applications. My expertise: Front-end development | Back-end development | Machine Learning.
+Front-end development | Back-end development | Data pipelines & Analytics
 
 ## Sample projects
 
