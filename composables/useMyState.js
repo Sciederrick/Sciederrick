@@ -89,5 +89,23 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "June 2021",
+    },
+    {
+      id: 6,
+      title: "Blog",
+      link: "https://derricks-data-blog.vercel.app/",
+      shortDescription: "blog website",
+      description:
+        "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
+      features: ["Blog", "Markdown"],
+      technicalDetails:
+        "Powered by VitePress, TailwindCss, Markdown",
+      image: "datablog",
+      screenshots: [
+        "datablog_sample1",
+        "datablog_sample2"
+      ],
+      client: "personal project",
+      date: "June 2023",
     }
   ]);
