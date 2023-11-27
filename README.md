@@ -6,9 +6,9 @@
 [![Google Badge](https://img.shields.io/badge/-g.dev-32cd32?style=flat&logo=Google&logoColor=white)](https://g.dev/derrick_mbarani)
 </div>
 
-# Hi, I'm Derrick,
+# :wave: Hi, I'm Derrick,
 
-I'm an apps developer with passion for creating data-driven applications. My expertise: Front-end development | Back-end development | Machine Learning.
+Front-end development | Back-end development | Data pipelines & analytics
 
 ## Sample projects
 
@@ -24,6 +24,20 @@ I'm an apps developer with passion for creating data-driven applications. My exp
 </thead>
 <tbody>
     <tr>
+        <td><a href="https://github.com/Sciederrick/Sciederrick"><b>🚀 Portfolio</b></a></td>
+        <td>My Porfolio Website</td>
+        <td>Vue|Nuxt</td>
+        <td>█████ 100%</td>
+        <td><a href="https://www.derrick.ink/">🔗&nbsp;&nbsp;website</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/Sciederrick/blog"><b>🚀 Personal Blog</b></a></td>
+        <td>Where I share data engineering & analytics concepts</td>
+        <td>Vue|Vitepress</td>
+        <td>█████ 100%</td>
+        <td><a href="https://derricks-data-blog.vercel.app/">🔗&nbsp;&nbsp;website</a></td>
+    </tr>
+    <tr>
         <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt</b></a></td>
         <td>Maternal health concept landing page</td>
         <td>Vue|Nuxt</td>
@@ -31,11 +45,11 @@ I'm an apps developer with passion for creating data-driven applications. My exp
         <td><a href="https://care-prompt.vercel.app">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
-        <td><a href="https://pizza-shop-ik23c78qq-sciederrick.vercel.app/"><b>🚀 Pizza e-commerce Clone</b></a></td>
+        <td><a href="https://github.com/Sciederrick/pizza-shop"><b>🚀 Pizza e-commerce Clone</b></a></td>
         <td>An example e-commerce site to experiment with Vue2</td>
         <td>Vue2|TailwindCSS</td>
         <td>████90%</td>
-        <td><a href="https://github.com/Sciederrick/pizza-shop">🔗&nbsp;&nbsp;repo</a></td>
+        <td><a href="https://pizza-shop-little-italy.vercel.app/">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
         <td><a href="https://github.com/Sciederrick/Node.js_API_Template"><b>🚀 Starter Node API template</b></a></td>
@@ -54,12 +68,7 @@ I'm an apps developer with passion for creating data-driven applications. My exp
 </tbody>
 </table>
 
-<hr/>
-
-## Preffered Tools
-
-JavaScript is my preference when it comes to web developent &
-Kotlin for mobile app development.    
+<hr/> 
     
 [![Vue Badge](https://img.shields.io/badge/-VueJS-3c4e64?style=for-the-badge&logo=vue.js&logoColor=white&logoWidth=30)](https://vuejs.org/)
 [![Node Badge](https://img.shields.io/badge/-NodeJS-3a5311?style=for-the-badge&logo=node.js&logoColor=white&logoWidth=30)](https://nodejs.org/)
