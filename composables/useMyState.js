@@ -106,6 +106,6 @@ export const useMyState = () =>
         "datablog_sample2"
       ],
       client: "personal project",
-      date: "June 2023",
+      date: "Novemeber 2023",
     }
   ]);
