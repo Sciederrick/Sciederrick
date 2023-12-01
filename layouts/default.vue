@@ -21,10 +21,9 @@
           </NuxtLink>
         </div>
         <NuxtLink
-          to="mailto:derrickmbarani@gmail.com"
+          to="https://blog-sciederrick.vercel.app/"
           target="_top"
-          class="btn btn-transparent rounded md:rounded-3xl mr-0 md:ml-6 lg:ml-8"
-          >Hire me</NuxtLink
+          >Blog →</NuxtLink
         >
       </nav>
     </header>

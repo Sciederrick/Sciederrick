@@ -12,7 +12,7 @@
 
   function applyVisualClasses(target) {
     const textElements = document.querySelectorAll(
-      `#${target.id} p, #${target.id} div.paragraph, #${target.id} h1, #${target.id} h2, #${target.id} h3, #${target.id} a`
+      `#${target.id} p, #${target.id} div.paragraph, div.progress-bar, #${target.id} h1, #${target.id} h2, #${target.id} h3, #${target.id} a`
     );
     const imgElements = document.querySelectorAll(`#${target.id} img`);
     textElements.forEach((el) => {
@@ -128,7 +128,7 @@
             <!--#endregion-->
   
             <!--#region project progress-->
-            <ProgressHalfCircle class="paragraph out" :perc="project.progress"/>
+            <ProgressHalfCircle class="progress-bar out" :perc="project.progress"/>
             <!--#endregion-->
           </div>
           <!--#endregion-->
