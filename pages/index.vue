@@ -88,6 +88,14 @@
             @mouseover="project.isShortDescription = true"
             @mouseout="project.isShortDescription = false"
           />
+
+          <!--#region project card overlay shadow decoration-->
+          <div 
+            class="img-b-shadow"
+            @mouseover="project.isShortDescription = true"
+            @mouseout="project.isShortDescription = false">&nbsp;</div>
+          <!--#endregion-->
+
           <!--#region arrow decoration-->
           <Transition name="rotate-down">
             <div
@@ -119,7 +127,7 @@
             </Transition>
           </div>
           <!--#endregion-->
-        </NuxtLink>
+         </NuxtLink>
       </div>
     </section>
     <!--#endregion-->
