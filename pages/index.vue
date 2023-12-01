@@ -134,6 +134,13 @@
           <!--#endregion-->
          </NuxtLink>
       </div>
+      <div class="w-full my-2 border border-1 border-x-0 border-[#282828] py-4 md:py-0 md:border-0 md:my-0 md:h-[300px] md:flex md:justify-center md:items-center">
+        <NuxtLink 
+          to="https://github.com/Sciederrick/"
+          target="_top">
+          View more projects on Github →
+        </NuxtLink>
+      </div>
     </section>
     <!--#endregion-->
 
