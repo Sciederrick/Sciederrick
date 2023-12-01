@@ -59,8 +59,8 @@ export const useMyState = () =>
       link: "https://care-prompt-search.vercel.app",
       shortDescription: "Concept Obstetric Emergency Search Tool",
       description:
-        "Search tool that is niche-focused on offering education material for health workers. I built this in collaboration with Medical Officers as part of the concluded Appwrite hackathon.",
-      features: ["Search", "Social Share"],
+        "Search tool that is niche-focused on offering education material for health workers. I built this in collaboration with Medical Officers as part of the concluded Appwrite hackathon. The app allows quick learning by leveraging imagery to allow content digestion in stressful, emergency situations. The app is powered by Typesense Search and Appwrite block storage for image storage.",
+      features: ["Typesense Search", "Social Share"],
       technicalDetails:
         "Powered by Nuxt, Typesense, Appwrite, hosted on vercel",
       image: "carepromptsearch",
