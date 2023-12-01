@@ -14,6 +14,7 @@ export const useMyState = () =>
       screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
       client: "personal project",
       date: "January 2023",
+      progress: 99
     },
     // {
     //     id:2,
@@ -30,7 +31,8 @@ export const useMyState = () =>
     //     image: "sheng_api",
     //     screenshots: ["sheng_api_sample1", "sheng_api_sample2", "sheng_api_sample3"],
     //     client: "personal project",
-    //     date: "January 2023"
+    //     date: "January 2023",
+    //     progress: 60
     // },
     {
       id: 3,
@@ -49,6 +51,7 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "April 2023",
+      progress: 100
     },
     {
       id: 4,
@@ -69,14 +72,15 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "June 2023",
+      progress: 100
     },
     {
       id: 5,
       title: "Pizza Palace",
       link: "https://pizza-shop-ik23c78qq-sciederrick.vercel.app/",
-      shortDescription: "e-commerce site clone",
+      shortDescription: "e-commerce site Little Italy template clone powered by Vue.js 2",
       description:
-        "An e-commerce clone to explore e-commerce and the power of Vue.js",
+        "An e-commerce clone to explore the build process for an e-commerce site starting from scratch.",
       features: ["Cart", "Table Booking"],
       technicalDetails:
         "Powered by Vue2, TailwindCss",
@@ -89,6 +93,7 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "June 2021",
+      progress: 99
     },
     {
       id: 6,
@@ -107,5 +112,6 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "Novemeber 2023",
+      progress: 100
     }
   ]);
