@@ -85,8 +85,6 @@
             class="out object-cover rounded-3xl h-[300px]"
             :src="templateImages[project.image]"
             alt="project image"
-            @mouseover="project.isShortDescription = true"
-            @mouseout="project.isShortDescription = false"
           />
 
           <!--#region project card overlay shadow decoration-->
@@ -107,24 +105,31 @@
           </Transition>
           <!--#endregion-->
 
-          <!--#region project card description (animates in & out on hover)-->
-          <div class="paragraph out">
-            <Transition mode="out-in" name="slide-up">
-              <p class="py-6" v-if="!project.isShortDescription">
-                {{ useCapitalize(project.title) }}&nbsp;&nbsp;<Icon
-                  name="mdi:arrow-top-right"
-                  color="#e1e1e1"
-                  size="24px"
-                />
-              </p>
-              <p class="py-6" v-else>
-                {{ project.shortDescription }}&nbsp;&nbsp;<Icon
-                  name="mdi:arrow-top-right"
-                  color="#e1e1e1"
-                  size="24px"
-                />
-              </p>
-            </Transition>
+          <div class="flex justify-between items-center">
+            <!--#region project card description (animates in & out on hover)-->
+            <div class="paragraph out">
+              <Transition mode="out-in" name="slide-up">
+                <p class="py-6" v-if="!project.isShortDescription">
+                  {{ useCapitalize(project.title) }}&nbsp;&nbsp;<Icon
+                    name="mdi:arrow-top-right"
+                    color="#e1e1e1"
+                    size="24px"
+                  />
+                </p>
+                <p class="py-6" v-else>
+                  {{ project.shortDescription }}&nbsp;&nbsp;<Icon
+                    name="mdi:arrow-top-right"
+                    color="#e1e1e1"
+                    size="24px"
+                  />
+                </p>
+              </Transition>
+            </div>
+            <!--#endregion-->
+  
+            <!--#region project progress-->
+            <ProgressHalfCircle class="paragraph out" :perc="project.progress"/>
+            <!--#endregion-->
           </div>
           <!--#endregion-->
          </NuxtLink>

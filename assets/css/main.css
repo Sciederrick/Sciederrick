@@ -158,6 +158,6 @@ p.fake-link:hover {
   }
 
   .img-b-shadow {
-    @apply absolute inset-x-0 bottom-16 rounded-b-3xl backdrop-sepia-0 bg-gradient-to-t from-black/95 to-black/5 h-full;
+    @apply absolute inset-x-0 bottom-16 rounded-b-3xl backdrop-sepia-0 bg-gradient-to-t from-black to-black/50 h-full;
   }
 }
