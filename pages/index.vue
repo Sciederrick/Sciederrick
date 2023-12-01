@@ -26,7 +26,7 @@
 
 <template>
   <main class="px-5 lg:px-16">
-    <!-- hero -->
+    <!--#region hero-->
     <section class="md:pb-16 xl:min-h-max" data-observed="true" id="hero">
       <article
         class="py-10 md:py-20 md:flex md:justify-between md:items-end lg:py-28"
@@ -66,8 +66,9 @@
         </div>
       </article>
     </section>
+    <!--#endregion-->
 
-    <!-- projects -->
+    <!--#region projects -->
     <section
       class="py-8 grid grid-cols-1 md:py-16 md:grid-cols-2 gap-y-10 md:gap-x-8"
       data-observed="true"
@@ -87,6 +88,7 @@
             @mouseover="project.isShortDescription = true"
             @mouseout="project.isShortDescription = false"
           />
+          <!--#region arrow decoration-->
           <Transition name="rotate-down">
             <div
               v-show="project.isShortDescription"
@@ -95,6 +97,9 @@
               <Icon name="mdi:arrow-top-right" color="#313131" size="24px" />
             </div>
           </Transition>
+          <!--#endregion-->
+
+          <!--#region project card description (animates in & out on hover)-->
           <div class="paragraph out">
             <Transition mode="out-in" name="slide-up">
               <p class="py-6" v-if="!project.isShortDescription">
@@ -113,11 +118,13 @@
               </p>
             </Transition>
           </div>
+          <!--#endregion-->
         </NuxtLink>
       </div>
     </section>
+    <!--#endregion-->
 
-    <!-- about -->
+    <!--#region about -->
     <section class="py-8 md:py-16" data-observed="true" id="about">
       <p class="out text-2xl md:text-4xl">
         I'm a software developer. I build web & android applications; translate
@@ -132,6 +139,7 @@
         />
       </div>
     </section>
+    <!--#endregion-->
     <Observer @intersect="applyVisualClasses($event)" />
   </main>
 </template>
