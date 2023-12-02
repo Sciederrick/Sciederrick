@@ -77,7 +77,7 @@ export const useMyState = () =>
     {
       id: 5,
       title: "Pizza Palace",
-      link: "https://pizza-shop-ik23c78qq-sciederrick.vercel.app/",
+      link: "https://pizza-shop-little-italy.vercel.app/",
       shortDescription: "e-commerce site clone",
       description:
         "An e-commerce website inspired by the little italy template to explore the build process of e-commerce starting from scratch",
