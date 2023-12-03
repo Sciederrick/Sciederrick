@@ -17,7 +17,7 @@
       <nav class="flex flex-row justify-between items-center py-5 md:py-3">
         <div>
           <NuxtLink to="/">
-            <img src="~/assets/images/logo.svg" class="h-[32px] md:h-[40px]" />
+            <img src="/logo.svg" class="h-[32px] md:h-[45px]" />
           </NuxtLink>
         </div>
         <NuxtLink
