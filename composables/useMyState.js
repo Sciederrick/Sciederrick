@@ -1,20 +1,44 @@
 export const useMyState = () =>
   useState(() => [
     {
-      id: 1,
-      title: "sheng dictionary",
-      link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
-      shortDescription: "keep up with sheng",
+      id: 5,
+      title: "Pizza Palace",
+      link: "https://pizza-shop-little-italy.vercel.app/",
+      shortDescription: "e-commerce site clone",
       description:
-        "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
-      features: ["words", "idioms"],
+        "An e-commerce website inspired by the little italy template to explore the build process of e-commerce starting from scratch",
+      features: ["Cart", "Table Booking"],
       technicalDetails:
-        "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.",
-      image: "sheng_dictionary",
-      screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
+        "Powered by Vue2, TailwindCss",
+      image: "pizzapalace",
+      screenshots: [
+        "pizzapalace_sample1",
+        "pizzapalace_sample2",
+        "pizzapalace_sample3",
+        "pizzapalace_sample4",
+      ],
       client: "personal project",
-      date: "January 2023",
+      date: "June 2021",
       progress: 99
+    },
+    {
+      id: 6,
+      title: "Blog",
+      link: "https://derricks-data-blog.vercel.app/",
+      shortDescription: "blog website",
+      description:
+        "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
+      features: ["Blog", "Markdown"],
+      technicalDetails:
+        "Powered by VitePress, TailwindCss, Markdown",
+      image: "datablog",
+      screenshots: [
+        "datablog_sample1",
+        "datablog_sample2"
+      ],
+      client: "personal project",
+      date: "Novemeber 2023",
+      progress: 100
     },
     // {
     //     id:2,
@@ -75,43 +99,19 @@ export const useMyState = () =>
       progress: 100
     },
     {
-      id: 5,
-      title: "Pizza Palace",
-      link: "https://pizza-shop-little-italy.vercel.app/",
-      shortDescription: "e-commerce site clone",
+      id: 1,
+      title: "sheng dictionary",
+      link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
+      shortDescription: "keep up with sheng",
       description:
-        "An e-commerce website inspired by the little italy template to explore the build process of e-commerce starting from scratch",
-      features: ["Cart", "Table Booking"],
+        "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
+      features: ["words", "idioms"],
       technicalDetails:
-        "Powered by Vue2, TailwindCss",
-      image: "pizzapalace",
-      screenshots: [
-        "pizzapalace_sample1",
-        "pizzapalace_sample2",
-        "pizzapalace_sample3",
-        "pizzapalace_sample4",
-      ],
+        "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.",
+      image: "sheng_dictionary",
+      screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
       client: "personal project",
-      date: "June 2021",
+      date: "January 2023",
       progress: 99
-    },
-    {
-      id: 6,
-      title: "Blog",
-      link: "https://derricks-data-blog.vercel.app/",
-      shortDescription: "blog website",
-      description:
-        "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
-      features: ["Blog", "Markdown"],
-      technicalDetails:
-        "Powered by VitePress, TailwindCss, Markdown",
-      image: "datablog",
-      screenshots: [
-        "datablog_sample1",
-        "datablog_sample2"
-      ],
-      client: "personal project",
-      date: "Novemeber 2023",
-      progress: 100
     }
   ]);
