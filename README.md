@@ -65,6 +65,13 @@ Web development | Data pipelines & analytics
         <td>████80%</td>
         <td><a href="https://github.com/Sciederrick/Vue3.DDD.Template">🔗&nbsp;&nbsp;repo</a></td>
     </tr>
+    <tr>
+        <td><a href="https://github.com/Sciederrick/dbt_craigslist_vehicles"><b>🚀 Data pipeline & analytics</b></a></td>
+        <td>Sample data pipeline for powerBI analytics</td>
+        <td>postgresql|snowflake|dbt|AWS S3|AWS SQS</td>
+        <td>█████ 100%</td>
+        <td><a href="[https://github.com/Sciederrick/Vue3.DDD.Template](https://sciederrick.github.io/dbt_craigslist_vehicles/)">🔗&nbsp;&nbsp;gh pages</a></td>
+    </tr>
 </tbody>
 </table>
 
