@@ -64,7 +64,7 @@ export const useMyState = () =>
       technicalDetails: "Powered by Vue2 & Tailwind CSS.",
       image: "kq",
       screenshots: ["kq_sample1", "kq_sample2", "kq_sample3"],
-      client: "personal project",
+      client: "School project",
       date: "November 2020",
       progress: 99,
     },
