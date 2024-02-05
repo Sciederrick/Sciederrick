@@ -39,24 +39,24 @@
           <h1
             class="out text-4xl text-left pt-5 pb-10 md:text-6xl md:pb-0 lg:text-7xl"
           >
-            Websites, APIs & Android Applications
+            Websites, APIs & ML
           </h1>
         </div>
         <div class="mt-10">
-          <NuxtLink
+          <NuxtLink title="for an updated version, please contact me"
             to="/pdf/Derrick-Mbarani.pdf"
             target="_blank"
             class="out md:hidden"
             download=""
           >
-            updated&nbsp;resume&nbsp;
+            sample&nbsp;resume&nbsp;
             <Icon
               name="material-symbols:keyboard-double-arrow-down"
               class="animate-bounce"
             />
           </NuxtLink>
-          <NuxtLink to="/resume" class="out hidden md:flex">
-            updated&nbsp;resume&nbsp;
+          <NuxtLink to="/resume" class="out hidden md:flex" title="for an updated version, please contact me">
+            sample&nbsp;resume&nbsp;
             <Icon
               name="material-symbols:keyboard-double-arrow-down"
               class="animate-bounce"
@@ -126,30 +126,23 @@
               </Transition>
             </div>
             <!--#endregion-->
-  
-            <!--#region project progress-->
-            <ProgressHalfCircle class="progress-bar out" :perc="project.progress"/>
-            <!--#endregion-->
           </div>
           <!--#endregion-->
          </NuxtLink>
       </div>
-      <div class="w-full my-2 border border-1 border-x-0 border-[#282828] py-4 md:py-0 md:border-0 md:my-0 md:h-[300px] md:flex md:justify-center md:items-center">
-        <NuxtLink 
-          to="https://github.com/Sciederrick/"
-          target="_top">
+      <NuxtLink 
+        to="https://github.com/Sciederrick/"        
+        class="block w-full my-2 border border-1 border-x-0 border-[#282828] py-4 md:py-0 md:border-x-2 md:rounded-3xl md:h-[300px] md:flex md:justify-center md:items-center" target="_blank">
           View more projects on Github →
-        </NuxtLink>
-      </div>
+      </NuxtLink>
     </section>
     <!--#endregion-->
 
     <!--#region about -->
     <section class="py-8 md:py-16" data-observed="true" id="about">
       <p class="out text-2xl md:text-4xl">
-        I'm a software developer. I build web & android applications; translate
-        designs into products; write articles to document my learnings & do
-        UI/UX design as a hobby.
+        I'm a software developer. I build websites, <span title="Application Programming Interfaces to feed data from your user interface">API's</span> & machine learning models; translate
+        designs into products and write newsletters for the VueJs Kenya community.
       </p>
       <div class="max-h-96 w-full rounded-3xl overflow-hidden mt-20">
         <img

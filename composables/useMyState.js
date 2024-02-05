@@ -8,8 +8,7 @@ export const useMyState = () =>
       description:
         "An e-commerce website inspired by the little italy template to explore the build process of e-commerce starting from scratch",
       features: ["Cart", "Table Booking"],
-      technicalDetails:
-        "Powered by Vue2, TailwindCss",
+      technicalDetails: "Powered by Vue2, TailwindCss",
       image: "pizzapalace",
       screenshots: [
         "pizzapalace_sample1",
@@ -19,7 +18,7 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "June 2021",
-      progress: 99
+      progress: 99,
     },
     {
       id: 6,
@@ -29,16 +28,12 @@ export const useMyState = () =>
       description:
         "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
       features: ["Blog", "Markdown"],
-      technicalDetails:
-        "Powered by VitePress, TailwindCss, Markdown",
+      technicalDetails: "Powered by VitePress, TailwindCss, Markdown",
       image: "datablog",
-      screenshots: [
-        "datablog_sample1",
-        "datablog_sample2"
-      ],
+      screenshots: ["datablog_sample1", "datablog_sample2"],
       client: "personal project",
       date: "Novemeber 2023",
-      progress: 100
+      progress: 100,
     },
     // {
     //     id:2,
@@ -59,11 +54,27 @@ export const useMyState = () =>
     //     progress: 60
     // },
     {
+      id: 7,
+      title: "KQ",
+      link: "https://kenya-airways.vercel.app/",
+      shortDescription: "Book flights from your couch!",
+      description:
+        "This is a mobile responsive website created in partial fulffilment of HCI Design to demonstrate HCI design concepts",
+      features: ["book flights", "print ticket"],
+      technicalDetails: "Powered by Vue2 & Tailwind CSS.",
+      image: "kq",
+      screenshots: ["kq_sample1", "kq_sample2", "kq_sample3"],
+      client: "personal project",
+      date: "November 2020",
+      progress: 99,
+    },
+    {
       id: 3,
       title: "careprompt",
       link: "https://care-prompt.vercel.app",
       shortDescription: "Concept landing page",
-      description: "Concept landing page for a maternal health care solution. I built to this for UI/UX exploration through a simple design with subtle animations.",
+      description:
+        "Concept landing page for a maternal health care solution. I built to this for UI/UX exploration through a simple design with subtle animations.",
       features: ["carousel sliders", "social links", "FAQ"],
       technicalDetails: "Powered by Nuxt, hosted on vercel",
       image: "careprompt",
@@ -75,7 +86,7 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "April 2023",
-      progress: 100
+      progress: 100,
     },
     {
       id: 4,
@@ -96,7 +107,7 @@ export const useMyState = () =>
       ],
       client: "personal project",
       date: "June 2023",
-      progress: 100
+      progress: 100,
     },
     {
       id: 1,
@@ -112,6 +123,6 @@ export const useMyState = () =>
       screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
       client: "personal project",
       date: "January 2023",
-      progress: 99
-    }
+      progress: 99,
+    },
   ]);
