@@ -88,7 +88,7 @@ Web development | Data pipelines & analytics
 
 <hr/> 
 
-[![React Badge](https://img.shields.io/badge/React-3c4e6?style=for-the-badge&logo=react&logoColor=white&logoWidth=30)](https://react.dev/)  
+[![React Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=white&logoWidth=30)](https://react.dev/)  
 [![Vue Badge](https://img.shields.io/badge/-VueJS-3c4e64?style=for-the-badge&logo=vue.js&logoColor=white&logoWidth=30)](https://vuejs.org/)
 [![Node Badge](https://img.shields.io/badge/-NodeJS-3a5311?style=for-the-badge&logo=node.js&logoColor=white&logoWidth=30)](https://nodejs.org/)
 [![Android Badge](https://img.shields.io/badge/-Android-32cd32?style=for-the-badge&logo=android&logoColor=white&logoWidth=30)](https://developer.android.com/)
