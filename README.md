@@ -38,6 +38,17 @@ Web development | Data pipelines & analytics
         <td><a href="https://derricks-data-blog.vercel.app/">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
+        <td><b>🚀 Gen AI Integrations </b></td>
+        <td>React/Nextjs apps with VercelSDK Gen AI integrations for creative text and image generations.</td>
+        <td>React/Next/VercelSDK/Python</td>
+        <td>█████ 100%</td>
+        <td>
+            <a href="https://github.com/Sciederrick/ai-paintings">🔗&nbsp;&nbsp;project 1</a>
+            <a href="https://github.com/Sciederrick/ai-jokes">🔗&nbsp;&nbsp;project 2</a>
+            <a href="https://github.com/Sciederrick/ai-chef">🔗&nbsp;&nbsp;project 3</a>
+        </td>
+    </tr>
+    <tr>
         <td><a href="https://github.com/Sciederrick/CarePrompt"><b>🚀 Careprompt</b></a></td>
         <td>Maternal health concept landing page</td>
         <td>Vue|Nuxt</td>
