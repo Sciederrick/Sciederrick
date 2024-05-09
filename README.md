@@ -38,7 +38,7 @@ Web development | Data pipelines & analytics
         <td><a href="https://derricks-data-blog.vercel.app/">🔗&nbsp;&nbsp;website</a></td>
     </tr>
     <tr>
-        <td><b>🚀 Gen AI Integrations </b></td>
+        <td><b>🚀 Generative AI Integrations </b></td>
         <td>React/Nextjs apps with VercelSDK Gen AI integrations for creative text and image generations.</td>
         <td>React/Next/VercelSDK/Python</td>
         <td>█████ 100%</td>
