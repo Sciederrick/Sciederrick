@@ -8,7 +8,7 @@
 
 # :wave: Hi, I'm Derrick,
 
-Web development | Data pipelines & analytics
+Front-end Developer | Data specialist
 
 ## Sample projects
 
