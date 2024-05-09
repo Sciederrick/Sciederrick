@@ -40,7 +40,7 @@ Front-end Developer | Data specialist
     <tr>
         <td><b>🚀 Generative AI Integrations </b></td>
         <td>React/Nextjs apps with VercelSDK Gen AI integrations for creative text and image generations.</td>
-        <td>React/Next/VercelSDK/Python</td>
+        <td>React/Next/VercelAISDK/Python</td>
         <td>█████ 100%</td>
         <td>
             <a href="https://github.com/Sciederrick/ai-paintings">🔗&nbsp;&nbsp;project 1</a>
