@@ -39,10 +39,14 @@
           <h1
             class="out text-4xl text-left pt-5 pb-10 md:text-6xl md:pb-0 lg:text-7xl"
           >
-            Websites, APIs & ML
+            Websites, Mobile Apps & APIs
           </h1>
         </div>
         <div class="mt-10">
+          <NuxtLink href="mailto:contact@derrick.ink?subject=Resume Request">
+            Request Resume
+          </NuxtLink>
+<!-- 
           <NuxtLink title="for an updated version, please contact me"
             to="/pdf/Derrick-Mbarani.pdf"
             target="_blank"
@@ -61,8 +65,8 @@
               name="material-symbols:keyboard-double-arrow-down"
               class="animate-bounce"
             />
-          </NuxtLink>
-          <p class="out text-muted">Click&nbsp;to&nbsp;download</p>
+          </NuxtLink> -->
+          <p class="out text-muted">contact@derrick.ink</p>
         </div>
       </article>
     </section>
@@ -141,7 +145,7 @@
     <!--#region about -->
     <section class="py-8 md:py-16" data-observed="true" id="about">
       <p class="out text-2xl md:text-4xl">
-        I'm a software developer. I build websites, <span title="Application Programming Interfaces to feed data from your user interface">API's</span> & machine learning models; translate
+        I'm a software developer. I build websites, <span title="Application Programming Interfaces to feed data from your user interface">API's</span> & mobile applications; translate
         designs into products and write newsletters for the VueJs Kenya community.
       </p>
       <div class="max-h-96 w-full rounded-3xl overflow-hidden mt-20">

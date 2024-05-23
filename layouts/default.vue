@@ -44,7 +44,7 @@
             Let's build something great together.
           </p>
           <NuxtLink
-            to="mailto:derrickmbarani@gmail.com"
+            to="mailto:contact@derrick.ink"
             target="_top"
             class="btn btn-transparent rounded -ml-1 md:rounded-3xl"
             >Let's Talk</NuxtLink

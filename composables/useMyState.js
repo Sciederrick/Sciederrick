@@ -21,6 +21,22 @@ export const useMyState = () =>
       progress: 99,
     },
     {
+      id: 1,
+      title: "sheng dictionary",
+      link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
+      shortDescription: "keep up with sheng",
+      description:
+        "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
+      features: ["words", "idioms"],
+      technicalDetails:
+        "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit. I am currently rewriting it in React Native and adding 3000 definitions to compete with the best.",
+      image: "sheng_dictionary",
+      screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
+      client: "personal project",
+      date: "January 2023",
+      progress: 99,
+    },
+    {
       id: 6,
       title: "Blog",
       link: "https://derricks-data-blog.vercel.app/",
@@ -108,21 +124,6 @@ export const useMyState = () =>
       client: "personal project",
       date: "June 2023",
       progress: 100,
-    },
-    {
-      id: 1,
-      title: "sheng dictionary",
-      link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
-      shortDescription: "keep up with sheng",
-      description:
-        "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
-      features: ["words", "idioms"],
-      technicalDetails:
-        "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit.",
-      image: "sheng_dictionary",
-      screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
-      client: "personal project",
-      date: "January 2023",
-      progress: 99,
-    },
+    }
+
   ]);
