@@ -43,7 +43,7 @@
           </h1>
         </div>
         <div class="mt-10">
-          <NuxtLink href="mailto:contact@derrick.ink?subject=Resume Request">
+          <NuxtLink class="out" href="mailto:contact@derrick.ink?subject=Resume Request">
             Request Resume
           </NuxtLink>
 <!-- 
