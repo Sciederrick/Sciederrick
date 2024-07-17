@@ -10,6 +10,8 @@
 
 Front-end Developer | Data specialist
 
+🌱 Currently, I'm building Forums, a platform where communities thrive. 
+
 ## Sample projects
 
 <table>
