@@ -8,7 +8,7 @@
 
 # :wave: Hi, I'm Derrick,
 
-Front-end Developer | Data specialist
+Full-stack Developer - Web & Mobile | Data-driven Apps | Real-time Apps
 
 🌱 Currently, I'm building Forums, a platform where communities thrive. 
 
