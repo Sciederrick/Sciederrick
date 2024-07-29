@@ -10,7 +10,7 @@
 
 Full-stack Developer - Web & Mobile | Data-driven Apps | Real-time Apps
 
-🌱 Currently, I'm building Forums, a platform where communities thrive. 
+🌱 Currently, I'm building Forums, a platform where communities thrive. Launching soon.
 
 ## Sample projects
 
