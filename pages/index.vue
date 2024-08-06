@@ -93,7 +93,7 @@
 
           <!--#region project card overlay shadow decoration-->
           <div 
-            class="img-b-shadow"
+            class="img-b-shadow hover:bg-none"
             @mouseover="project.isShortDescription = true"
             @mouseout="project.isShortDescription = false">&nbsp;</div>
           <!--#endregion-->
