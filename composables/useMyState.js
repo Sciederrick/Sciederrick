@@ -24,7 +24,7 @@ export const useMyState = () =>
         },
         {
             id: 8,
-            title: "Zeraki Concept Dashboard",
+            title: "Zeraki",
             link: "https://sales-agent-dashboard-demo.vercel.app/",
             shortDescription:
                 "A concept dashboard for an edtech products sales agent",
@@ -66,7 +66,7 @@ export const useMyState = () =>
         },
         {
             id: 1,
-            title: "sheng dictionary",
+            title: "Sheng Dictionary",
             link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
             shortDescription: "keep up with sheng",
             description:
@@ -130,7 +130,7 @@ export const useMyState = () =>
         },
         {
             id: 3,
-            title: "careprompt",
+            title: "Careprompt",
             link: "https://care-prompt.vercel.app",
             shortDescription: "Concept landing page",
             description:
