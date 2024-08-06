@@ -66,7 +66,7 @@
               class="animate-bounce"
             />
           </NuxtLink> -->
-          <p class="out text-muted">contact@derrick.ink</p>
+          <p class="out text-muted">derrickmbarani@gmail.com</p>
         </div>
       </article>
     </section>

@@ -1,6 +1,28 @@
 export const useMyState = () =>
     useState(() => [
         {
+            id: 9,
+            title: "Kisiki Capital Landing Page",
+            link: "https://kisiki-landing-page.vercel.app/",
+            shortDescription:
+                "A landing page for a prop firm",
+            description:
+                "A landing page to onboard clients onto a trading platform through a get started CTA and payment checkout",
+            features: ["Payments Integration - Pesapal", "Checkout"],
+            technicalDetails:
+                "Powered by Nuxt, TailwindCss, Pesapal, Feathersjs",
+            image: "kisiki",
+            screenshots: [
+                "kisiki_sample1",
+                "kisiki_sample2",
+                "kisiki_sample3",
+                "kisiki_sample4",
+            ],
+            client: "kisiki capital",
+            date: "Aug 2024",
+            progress: 75,
+        },
+        {
             id: 8,
             title: "Zeraki Concept Dashboard",
             link: "https://sales-agent-dashboard-demo.vercel.app/",
