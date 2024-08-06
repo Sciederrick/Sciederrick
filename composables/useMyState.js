@@ -2,12 +2,12 @@ export const useMyState = () =>
     useState(() => [
         {
             id: 9,
-            title: "Kisiki Capital Landing Page",
+            title: "Kisiki Capital",
             link: "https://kisiki-landing-page.vercel.app/",
             shortDescription:
                 "A landing page for a prop firm",
             description:
-                "A landing page to onboard clients onto a trading platform through a get started CTA and payment checkout",
+                "A landing page to onboard clients onto a trading platform through a get started call-to-action (CTA) and payment checkout. The aim the project was to drive conversions on the landing page through a clear CTA and smooth checkout process. I collaborated with the client and UI/UX designer to come up with a user-friendly onboarding and checkout process.",
             features: ["Payments Integration - Pesapal", "Checkout"],
             technicalDetails:
                 "Powered by Nuxt, TailwindCss, Pesapal, Feathersjs",
