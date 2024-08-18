@@ -235,7 +235,7 @@ const generateStyle = (word) => {
       <div class="py-16">
         <p class="out inline-flex relative md:float-right">
           <Icon name="teenyicons:quote-outline" size="32" />
-        <blockquote class="out text-xl font-normal pb-5 pl-4 md:text-2xl md:max-w-lg">
+        <blockquote class="text-xl font-normal pb-5 pl-4 md:text-2xl md:max-w-lg">
           Creativity is intelligence having fun
         </blockquote>
         <span class="absolute -bottom-4 right-0">-- Albert Einstein</span>
