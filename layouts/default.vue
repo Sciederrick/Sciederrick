@@ -9,33 +9,22 @@
 <template>
   <div class="relative lg:mx-auto 2xl:container">
     <div class="w-full h-28"></div>
-    <header
-      class="out fixed top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16"
-      data-observed="true"
-      id="navbar"
-    >
+    <header class="out fixed top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16 lg:mx-auto 2xl:container"
+      data-observed="true" id="navbar">
       <nav class="flex flex-row justify-between items-center py-5 md:py-3">
         <div>
           <NuxtLink to="/">
             <img src="/logo.svg" class="h-[32px] md:h-[45px]" />
           </NuxtLink>
         </div>
-        <NuxtLink
-          to="https://blog-sciederrick.vercel.app/"
-          target="_top"
-          >Blog →</NuxtLink
-        >
+        <NuxtLink to="https://blog-sciederrick.vercel.app/" target="_top">Blog →</NuxtLink>
       </nav>
     </header>
 
     <!-- page content down here -->
     <slot />
 
-    <footer
-      class="out px-5 py-6 md:py-16 lg:px-16"
-      data-observed="true"
-      id="footer"
-    >
+    <footer class="out px-5 py-6 md:py-16 lg:px-16" data-observed="true" id="footer">
       <div class="flex flex-col md:flex-row">
         <div class="md:max-w-md md:pr-16 lg:pr-0 lg:max-w-xl">
           <p class="pb-12 text-2xl">
@@ -43,36 +32,22 @@
             <br />
             Let's build something great together.
           </p>
-          <NuxtLink
-            to="mailto:contact@derrick.ink"
-            target="_top"
-            class="btn btn-transparent rounded -ml-1 md:rounded-3xl"
-            >Let's Talk</NuxtLink
-          >
+          <NuxtLink to="mailto:contact@derrick.ink" target="_top"
+            class="btn btn-transparent rounded -ml-1 md:rounded-3xl">Let's Talk</NuxtLink>
         </div>
         <div class="py-20 pb-12 md:my-0 md:pt-0">
           <h2 class="pb-8">Profiles</h2>
           <dl class="grid grid-cols-2 gap-y-4 md:gap-x-16">
             <dt>work</dt>
             <dd class="md:text-end">
-              <NuxtLink
-                href="https://www.linkedin.com/in/derrick-mbarani/"
-                target="_blank"
-              >
+              <NuxtLink href="https://www.linkedin.com/in/derrick-mbarani/" target="_blank">
                 <Icon name="mdi:linkedin" size="24px" color="#DCDCDC" />
               </NuxtLink>
             </dd>
             <dt>android</dt>
             <dd class="md:text-end">
-              <NuxtLink
-                href="https://developers.google.com/profile/u/derrick_mbarani"
-                target="_blank"
-              >
-                <Icon
-                  name="logos:google-developers"
-                  size="24px"
-                  color="#DCDCDC"
-                />
+              <NuxtLink href="https://developers.google.com/profile/u/derrick_mbarani" target="_blank">
+                <Icon name="logos:google-developers" size="24px" color="#DCDCDC" />
               </NuxtLink>
             </dd>
             <dt>projects</dt>
@@ -85,13 +60,9 @@
         </div>
       </div>
       <div class="pt-8 md:pt-16 lg:pt-10">
-        <NuxtLink to="https://nuxt.com/"
-          >/Made from scratch with nuxt/</NuxtLink
-        >
+        <NuxtLink to="https://nuxt.com/">/Made from scratch with nuxt/</NuxtLink>
         <br class="md:hidden" />
-        <span class="md:pl-8"
-          >Copyright &#169; {{ new Date().getFullYear() }} Derrick Mbarani</span
-        >
+        <span class="md:pl-8">Copyright &#169; {{ new Date().getFullYear() }} Derrick Mbarani</span>
       </div>
     </footer>
     <Observer @intersect="applyVisualClasses($event)" />
