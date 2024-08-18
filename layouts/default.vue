@@ -10,7 +10,7 @@
   <div class="relative lg:mx-auto 2xl:container">
     <div class="w-full h-28"></div>
     <header
-      class="out absolute top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16"
+      class="out fixed top-0 inset-x-0 z-40 nav-dark text-white px-5 lg:px-16"
       data-observed="true"
       id="navbar"
     >
