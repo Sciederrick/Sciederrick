@@ -65,7 +65,7 @@ const generateStyle = (word) => {
           </h1>
         </header>
         <div class="mt-10">
-          <NuxtLink class="out" href="mailto:contact@derrick.ink?subject=Resume Request">
+          <NuxtLink class="out" href="mailto:derrickmbarani@gmail.com?subject=Resume Request">
             Request Resume
           </NuxtLink>
           <p class="out text-muted">derrickmbarani@gmail.com</p>

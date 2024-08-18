@@ -32,8 +32,8 @@
             <br />
             Let's build something great together.
           </p>
-          <NuxtLink to="mailto:contact@derrick.ink" target="_top"
-            class="btn btn-transparent rounded -ml-1 md:rounded-3xl">Let's Talk</NuxtLink>
+          <NuxtLink to="mailto:derrickmbarani@gmail.com" target="_top"
+            class="btn btn-transparent rounded -ml-[0.5px] md:rounded-3xl">Let's Talk</NuxtLink>
         </div>
         <div class="py-20 pb-12 md:my-0 md:pt-0">
           <h2 class="pb-8">Profiles</h2>
