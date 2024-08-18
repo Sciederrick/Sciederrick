@@ -17,7 +17,13 @@
             <img src="/logo.svg" class="h-[32px] md:h-[45px]" />
           </NuxtLink>
         </div>
-        <NuxtLink to="https://blog-sciederrick.vercel.app/" target="_top">Blog →</NuxtLink>
+        <div class="flex items-center text-xs md:text-base">
+          <NuxtLink to="#projects">Projects</NuxtLink>
+          <Icon name="ph:dot-thin" color="white" class="md:w-[32px] md:h-[32px]"/>         
+           <NuxtLink to="#experience">Experience</NuxtLink>
+          <Icon name="ph:dot-thin" color="white" class="md:w-[32px] md:h-[32px]"/>
+          <NuxtLink to="#communities">Communities</NuxtLink>
+        </div>
       </nav>
     </header>
 
