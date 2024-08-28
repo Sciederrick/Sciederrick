@@ -1,27 +1,27 @@
 export const useMyState = () =>
     useState(() => [
-        {
-            id: 9,
-            title: "Kisiki Capital",
-            link: "https://kisiki-landing-page.vercel.app/",
-            shortDescription:
-                "A landing page for a prop firm",
-            description:
-                "A landing page to onboard clients onto a trading platform through a get started call-to-action (CTA) and payment checkout. The aim of the project was to drive conversions on the landing page through a clear CTA and smooth checkout process. I collaborated with the client and UI/UX designer to come up with a user-friendly onboarding and checkout process.",
-            features: ["Payments Integration - Pesapal", "Checkout"],
-            technicalDetails:
-                "Powered by Nuxt, TailwindCss, Pesapal, Feathersjs",
-            image: "kisiki",
-            screenshots: [
-                "kisiki_sample1",
-                "kisiki_sample2",
-                "kisiki_sample3",
-                "kisiki_sample4",
-            ],
-            client: "kisiki capital",
-            date: "Aug 2024",
-            progress: 75,
-        },
+        // {
+        //     id: 9,
+        //     title: "Kisiki Capital",
+        //     link: "https://kisiki-landing-page.vercel.app/",
+        //     shortDescription:
+        //         "A landing page for a prop firm",
+        //     description:
+        //         "A landing page to onboard clients onto a trading platform through a get started call-to-action (CTA) and payment checkout. The aim of the project was to drive conversions on the landing page through a clear CTA and smooth checkout process. I collaborated with the client and UI/UX designer to come up with a user-friendly onboarding and checkout process.",
+        //     features: ["Payments Integration - Pesapal", "Checkout"],
+        //     technicalDetails:
+        //         "Powered by Nuxt, TailwindCss, Pesapal, Feathersjs",
+        //     image: "kisiki",
+        //     screenshots: [
+        //         "kisiki_sample1",
+        //         "kisiki_sample2",
+        //         "kisiki_sample3",
+        //         "kisiki_sample4",
+        //     ],
+        //     client: "kisiki capital",
+        //     date: "Aug 2024",
+        //     progress: 75,
+        // },
         {
             id: 8,
             title: "Zeraki",
@@ -64,37 +64,37 @@ export const useMyState = () =>
             date: "June 2021",
             progress: 99,
         },
-        {
-            id: 1,
-            title: "Sheng Dictionary",
-            link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
-            shortDescription: "keep up with sheng",
-            description:
-                "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
-            features: ["words", "idioms"],
-            technicalDetails:
-                "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit. I am currently rewriting it in React Native and adding 3000 definitions to compete with the best.",
-            image: "sheng_dictionary",
-            screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
-            client: "personal project",
-            date: "January 2023",
-            progress: 99,
-        },
-        {
-            id: 6,
-            title: "Blog",
-            link: "https://derricks-data-blog.vercel.app/",
-            shortDescription: "blog website",
-            description:
-                "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
-            features: ["Blog", "Markdown"],
-            technicalDetails: "Powered by VitePress, TailwindCss, Markdown",
-            image: "datablog",
-            screenshots: ["datablog_sample1", "datablog_sample2"],
-            client: "personal project",
-            date: "Novemeber 2023",
-            progress: 100,
-        },
+        // {
+        //     id: 1,
+        //     title: "Sheng Dictionary",
+        //     link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
+        //     shortDescription: "keep up with sheng",
+        //     description:
+        //         "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
+        //     features: ["words", "idioms"],
+        //     technicalDetails:
+        //         "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit. I am currently rewriting it in React Native and adding 3000 definitions to compete with the best.",
+        //     image: "sheng_dictionary",
+        //     screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
+        //     client: "personal project",
+        //     date: "January 2023",
+        //     progress: 99,
+        // },
+        // {
+        //     id: 6,
+        //     title: "Blog",
+        //     link: "https://derricks-data-blog.vercel.app/",
+        //     shortDescription: "blog website",
+        //     description:
+        //         "A VitePress powered static site that hosts data engineering & analytics articles written in Markdown.",
+        //     features: ["Blog", "Markdown"],
+        //     technicalDetails: "Powered by VitePress, TailwindCss, Markdown",
+        //     image: "datablog",
+        //     screenshots: ["datablog_sample1", "datablog_sample2"],
+        //     client: "personal project",
+        //     date: "Novemeber 2023",
+        //     progress: 100,
+        // },
         // {
         //     id:2,
         //     title:'definitions api',
@@ -113,41 +113,41 @@ export const useMyState = () =>
         //     date: "January 2023",
         //     progress: 60
         // },
-        {
-            id: 7,
-            title: "KQ",
-            link: "https://kenya-airways.vercel.app/",
-            shortDescription: "Book flights from your couch!",
-            description:
-                "This is a mobile responsive website created in partial fulffilment of HCI Design to demonstrate HCI design concepts",
-            features: ["book flights", "print ticket"],
-            technicalDetails: "Powered by Vue2 & Tailwind CSS.",
-            image: "kq",
-            screenshots: ["kq_sample1", "kq_sample2", "kq_sample3"],
-            client: "School project",
-            date: "November 2020",
-            progress: 99,
-        },
-        {
-            id: 3,
-            title: "Careprompt",
-            link: "https://care-prompt.vercel.app",
-            shortDescription: "Concept landing page",
-            description:
-                "Concept landing page for a maternal health care solution. I built to this for UI/UX exploration through a simple design with subtle animations.",
-            features: ["carousel sliders", "social links", "FAQ"],
-            technicalDetails: "Powered by Nuxt, hosted on vercel",
-            image: "careprompt",
-            screenshots: [
-                "careprompt_sample1",
-                "careprompt_sample2",
-                "careprompt_sample3",
-                "careprompt_sample4",
-            ],
-            client: "personal project",
-            date: "April 2023",
-            progress: 100,
-        },
+        // {
+        //     id: 7,
+        //     title: "KQ",
+        //     link: "https://kenya-airways.vercel.app/",
+        //     shortDescription: "Book flights from your couch!",
+        //     description:
+        //         "This is a mobile responsive website created in partial fulffilment of HCI Design to demonstrate HCI design concepts",
+        //     features: ["book flights", "print ticket"],
+        //     technicalDetails: "Powered by Vue2 & Tailwind CSS.",
+        //     image: "kq",
+        //     screenshots: ["kq_sample1", "kq_sample2", "kq_sample3"],
+        //     client: "School project",
+        //     date: "November 2020",
+        //     progress: 99,
+        // },
+        // {
+        //     id: 3,
+        //     title: "Careprompt",
+        //     link: "https://care-prompt.vercel.app",
+        //     shortDescription: "Concept landing page",
+        //     description:
+        //         "Concept landing page for a maternal health care solution. I built to this for UI/UX exploration through a simple design with subtle animations.",
+        //     features: ["carousel sliders", "social links", "FAQ"],
+        //     technicalDetails: "Powered by Nuxt, hosted on vercel",
+        //     image: "careprompt",
+        //     screenshots: [
+        //         "careprompt_sample1",
+        //         "careprompt_sample2",
+        //         "careprompt_sample3",
+        //         "careprompt_sample4",
+        //     ],
+        //     client: "personal project",
+        //     date: "April 2023",
+        //     progress: 100,
+        // },
         // {
         //     id: 4,
         //     title: "carepromptsearch",
