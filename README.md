@@ -8,9 +8,9 @@
 
 # :wave: Hi, I'm Derrick,
 
-Full-stack Developer - Web & Mobile | Data-driven Apps | Real-time Apps
+Product Focused Developer - Data-driven Apps | Real-time Apps
 
-🌱 Currently, I'm building Forums, a platform where communities thrive. Launching soon.
+🌱 Currently, I'm building Forums, a platform where communities thrive.
 
 ## Sample projects
 
