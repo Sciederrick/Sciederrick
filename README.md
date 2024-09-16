@@ -14,6 +14,8 @@ Product Focused Developer - Data-driven Apps | Real-time Apps
 
 🖎 I volunteer as a technical writer for the Vue.js Kemya Community.
 
+🤙🏽 I also do freelance projects, [hit me up](mailto:derrickmbarani@gmail.com) if you need a web developer.
+
 <hr/> 
 
 [![React Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=white&logoWidth=30)](https://react.dev/)  
