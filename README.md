@@ -12,6 +12,8 @@ Product Focused Developer - Data-driven Apps | Real-time Apps
 
 🌱 Currently, I'm building Forums, a platform where communities thrive.
 
+🖎 I volunteer as a technical writer for the Vue.js Kemya Community.
+
 <hr/> 
 
 [![React Badge](https://img.shields.io/badge/React-black?style=for-the-badge&logo=react&logoColor=white&logoWidth=30)](https://react.dev/)  
