@@ -23,6 +23,25 @@ export const useMyState = () =>
         //     progress: 75,
         // },
         {
+            id: 10,
+            title: "Forums",
+            link: "https://forums-platform.vercel.app/",
+            shortDescription:
+                "Forums is a modern, interactive platform designed for seamless discussions, knowledge sharing, and community building across diverse topics.",
+            description:
+                "Forums is an innovative platform built to foster engaging conversations, connect people with shared interests, and enable meaningful knowledge exchange. Whether you're joining a professional discussion, seeking advice, or contributing to your favorite hobby group, Forums offers an intuitive interface, real-time updates, and powerful tools to make every interaction effortless and productive. With features like customizable topics, private or public discussions, and robust moderation options, Forums is designed to empower communities to thrive in an organized, collaborative, and user-friendly environment.",
+            features: ["Group chat", "Direct Messaging"],
+            technicalDetails:
+                "Powered by React, TailwindCss, Material UI Components, Feathersjs, MongoDB",
+            image: "forums",
+            screenshots: [
+                "forums_sample1",
+            ],
+            client: "hobby project",
+            date: "2024",
+            progress: 65,
+        },
+        {
             id: 8,
             title: "Zeraki",
             link: "https://sales-agent-dashboard-demo.vercel.app/",
