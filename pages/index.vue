@@ -109,7 +109,7 @@ function applyVisualClasses(target) {
           Experience
         </h2>
         <NuxtLink to="mailto:contact@derrick.ink" target="_top"
-          class="out btn btn-transparent rounded ml-[0.5px] md:rounded-3xl">Let's
+          class="out btn btn-solid rounded ml-[0.5px] md:rounded-3xl">Let's
           Talk</NuxtLink>
       </header>
       <div class="pt-12 md:pt-4">

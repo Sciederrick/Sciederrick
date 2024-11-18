@@ -133,6 +133,10 @@ p.fake-link:hover {
     @apply rounded-3xl text-[#FFF] border-2 border-[#FFF] hover:bg-[#FFF] hover:text-black;
   }
 
+  .btn-solid {
+    @apply rounded-3xl text-black bg-[#FFF] border-2 border-[#FFF] hover:font-bold;
+  }
+
   .btn-green {
     @apply rounded-3xl text-[#000];
   }
