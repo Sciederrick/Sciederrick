@@ -97,7 +97,7 @@ function applyVisualClasses(target) {
     </section>
     <!--#endregion-->
 
-    <div class="border-b border-[#282828]">&nbsp;</div>
+    <div class="border-b border-[#282828] md:max-w-md md:mx-auto">&nbsp;</div>
 
     <!--#region experience -->
     <section class="py-8 md:py-16 lg:flex lg:justify-between" data-observed="true" id="experience">
@@ -161,7 +161,7 @@ function applyVisualClasses(target) {
     </section>
     <!--#endregion-->
 
-    <div class="border-b border-[#282828]">&nbsp;</div>
+    <div class="border-b border-[#282828] md:max-w-md md:mx-auto">&nbsp;</div>
 
     <!--#region communities -->
     <section class="py-8 md:py-16 lg:flex lg:justify-between" data-observed="true" id="communities">
@@ -195,7 +195,7 @@ function applyVisualClasses(target) {
     </section>
     <!--#endregion-->
 
-    <div class="border-b border-[#282828]">&nbsp;</div>
+    <div class="border-b border-[#282828] md:max-w-md md:mx-auto">&nbsp;</div>
 
     <!--#region about -->
     <section class="py-8 md:py-16" data-observed="true" id="about">
@@ -245,6 +245,8 @@ function applyVisualClasses(target) {
       </div>
     </section>
     <!--#endregion -->
+
+    <div class="border-b border-[#282828] md:max-w-md md:mx-auto">&nbsp;</div>
 
     <Observer @intersect="applyVisualClasses($event)" />
   </main>
