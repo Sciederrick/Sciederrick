@@ -23,31 +23,6 @@ function applyVisualClasses(target) {
   });
 }
 
-const wordCloudData = ref([
-  { text: 'Vue.js', size: 3.2, color: '#4FC08D' },
-  { text: 'JavaScript', size: 2.8, color: '#F7DF1E' },
-  { text: 'TailwindCSS', size: 2.5, color: '#38B2AC' },
-  { text: 'React.js', size: 2, color: '#264de4' },
-  { text: 'Android', size: 2.2, color: '#e34c26' },
-  { text: 'Frontend', size: 2.7, color: '#FF6347' },
-  { text: 'Figma', size: 1.9, color: '#6A5ACD' },
-  { text: 'Community', size: 3.0, color: '#FFA500' },
-  { text: 'Node.js', size: 3.5, color: '#4FC08D' },
-  { text: 'Feathers.js', size: 2.4, color: '#2D3748' },
-  { text: 'Python', size: 2.6, color: '#9b59b6' },
-])
-
-const generateStyle = (word) => {
-  const randomX = Math.random() * 20 - 10;
-  const randomY = Math.random() * 20 - 10;
-  const randomRotation = Math.random() * 30 - 15;
-  return {
-    fontSize: `${word.size}rem`,
-    color: word.color,
-    transform: `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`,
-    zIndex: Math.floor(word.size * 10),
-  };
-}
 </script>
 
 <template>
@@ -224,25 +199,53 @@ const generateStyle = (word) => {
 
     <!--#region about -->
     <section class="py-8 md:py-16" data-observed="true" id="about">
-      <div class="relative overflow-hidden -ml-12 lg:mx-auto lg:p-4">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-          <span v-for="(word, index) in wordCloudData" :key="index" :style="generateStyle(word)"
-            class="font-bold inline-block text-center transform transition-transform duration-300 ease-in-out hover:scale-110">
-            {{ word.text }}
-          </span>
-        </div>
+      <!-- Full width column -->
+      <div class="flex mb-4 animate-fade-in-up delay-100" style="--tw-animation-delay: 100ms">
+        <div class="w-full bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
       </div>
-      <div class="py-16">
-        <p class="out inline-flex relative md:float-right">
-          <Icon name="teenyicons:quote-outline" size="32" />
-        <blockquote class="text-xl font-normal pb-5 pl-4 md:text-2xl md:max-w-lg">
-          Creativity is intelligence having fun
-        </blockquote>
-        <span class="absolute -bottom-4 right-0">-- Albert Einstein</span>
-        </p>
+
+      <!-- Two columns -->
+      <div class="flex mb-4 animate-fade-in-up delay-200" style="--tw-animation-delay: 200ms">
+        <div class="w-1/2 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/2 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+      </div>
+
+      <!-- Three columns -->
+      <div class="flex mb-4 animate-fade-in-up delay-300" style="--tw-animation-delay: 300ms">
+        <div class="w-1/3 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/3 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/3 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+      </div>
+
+      <!-- Four columns -->
+      <div class="flex mb-4 animate-fade-in-up delay-400" style="--tw-animation-delay: 400ms">
+        <div class="w-1/4 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/4 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/4 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/4 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+      </div>
+
+      <!-- Five columns -->
+      <div class="flex mb-4 animate-fade-in-up delay-500" style="--tw-animation-delay: 500ms">
+        <div class="w-1/5 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/5 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/5 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/5 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/5 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+      </div>
+
+      <!-- Six columns -->
+      <div class="flex animate-fade-in-up delay-600" style="--tw-animation-delay: 600ms">
+        <div class="w-1/6 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/6 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/6 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/6 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/6 bg-gray-500 h-12 transition-transform transform hover:scale-105"></div>
+        <div class="w-1/6 bg-gray-300 h-12 transition-transform transform hover:scale-105"></div>
       </div>
     </section>
-    <!--#endregion-->
+    <!--#endregion -->
+
     <Observer @intersect="applyVisualClasses($event)" />
   </main>
 </template>
@@ -275,5 +278,22 @@ const generateStyle = (word) => {
 .rotate-down-leave-to {
   opacity: 0;
   transform: rotate(45deg);
+}
+
+/* about section */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
 }
 </style>
