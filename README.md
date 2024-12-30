@@ -9,8 +9,6 @@
 
 Product Focused Developer - Data-driven Apps | Real-time Apps
 
-🌱 Currently, I'm building Forums, a platform where communities thrive.
-
 🖎 I volunteer as a technical writer for the Vue.js Kenya Community.
 
 🤙🏽 I also do freelance projects, [hit me up](mailto:derrickmbarani@gmail.com) if you need a web developer.
