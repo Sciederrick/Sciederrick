@@ -1,8 +1,8 @@
 {
   "private": true,
   "engines": {
-	"node": ">=18.0.0"
-},
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,9 +12,10 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.2.0",
-    "nuxt": "3.0.0",
+    "nuxt": "^3.17.4",
     "nuxt-icon": "^0.1.8"
   },
   "dependencies": {
+    "@nuxt/nitro": "^0.10.0"
   }
 }
