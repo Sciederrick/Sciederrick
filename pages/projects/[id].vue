@@ -11,7 +11,7 @@
 
     let projects = ref({})
 
-    projects.value = useMyState().value
+    projects.value = useMyProjects().value
     project.value = getProject(id)
 
     function applyVisualClasses(target) {
@@ -43,12 +43,12 @@
                 </li>
                 <li class="flex justify-between py-1 md:block">
                     <h3>Features</h3>
-                    <p>
+                    <div>
                         <ul>
                             <li v-for="(feature, index) in project.features" :key="index"
                                 class="text-right md:text-left">{{ useCapitalize(feature) }}</li>
                         </ul>
-                    </p>
+                    </div>
                 </li>
                 <li class="flex justify-between py-1 md:block">
                     <h3>Link</h3>
