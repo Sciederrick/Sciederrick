@@ -22,7 +22,5 @@ Follow me or reach out for projects and collaborations.
 <div align="right">
     
 [![GitHub Sciederrick](https://img.shields.io/github/followers/sciederrick?label=follow&style=social)](https://github.com/Sciederrick)
-&nbsp;
-![Profile views](https://views.igorkowalczyk.vercel.app/api/badge/Sciederrick)
     
 </div>
