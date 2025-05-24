@@ -7,11 +7,7 @@
 
 # :wave: Hi, I'm Derrick,
 
-Product Focused Developer - Data-driven Apps | Real-time Apps
-
-🖎 I volunteer as a technical writer for the Vue.js Kenya Community.
-
-🤙🏽 I also do freelance projects, [hit me up](mailto:derrickmbarani@gmail.com) if you need a web developer.
+Product Focused Developer Designing & Shipping E-commerce Features at [Sare](https://sare.africa/)
 
 <hr/> 
 
