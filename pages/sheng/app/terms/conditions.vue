@@ -1,6 +1,6 @@
 <script setup>
 definePageMeta({
-	layout: false
+	layout: 'plain-layout'
 });
 </script>
 
@@ -101,7 +101,7 @@ definePageMeta({
 .container {
 	max-width: 800px;
 	margin: 32px auto;
-	background: #fff;
+	/* background: #fff; */
 	border-radius: 18px;
 	box-shadow: 0 4px 32px rgba(60, 72, 88, 0.08);
 	padding: 48px 32px;
