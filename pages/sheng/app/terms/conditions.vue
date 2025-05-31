@@ -7,7 +7,7 @@ definePageMeta({
 <template>
 	<section>
 		<div class="container">
-			<h1>Privacy Policy</h1>
+			<h1>Terms and Conditions</h1>
 			<p>
 				By downloading or using the app, these terms will automatically apply to you – you should make sure
 				therefore that you read them carefully before using the app. You’re not allowed to copy or modify the
@@ -90,7 +90,7 @@ definePageMeta({
 
 			<h2>Contact Us</h2>
 			<p>
-				If you have any questions about this Privacy Policy, please contact us at <a
+				If you have any questions about this Terms and Conditions, please contact us at <a
 					href="mailto:devacc455@@gmail.com">devacc455@@gmail.com</a>.
 			</p>
 		</div>
