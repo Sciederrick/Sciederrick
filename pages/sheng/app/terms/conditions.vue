@@ -100,11 +100,11 @@ definePageMeta({
 <style scoped>
 .container {
 	max-width: 800px;
-	margin: 32px auto;
-	/* background: #fff; */
+	margin: 0 auto;
+	background: #fff;
 	border-radius: 18px;
-	box-shadow: 0 4px 32px rgba(60, 72, 88, 0.08);
-	padding: 48px 32px;
+	box-shadow: none;
+	padding: 16px 32px;
 }
 
 h1 {
@@ -145,10 +145,17 @@ a {
 	text-decoration: underline;
 }
 
+@media (min-width: 768px) {
+	.container {
+			box-shadow: 0 4px 32px rgba(60, 72, 88, 0.08);
+			margin: 32px auto;
+			padding: 48px 32px;
+		}
+}
 @media (max-width: 600px) {
 	.container {
-		padding: 24px 8px;
-	}
+			padding: 16px 24px;
+		}
 
 	h1 {
 		font-size: 2rem;

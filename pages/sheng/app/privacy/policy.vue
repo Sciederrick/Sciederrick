@@ -82,51 +82,67 @@ definePageMeta({
 
 <style scoped>
 .container {
-  max-width: 800px;
-  margin: 32px auto;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(60, 72, 88, 0.08);
-  padding: 48px 32px;
+	max-width: 800px;
+	margin: 0 auto;
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: none;
+	padding: 16px 32px;
 }
+
 h1 {
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: #1a365d;
-  letter-spacing: -1px;
+	font-size: 2.6rem;
+	font-weight: 700;
+	margin-bottom: 18px;
+	color: #1a365d;
+	letter-spacing: -1px;
 }
+
 h2 {
-  font-size: 1.35rem;
-  color: #2d4363;
-  margin-top: 32px;
-  margin-bottom: 12px;
-  font-weight: 600;
+	font-size: 1.35rem;
+	color: #2d4363;
+	margin-top: 32px;
+	margin-bottom: 12px;
+	font-weight: 600;
 }
+
 ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  color: #42516e;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	color: #42516e;
 }
+
 li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+	margin-bottom: 8px;
+	line-height: 1.6;
 }
+
 p {
-  color: #42516e;
-  margin-bottom: 18px;
-  line-height: 1.7;
+	color: #42516e;
+	margin-bottom: 18px;
+	line-height: 1.7;
 }
+
 a {
-  color: #2563eb;
-  text-decoration: underline;
+	color: #2563eb;
+	text-decoration: underline;
 }
+
+@media (min-width: 768px) {
+	.container {
+		box-shadow: 0 4px 32px rgba(60, 72, 88, 0.08);
+		margin: 32px auto;
+		padding: 48px 32px;
+	}
+}
+
 @media (max-width: 600px) {
-  .container {
-    padding: 24px 8px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
+	.container {
+			padding: 16px 24px;
+		}
+
+	h1 {
+		font-size: 2rem;
+	}
 }
 </style>
