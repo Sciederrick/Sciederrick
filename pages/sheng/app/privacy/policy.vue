@@ -20,7 +20,7 @@ definePageMeta({
 				will not use or share your information with anyone except as described in this Privacy Policy.
 
 				The terms used in this Privacy Policy have the same meanings as in our <a
-					href="https://derrickmbarani.com/sheng/app/terms/conditions">Terms and Conditions</a>, which are
+					href="https://mbarani.xyz/sheng/app/terms/conditions">Terms and Conditions</a>, which are
 				accessible at Sheng unless otherwise defined in this Privacy Policy.
 			</p>
 

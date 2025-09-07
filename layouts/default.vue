@@ -18,11 +18,11 @@
 					</NuxtLink>
 				</div>
 				<div class="flex items-center text-xs md:text-base">
-					<NuxtLink to="https://derrickmbarani.com/#projects">Projects</NuxtLink>
+					<NuxtLink to="https://mbarani.xyz/#projects">Projects</NuxtLink>
 					<Icon name="ph:dot-thin" color="white" class="md:w-[32px] md:h-[32px]" />
-					<NuxtLink to="https://derrickmbarani.com/#experience">Experience</NuxtLink>
+					<NuxtLink to="https://mbarani.xyz/#experience">Experience</NuxtLink>
 					<Icon name="ph:dot-thin" color="white" class="md:w-[32px] md:h-[32px]" />
-					<NuxtLink to="https://derrickmbarani.com/#communities">Communities</NuxtLink>
+					<NuxtLink to="https://mbarani.xyz/#communities">Communities</NuxtLink>
 				</div>
 			</nav>
 		</header>
