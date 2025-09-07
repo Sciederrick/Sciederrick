@@ -22,25 +22,25 @@ export const useMyProjects = () =>
         //     date: "Aug 2024",
         //     progress: 75,
         // },
-        {
-            id: 10,
-            title: "Forums",
-            link: "https://forums-platform.vercel.app/",
-            shortDescription:
-                "Forums is a modern, interactive platform designed for seamless discussions, knowledge sharing, and community building across diverse topics.",
-            description:
-                "Forums is an innovative platform built to foster engaging conversations, connect people with shared interests, and enable meaningful knowledge exchange. Whether you're joining a professional discussion, seeking advice, or contributing to your favorite hobby group, Forums offers an intuitive interface, real-time updates, and powerful tools to make every interaction effortless and productive. With features like customizable topics, private or public discussions, and robust moderation options, Forums is designed to empower communities to thrive in an organized, collaborative, and user-friendly environment.",
-            features: ["Group chat", "Direct Messaging"],
-            technicalDetails:
-                "Powered by React, TailwindCss, Material UI Components, Feathersjs, MongoDB",
-            image: "forums",
-            screenshots: [
-                "forums_sample1",
-            ],
-            client: "hobby project",
-            date: "2024",
-            progress: 65,
-        },
+        // {
+        //     id: 10,
+        //     title: "Forums",
+        //     link: "https://forums-platform.vercel.app/",
+        //     shortDescription:
+        //         "Forums is a modern, interactive platform designed for seamless discussions, knowledge sharing, and community building across diverse topics.",
+        //     description:
+        //         "Forums is an innovative platform built to foster engaging conversations, connect people with shared interests, and enable meaningful knowledge exchange. Whether you're joining a professional discussion, seeking advice, or contributing to your favorite hobby group, Forums offers an intuitive interface, real-time updates, and powerful tools to make every interaction effortless and productive. With features like customizable topics, private or public discussions, and robust moderation options, Forums is designed to empower communities to thrive in an organized, collaborative, and user-friendly environment.",
+        //     features: ["Group chat", "Direct Messaging"],
+        //     technicalDetails:
+        //         "Powered by React, TailwindCss, Material UI Components, Feathersjs, MongoDB",
+        //     image: "forums",
+        //     screenshots: [
+        //         "forums_sample1",
+        //     ],
+        //     client: "hobby project",
+        //     date: "2024",
+        //     progress: 65,
+        // },
         {
             id: 8,
             title: "Zeraki",
@@ -83,22 +83,22 @@ export const useMyProjects = () =>
             date: "June 2021",
             progress: 99,
         },
-        // {
-        //     id: 1,
-        //     title: "Sheng Dictionary",
-        //     link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
-        //     shortDescription: "keep up with sheng",
-        //     description:
-        //         "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
-        //     features: ["words", "idioms"],
-        //     technicalDetails:
-        //         "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit. I am currently rewriting it in React Native and adding 3000 definitions to compete with the best.",
-        //     image: "sheng_dictionary",
-        //     screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
-        //     client: "personal project",
-        //     date: "January 2023",
-        //     progress: 99,
-        // },
+        {
+            id: 1,
+            title: "Sheng Dictionary",
+            link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
+            shortDescription: "keep up with sheng",
+            description:
+                "This application is powered by Android/Kotlin with Jetpack Compose. I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment",
+            features: ["words", "idioms"],
+            technicalDetails:
+                "This application is powered by Android/Kotlin with Jetpack Compose. It demonstrates the following concepts: infinite lists and paging3, android work manager and retrofit. I am currently rewriting it in React Native and adding 3000 definitions to compete with the best.",
+            image: "sheng_dictionary",
+            screenshots: ["sheng_sample1", "sheng_sample2", "sheng_sample3"],
+            client: "personal project",
+            date: "January 2023",
+            progress: 99,
+        },
         // {
         //     id: 6,
         //     title: "Blog",
