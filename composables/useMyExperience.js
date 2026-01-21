@@ -4,7 +4,7 @@ export const useMyExperience = () =>
             description:
                 "Improving operational efficiency and business scalability by automating sales, customer acquisitions through mobile app experiences.",
             company: "Sare Africa - Sandino Ltd",
-            date: "Jan - Present `25",
+            date: "Jan `25 - Present",
             position: "Frontend Developer",
         },
         {
