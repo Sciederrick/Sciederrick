@@ -42,6 +42,28 @@ export const useMyProjects = () =>
         //     progress: 65,
         // },
         {
+            id: 11,
+            title: "POS Demo",
+            link: "https://github.com/Sciederrick/e-commerce-demo",
+            shortDescription:
+                "A concept POS mobile app",
+            description:
+                "A react native expo app designed and built to while learning React Native. Unpublished, use README.md for setup -- use EXPO 52. Sell & manage shop products.",
+            features: ["Products", "Basic Stats", "Cart", "Manage Inventory"],
+            technicalDetails:
+                "React Native Expo 52, JSON mock server by json-server",
+            image: "tilltap",
+            screenshots: [
+                "tilltap",
+                "tilltap_sample1",
+                "tilltap_sample2",
+                "tilltap_sample3",
+            ],
+            client: "personal project",
+            date: "Jan 2025",
+            progress: 100,
+        },
+        {
             id: 8,
             title: "Zeraki",
             link: "https://sales-agent-dashboard-demo.vercel.app/",
