@@ -48,7 +48,7 @@ export const useMyProjects = () =>
             shortDescription:
                 "A concept POS mobile app",
             description:
-                "A react native expo app designed and built to while learning React Native. Unpublished, use README.md for setup -- use EXPO 52. Sell & manage shop products.",
+                "A react native expo app collaboratively designed and built to while learning React Native. Unpublished, use README.md for setup -- use EXPO 52. Sell & manage shop products.",
             features: ["Products", "Basic Stats", "Cart", "Manage Inventory"],
             technicalDetails:
                 "React Native Expo 52, JSON mock server by json-server",
