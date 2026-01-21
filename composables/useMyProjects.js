@@ -111,7 +111,7 @@ export const useMyProjects = () =>
             link: "https://play.google.com/store/apps/details?id=ke.derrick.shengdictionary",
             shortDescription: "keep up with sheng",
             description:
-                "This application is powered by React Native (CLI). I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment but later refactored to React Native.",
+                "This application is powered by React Native (CLI). I worked on this to experiment with Android Work Manager, Infinite Lists & Paging3, Retrofit and Google Play Store Deployment but later refactored to React Native. The new React Native version has similar features but a new modern design. Please checkout on Playstore",
             features: ["words", "idioms"],
             technicalDetails:
                 "This application is powered by React Native, Node js & Mongo DB backend.",
